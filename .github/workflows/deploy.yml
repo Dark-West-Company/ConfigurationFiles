@@ -84,18 +84,14 @@ jobs:
         print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
         
         def get_mapping_info(mapping_value):
-            """Extract path and filename from mapping value (supports both old and new format)"""
-            if isinstance(mapping_value, str):
-                # Old format: simple string path
-                decoded_path = urllib.parse.unquote(mapping_value)
-                return decoded_path, Path(decoded_path).name
-            elif isinstance(mapping_value, dict):
-                # New format: object with path and optional filename
+            """Extract path and filename from mapping value"""
+            if isinstance(mapping_value, dict):
+                # Object format with path and optional filename
                 path = urllib.parse.unquote(mapping_value['path'])
                 filename = mapping_value.get('filename', Path(path).name)
                 return path, filename
             else:
-                raise ValueError(f"Invalid mapping format: {mapping_value}")
+                raise ValueError(f"Invalid mapping format: {mapping_value}. Expected object with 'path' and optional 'filename' keys.")
         
         def create_ftp_directory(ftp, path):
             """Create FTP directory structure, handling URL-decoded paths"""
@@ -194,16 +190,13 @@ jobs:
             mappings = json.load(f)
         
         for local_path, mapping_value in mappings.items():
-            if isinstance(mapping_value, str):
-                # Old format
-                remote_path = urllib.parse.unquote(mapping_value)
-                print(f"- `{local_path}` → `{remote_path}`")
-            elif isinstance(mapping_value, dict):
-                # New format
+            if isinstance(mapping_value, dict):
+                # Object format
                 remote_path = urllib.parse.unquote(mapping_value['path'])
                 target_filename = mapping_value.get('filename', Path(remote_path).name)
                 if target_filename != Path(local_path).name:
                     print(f"- `{local_path}` → `{remote_path}` (renamed to `{target_filename}`)")
                 else:
                     print(f"- `{local_path}` → `{remote_path}`")
-        EOF
+            else:
+                print(f"- ERROR: Invalid mapping format for `{local_path}`")

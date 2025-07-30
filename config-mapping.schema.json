@@ -1,31 +1,23 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "RedM Config File Mapping",
-  "description": "Maps local config files to their deployment paths on the RedM server",
+  "title": "Dark West RedM Config File Mapping",
+  "description": "Maps local config files to their deployment paths on the Dark West server",
   "type": "object",
   "patternProperties": {
     "^configs/": {
-      "oneOf": [
-        {
+      "type": "object",
+      "properties": {
+        "path": {
           "type": "string",
-          "description": "Simple string path for backward compatibility"
+          "description": "The destination path on the server (can include URL-encoded characters like %5B for [)"
         },
-        {
-          "type": "object",
-          "properties": {
-            "path": {
-              "type": "string",
-              "description": "The destination path on the server (can include URL-encoded characters like %5B for [)"
-            },
-            "filename": {
-              "type": "string", 
-              "description": "The target filename on the server (if different from local filename)"
-            }
-          },
-          "required": ["path"],
-          "additionalProperties": false
+        "filename": {
+          "type": "string", 
+          "description": "The target filename on the server (if different from local filename)"
         }
-      ]
+      },
+      "required": ["path"],
+      "additionalProperties": false
     }
   },
   "examples": [
