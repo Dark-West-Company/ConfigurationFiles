@@ -1,7 +1,6 @@
 Config = {}
 Config.Crafting = {}
 Config.CraftPromptHandles = {}
--- TESTING COMMENT TO SEE IF THE CONFIG DEPLOYMENT THING IS WORKING
 
 -- Crafting Key
 Config.Keys = {
