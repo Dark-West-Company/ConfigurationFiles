@@ -1,7 +1,7 @@
 Config = {}
 Config.Crafting = {}
 Config.CraftPromptHandles = {}
-
+-- TESTING COMMENT TO SEE IF THE CONFIG DEPLOYMENT THING IS WORKING
 
 -- Crafting Key
 Config.Keys = {
@@ -48,18 +48,18 @@ Config.CraftingProps = {
     {
         title = "Campfire",
         prop = { "P_CAMPFIRECOMBINED01X",
-                "p_campfirefresh01x",
-                "p_fireplacelogs01x",
-                "p_campfire04x",
-                "p_campfire05x",
-                "p_campfire02x",
-                "p_campfirecombined02x",
-                "p_campfirecombined03x",
-                "p_campfirecombined04x", 
-                "P_CAMPFIRECOOK02X",
-                "P_CAMPFIRE_WIN2_01X",
-                "P_CRAFTINGPOT01X" 
-            }
+            "p_campfirefresh01x",
+            "p_fireplacelogs01x",
+            "p_campfire04x",
+            "p_campfire05x",
+            "p_campfire02x",
+            "p_campfirecombined02x",
+            "p_campfirecombined03x",
+            "p_campfirecombined04x",
+            "P_CAMPFIRECOOK02X",
+            "P_CAMPFIRE_WIN2_01X",
+            "P_CRAFTINGPOT01X"
+        }
     },
     {
         title = "Oven",
@@ -78,7 +78,7 @@ Config.CraftingProps = {
     }
 }
 
--- TODO: Migrate to vorp-animations 
+-- TODO: Migrate to vorp-animations
 -- Animations config
 Config.Animations = {
     ["dw_craft"] = { --Default Animation
@@ -166,63 +166,63 @@ Config.Categories = {
         ident = 'food',
         text = 'Cooking',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingCooking"
     },
     {
         ident = 'brewing',
         text = 'Brewing',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingBrewing"
     },
     {
         ident = 'butchery',
         text = 'Butchery',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingButcher"
     },
     {
         ident = 'drugs',
         text = 'Drugs',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingDrugs"
     },
     {
         ident = 'medical',
         text = 'Medical',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingMedical"
     },
     {
         ident = 'survival',
         text = 'Survival',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingSurvival"
     },
     {
         ident = 'blacksmithing',
         text = 'Blacksmithing',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingBlacksmithing"
     },
     {
         ident = 'jewelry',
         text = 'Jewelry',
         Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = 0,       -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Job = 0,      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingJewelsmithing"
     },
     {
         ident = 'magic',
         text = 'Dark Arts',
-        Location = 0, -- set to 0 to allow any locations from Config.Locations
-        Job = { "mage" },      -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
+        Location = 0,     -- set to 0 to allow any locations from Config.Locations
+        Job = { "mage" }, -- set to 0 to allow any jobs, or like { "butcher" } to job restriction
         Skill = "CraftingDrugs"
     },
 }
