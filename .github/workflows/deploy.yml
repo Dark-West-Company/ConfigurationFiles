@@ -87,7 +87,7 @@ jobs:
         if not server_base:
             print("❌ ERROR: SERVER_BASE environment variable is not set!")
             print("   Please configure the SERVER_BASE secret in GitHub repository settings.")
-            print("   Example value: VORPCore_758630.base")
+            print("   Example value: VORPCore_123456.base")
             exit(1)
         
         print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
