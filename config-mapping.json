@@ -1,54 +1,54 @@
 {
   "configs/bcc_doorlocks_config.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_doorlocks/config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-doorlocks/config.lua",
     "filename": "config.lua"
   },
   "configs/bcc_farming_config.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_farming/configs/config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-farming/configs/config.lua",
     "filename": "config.lua"
   },
   "configs/bcc_farming_plants.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_farming/configs/plants.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-farming/configs/plants.lua",
     "filename": "plants.lua"
   },
   "configs/bcc_housing_main.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_housing/configs/main.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-housing/configs/main.lua",
     "filename": "main.lua"
   },
   "configs/bcc_housing_furniture.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_housing/configs/furniture.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-housing/configs/furniture.lua",
     "filename": "furniture.lua"
   },
   "configs/bcc_housing_hotels.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_housing/configs/hotels.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-housing/configs/hotels.lua",
     "filename": "hotels.lua"
   },
   "configs/bcc_housing_houses.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_housing/configs/houses.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-housing/configs/houses.lua",
     "filename": "houses.lua"
   },
   "configs/bcc_housing_npcAgents.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_housing/configs/npcAgents.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-housing/configs/npcAgents.lua",
     "filename": "npcAgents.lua"
   },
   "configs/bcc_ranch_main.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_ranch/configs/main.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-ranch/configs/main.lua",
     "filename": "main.lua"
   },
   "configs/bcc_ranch_config.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_ranch/configs/ranch_config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-ranch/configs/ranch_config.lua",
     "filename": "ranch_config.lua"
   },
   "configs/bcc_ranch_animals.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_ranch/configs/animals_config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-ranch/configs/animals_config.lua",
     "filename": "animals_config.lua"
   },
   "configs/bcc_scene_config.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_scene/config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-scene/config.lua",
     "filename": "config.lua"
   },
   "configs/bcc_society_config.lua": {
-    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc_society/config.lua",
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-society/config.lua",
     "filename": "config.lua"
   }
 }
