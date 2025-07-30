@@ -30,11 +30,7 @@
   },
   "examples": [
     {
-      "configs/esx_ambulancejob/config.lua": {
-        "path": "resources/%5Besx%5D/esx_ambulancejob/config.lua",
-        "filename": "config.lua"
-      },
-      "configs/dw_crafting/dw_crafting_config.lua": {
+      "configs/dw_crafting_config.lua": {
         "path": "server/txData/VORPCore_758630.base/resources/%5BDW_CUSTOM%5D/dw_crafting/config.lua",
         "filename": "config.lua"
       }

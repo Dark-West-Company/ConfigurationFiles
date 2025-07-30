@@ -11,15 +11,16 @@ A centralized configuration management system for RedM servers that allows game 
 
 ## Directory Structure
 
+The config file is stored directly in the `configs/` directory:
+
 ```
 configs/
-├── esx_ambulancejob/
-│   └── config.lua
-├── esx_policejob/
-│   └── config.lua
-└── qb-banking/
-    └── config.json
+└── dw_crafting_config.lua
 ```
+
+### Naming Convention
+- **Format**: lowercase with underscores between words
+- **Example**: `dw_crafting_config.lua`
 
 ## Configuration Mapping
 
@@ -54,19 +55,20 @@ The `config-mapping.json` file supports two formats for maximum flexibility:
 - `&` → `%26`
 - `+` → `%2B`
 
-### Examples:
+### Example:
 ```json
 {
-  "configs/esx_ambulancejob/config.lua": {
-    "path": "resources/%5Besx%5D/esx_ambulancejob/config.lua",
-    "filename": "config.lua"
-  },
-  "configs/dw_crafting/dw_crafting_config.lua": {
+  "configs/dw_crafting_config.lua": {
     "path": "server/txData/VORPCore_758630.base/resources/%5BDW_CUSTOM%5D/dw_crafting/config.lua", 
     "filename": "config.lua"
   }
 }
 ```
+
+This configuration will:
+- Take the local file `configs/dw_crafting_config.lua`
+- Deploy it to `/server/txData/VORPCore_758630.base/resources/[DW_CUSTOM]/dw_crafting/`
+- Rename it to `config.lua` on the server
 
 ## Setup
 

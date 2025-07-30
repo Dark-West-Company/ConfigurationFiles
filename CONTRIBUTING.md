@@ -17,9 +17,10 @@ Thank you for contributing to the RedM Config Manager! Please follow these guide
 ## Config File Guidelines
 
 ### File Organization
-- Place config files in appropriate subdirectories under `configs/`
-- Use the resource name as the directory name (e.g., `configs/esx_ambulancejob/`)
-- Keep original filenames when possible
+- Place config files directly in the `configs/` directory
+- Use lowercase naming with underscores: `mod_name_config.lua`
+- Example: `dw_crafting_config.lua`
+- Keep original config content but rename files for clarity
 
 ### JSON Files
 - Ensure all JSON files are properly formatted
@@ -53,7 +54,10 @@ When adding new config files, update `config-mapping.json`:
 
 ```json
 {
-  "configs/new_resource/config.lua": "resources/[category]/new_resource/config.lua"
+  "configs/new_mod_config.lua": {
+    "path": "path/to/server/location/config.lua",
+    "filename": "config.lua"
+  }
 }
 ```
 

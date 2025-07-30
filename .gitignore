@@ -27,7 +27,7 @@ Thumbs.db
 
 # Don't ignore the configs directory or any config files
 !configs/
-!configs/**/*
+!configs/*
 !*.lua
 !*.json
 !*.cfg
