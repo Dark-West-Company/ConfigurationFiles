@@ -1,10 +1,10 @@
 Config = {}
-
+-- boop
 Config.defaultlang = 'en_lang' -- Set your language here current supported languages: "en_lang" = english
 
-Config.DevMode = false -- false on live server
+Config.DevMode = false         -- false on live server
 
-Config.CloseOnRestart = true -- Close all doors on server restart
+Config.CloseOnRestart = true   -- Close all doors on server restart
 
 Config.ManageDoorLocks = 'ManageDoorLocks'
 
@@ -24,7 +24,7 @@ Config.AllowedJobs = {
 
 Config.LockPicking = {
     minigameScript = 'bcc_minigames', -- bcc_minigames or rsd_lockpick
-    allowlockpicking = true, -- If true players will be able to lockpick doors
+    allowlockpicking = true,          -- If true players will be able to lockpick doors
     minigameSettings = {
         MaxAttemptsPerLock = 3,
         lockpickitem = 'lockpick',
@@ -34,6 +34,6 @@ Config.LockPicking = {
 }
 
 -- Resolve custom maping doors conflicts
-Config.SpooniEmerald = true -- If you are using spooni's emerald map and have door conflicts set this to true
-Config.SpooniManzanitaPost = true -- If you are using spooni's manzanita post map and have door conflicts set this to true
+Config.SpooniEmerald = true        -- If you are using spooni's emerald map and have door conflicts set this to true
+Config.SpooniManzanitaPost = true  -- If you are using spooni's manzanita post map and have door conflicts set this to true
 Config.SpooniPronghornRanch = true -- If you are using spooni's pronghorn ranch map and have door conflicts set this to true
