@@ -2,9 +2,9 @@ name: Deploy Config Files
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     types: [ closed ]
   workflow_dispatch:
 
@@ -63,6 +63,7 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         FTP_PORT: ${{ secrets.FTP_PORT }}
+        SERVER_BASE: ${{ secrets.SERVER_BASE }}
       run: |
         python3 << 'EOF'
         import json
@@ -80,14 +81,18 @@ jobs:
         ftp_username = os.environ['FTP_USERNAME']
         ftp_password = os.environ['FTP_PASSWORD']
         ftp_port = int(os.environ.get('FTP_PORT', '21'))
+        server_base = os.environ.get('SERVER_BASE', 'VORPCore_758630.base')  # Default fallback
         
         print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
+        print(f"🔧 Using server base: {server_base}")
         
         def get_mapping_info(mapping_value):
             """Extract path and filename from mapping value"""
             if isinstance(mapping_value, dict):
                 # Object format with path and optional filename
                 path = urllib.parse.unquote(mapping_value['path'])
+                # Replace {SERVER_BASE} placeholder with actual value
+                path = path.replace('{SERVER_BASE}', server_base)
                 filename = mapping_value.get('filename', Path(path).name)
                 return path, filename
             else:
@@ -171,6 +176,8 @@ jobs:
         
     - name: Create deployment summary
       if: always()
+      env:
+        SERVER_BASE: ${{ secrets.SERVER_BASE }}
       run: |
         echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
@@ -184,15 +191,20 @@ jobs:
         python3 << 'EOF' >> $GITHUB_STEP_SUMMARY
         import json
         import urllib.parse
+        import os
         from pathlib import Path
         
         with open('config-mapping.json', 'r') as f:
             mappings = json.load(f)
         
+        server_base = os.environ.get('SERVER_BASE', 'VORPCore_758630.base')  # Default fallback
+        
         for local_path, mapping_value in mappings.items():
             if isinstance(mapping_value, dict):
                 # Object format
                 remote_path = urllib.parse.unquote(mapping_value['path'])
+                # Replace {SERVER_BASE} placeholder with actual value
+                remote_path = remote_path.replace('{SERVER_BASE}', server_base)
                 target_filename = mapping_value.get('filename', Path(remote_path).name)
                 if target_filename != Path(local_path).name:
                     print(f"- `{local_path}` → `{remote_path}` (renamed to `{target_filename}`)")

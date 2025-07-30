@@ -5,6 +5,9 @@
 .DS_Store
 Thumbs.db
 
+# AI Assistant Instructions (keep private)
+AI_INSTRUCTIONS.md
+
 # IDE files
 .vscode/
 .idea/

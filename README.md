@@ -57,7 +57,7 @@ The `config-mapping.json` file maps local config files to their deployment paths
 ```json
 {
   "configs/dw_crafting_config.lua": {
-    "path": "server/txData/VORPCore_758630.base/resources/%5BDW_CUSTOM%5D/dw_crafting/config.lua", 
+    "path": "server/txData/{SERVER_BASE}/resources/%5BDW_CUSTOM%5D/dw_crafting/config.lua", 
     "filename": "config.lua"
   }
 }
@@ -65,8 +65,17 @@ The `config-mapping.json` file maps local config files to their deployment paths
 
 This configuration:
 - Takes the local file `configs/dw_crafting_config.lua`
-- Deploys it to `/server/txData/VORPCore_758630.base/resources/[DW_CUSTOM]/dw_crafting/`
+- Uses `{SERVER_BASE}` variable for server-specific base directory
+- Deploys it to `/server/txData/{SERVER_BASE}/resources/[DW_CUSTOM]/dw_crafting/`
 - Renames it to `config.lua` on the server
+
+### Server Base Variable
+The `{SERVER_BASE}` placeholder allows the same config mapping to work across different server installations:
+- **Development**: Could be `VORPCore_123456.base`
+- **Production**: Could be `VORPCore_758630.base`  
+- **Testing**: Could be `VORPCore_999999.base`
+
+The actual value is configured via the `SERVER_BASE` GitHub Secret.
 
 ## Usage
 
@@ -78,6 +87,14 @@ This configuration:
 ## Technical Notes
 
 - FTP credentials are stored as encrypted GitHub Secrets
+- `SERVER_BASE` secret must be configured to match your server's base directory
 - Only authorized team members can approve and merge PRs
 - All changes are tracked in Git history
 - The `config-mapping.schema.json` provides IDE autocomplete and validation support
+
+### Required GitHub Secrets
+- `FTP_SERVER`: Your FTP server hostname
+- `FTP_USERNAME`: FTP username
+- `FTP_PASSWORD`: FTP password  
+- `FTP_PORT`: FTP port (usually 21)
+- `SERVER_BASE`: Server base directory (e.g., `VORPCore_758630.base`)
