@@ -1,7 +1,7 @@
 Config = {}
 Config.Crafting = {}
 Config.CraftPromptHandles = {}
-
+-- apples are nice
 -- Crafting Key
 Config.Keys = {
     G = 0x760A9C6F
