@@ -81,7 +81,14 @@ jobs:
         ftp_username = os.environ['FTP_USERNAME']
         ftp_password = os.environ['FTP_PASSWORD']
         ftp_port = int(os.environ.get('FTP_PORT', '21'))
-        server_base = os.environ.get('SERVER_BASE', 'VORPCore_758630.base')  # Default fallback
+        
+        # SERVER_BASE is required - abort if not set
+        server_base = os.environ.get('SERVER_BASE')
+        if not server_base:
+            print("❌ ERROR: SERVER_BASE environment variable is not set!")
+            print("   Please configure the SERVER_BASE secret in GitHub repository settings.")
+            print("   Example value: VORPCore_758630.base")
+            exit(1)
         
         print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
         print(f"🔧 Using server base: {server_base}")
@@ -197,7 +204,12 @@ jobs:
         with open('config-mapping.json', 'r') as f:
             mappings = json.load(f)
         
-        server_base = os.environ.get('SERVER_BASE', 'VORPCore_758630.base')  # Default fallback
+        # SERVER_BASE is required - show error if not set
+        server_base = os.environ.get('SERVER_BASE')
+        if not server_base:
+            print("- ❌ **ERROR**: SERVER_BASE environment variable is not set!")
+            print("- Please configure the SERVER_BASE secret in GitHub repository settings.")
+            exit(0)  # Don't fail the summary step, just show the error
         
         for local_path, mapping_value in mappings.items():
             if isinstance(mapping_value, dict):

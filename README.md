@@ -97,4 +97,6 @@ The actual value is configured via the `SERVER_BASE` GitHub Secret.
 - `FTP_USERNAME`: FTP username
 - `FTP_PASSWORD`: FTP password  
 - `FTP_PORT`: FTP port (usually 21)
-- `SERVER_BASE`: Server base directory (e.g., `VORPCore_758630.base`)
+- `SERVER_BASE`: **[REQUIRED]** Server base directory (e.g., `VORPCore_758630.base`)
+
+**⚠️ Important**: The `SERVER_BASE` secret must be configured or deployments will fail. There is no default fallback.
