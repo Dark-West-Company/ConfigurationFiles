@@ -57,10 +57,6 @@ jobs:
       with:
         python-version: '3.x'
         
-    - name: Install dependencies
-      run: |
-        pip install ftplib
-        
     - name: Deploy config files via FTP
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
