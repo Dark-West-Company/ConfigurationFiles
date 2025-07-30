@@ -50,5 +50,57 @@
   "configs/bcc_society_config.lua": {
     "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-society/config.lua",
     "filename": "config.lua"
+  },
+  "configs/bcc_water_main.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-water/configs/main.lua",
+    "filename": "main.lua"
+  },
+  "configs/bcc_water_locations.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/bcc-water/configs/locations.lua",
+    "filename": "locations.lua"
+  },
+  "configs/weathersync_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5Bstandalone%5D/weathersync/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/vorp_character_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_character/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/vorp_core_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_core/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/vorp_core_commands.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_core/config/commands.lua",
+    "filename": "commands.lua"
+  },
+  "configs/vorp_core_logs.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_core/config/logs.lua",
+    "filename": "logs.lua"
+  },
+  "configs/vorp_core_skills.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_core/config/skills.lua",
+    "filename": "skills.lua"
+  },
+  "configs/vorp_inventory_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/vorp_inventory_ammo.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/ammo.lua",
+    "filename": "ammo.lua"
+  },
+  "configs/vorp_inventory_groups.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/groups.lua",
+    "filename": "groups.lua"
+  },
+  "configs/vorp_inventory_logs.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/logs.lua",
+    "filename": "logs.lua"
+  },
+  "configs/vorp_inventory_weapons.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/weapons.lua",
+    "filename": "weapons.lua"
   }
 }
