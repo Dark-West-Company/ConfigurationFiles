@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RedM Config File Mapping",
+  "description": "Maps local config files to their deployment paths on the RedM server",
+  "type": "object",
+  "patternProperties": {
+    "^configs/": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Simple string path for backward compatibility"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The destination path on the server (can include URL-encoded characters like %5B for [)"
+            },
+            "filename": {
+              "type": "string", 
+              "description": "The target filename on the server (if different from local filename)"
+            }
+          },
+          "required": ["path"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "configs/esx_ambulancejob/config.lua": {
+        "path": "resources/%5Besx%5D/esx_ambulancejob/config.lua",
+        "filename": "config.lua"
+      },
+      "configs/dw_crafting/dw_crafting_config.lua": {
+        "path": "server/txData/VORPCore_758630.base/resources/%5BDW_CUSTOM%5D/dw_crafting/config.lua",
+        "filename": "config.lua"
+      }
+    }
+  ]
+}

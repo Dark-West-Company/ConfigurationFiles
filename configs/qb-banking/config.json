@@ -1,0 +1,70 @@
+{
+  "bankingSettings": {
+    "enableAtmWithdrawals": true,
+    "maxWithdrawalAmount": 5000,
+    "dailyWithdrawalLimit": 20000,
+    "enableBankTransfers": true,
+    "transferFeePercentage": 0.02,
+    "minimumBalance": 100,
+    "enableSavingsAccounts": true,
+    "savingsInterestRate": 0.05
+  },
+  "atmLocations": [
+    {
+      "x": 147.4,
+      "y": -1035.8,
+      "z": 29.3,
+      "heading": 340.0
+    },
+    {
+      "x": 145.9,
+      "y": -1035.2,
+      "z": 29.3,
+      "heading": 340.0
+    },
+    {
+      "x": 112.5,
+      "y": -819.3,
+      "z": 31.3,
+      "heading": 160.0
+    },
+    {
+      "x": 114.4,
+      "y": -776.4,
+      "z": 31.4,
+      "heading": 270.0
+    }
+  ],
+  "bankLocations": [
+    {
+      "name": "Pacific Standard Bank",
+      "x": 150.266,
+      "y": -1040.203,
+      "z": 29.374,
+      "blip": {
+        "sprite": 108,
+        "color": 2,
+        "scale": 0.8
+      }
+    },
+    {
+      "name": "Fleeca Bank",
+      "x": 314.187,
+      "y": -278.621,
+      "z": 54.170,
+      "blip": {
+        "sprite": 108,
+        "color": 2,
+        "scale": 0.6
+      }
+    }
+  ],
+  "securitySettings": {
+    "requirePinForLargeTransactions": true,
+    "largeTransactionThreshold": 10000,
+    "enableTransactionHistory": true,
+    "maxTransactionHistoryDays": 30,
+    "enableFraudDetection": true,
+    "freezeAccountOnSuspiciousActivity": false
+  }
+}

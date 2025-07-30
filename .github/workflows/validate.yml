@@ -1,0 +1,101 @@
+name: Config Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'configs/**'
+      - 'config-mapping.json'
+
+jobs:
+  validate-configs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Validate JSON files
+      run: |
+        echo "🔍 Validating JSON files..."
+        
+        # Validate config-mapping.json
+        echo "Checking config-mapping.json..."
+        python -m json.tool config-mapping.json > /dev/null
+        echo "✅ config-mapping.json is valid"
+        
+        # Validate all JSON config files
+        echo "Checking JSON config files..."
+        find configs/ -name "*.json" | while read file; do
+          echo "Validating $file..."
+          python -m json.tool "$file" > /dev/null
+          echo "✅ $file is valid"
+        done
+        
+    - name: Check file mappings
+      run: |
+        echo "🔍 Checking file mappings..."
+        python3 << 'EOF'
+        import json
+        import os
+        
+        with open('config-mapping.json', 'r') as f:
+            mappings = json.load(f)
+        
+        missing_files = []
+        for local_path, mapping_value in mappings.items():
+            if not os.path.exists(local_path):
+                missing_files.append(local_path)
+        
+        if missing_files:
+            print("❌ Missing config files:")
+            for file in missing_files:
+                print(f"  - {file}")
+            exit(1)
+        else:
+            print("✅ All mapped config files exist")
+        EOF
+        
+    - name: Generate validation report
+      if: always()
+      run: |
+        echo "## 📋 Config Validation Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Files Checked" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # List all config files
+        find configs/ -type f | sort | while read file; do
+          echo "- \`$file\`" >> $GITHUB_STEP_SUMMARY
+        done
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Mapping Validation" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        python3 << 'EOF' >> $GITHUB_STEP_SUMMARY
+        import json
+        import urllib.parse
+        from pathlib import Path
+        
+        with open('config-mapping.json', 'r') as f:
+            mappings = json.load(f)
+        
+        print("| Local Path | Server Path | Target Filename |")
+        print("|------------|-------------|-----------------|")
+        for local_path, mapping_value in mappings.items():
+            if isinstance(mapping_value, str):
+                # Old format
+                remote_path = urllib.parse.unquote(mapping_value)
+                target_filename = Path(remote_path).name
+                print(f"| `{local_path}` | `{remote_path}` | `{target_filename}` |")
+            elif isinstance(mapping_value, dict):
+                # New format
+                remote_path = urllib.parse.unquote(mapping_value['path'])
+                target_filename = mapping_value.get('filename', Path(remote_path).name)
+                print(f"| `{local_path}` | `{remote_path}` | `{target_filename}` |")
+        EOF

@@ -1,0 +1,212 @@
+name: Deploy Config Files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Validate config mapping
+      run: |
+        # Check if config-mapping.json is valid JSON
+        python -m json.tool config-mapping.json > /dev/null
+        echo "✅ config-mapping.json is valid JSON"
+        
+        # Check that all mapped files exist
+        python3 << 'EOF'
+        import json
+        import os
+        
+        with open('config-mapping.json', 'r') as f:
+            mappings = json.load(f)
+        
+        missing_files = []
+        for local_path, mapping_value in mappings.items():
+            if not os.path.exists(local_path):
+                missing_files.append(local_path)
+        
+        if missing_files:
+            print("❌ Missing config files:")
+            for file in missing_files:
+                print(f"  - {file}")
+            exit(1)
+        else:
+            print("✅ All mapped config files exist")
+        EOF
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: |
+        pip install ftplib
+        
+    - name: Deploy config files via FTP
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_PORT: ${{ secrets.FTP_PORT }}
+      run: |
+        python3 << 'EOF'
+        import json
+        import os
+        import ftplib
+        import urllib.parse
+        from pathlib import Path
+        
+        # Load configuration mapping
+        with open('config-mapping.json', 'r') as f:
+            mappings = json.load(f)
+        
+        # FTP connection details
+        ftp_server = os.environ['FTP_SERVER']
+        ftp_username = os.environ['FTP_USERNAME']
+        ftp_password = os.environ['FTP_PASSWORD']
+        ftp_port = int(os.environ.get('FTP_PORT', '21'))
+        
+        print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
+        
+        def get_mapping_info(mapping_value):
+            """Extract path and filename from mapping value (supports both old and new format)"""
+            if isinstance(mapping_value, str):
+                # Old format: simple string path
+                decoded_path = urllib.parse.unquote(mapping_value)
+                return decoded_path, Path(decoded_path).name
+            elif isinstance(mapping_value, dict):
+                # New format: object with path and optional filename
+                path = urllib.parse.unquote(mapping_value['path'])
+                filename = mapping_value.get('filename', Path(path).name)
+                return path, filename
+            else:
+                raise ValueError(f"Invalid mapping format: {mapping_value}")
+        
+        def create_ftp_directory(ftp, path):
+            """Create FTP directory structure, handling URL-decoded paths"""
+            dirs = [d for d in path.split('/') if d]  # Split and remove empty strings
+            current_path = ""
+            
+            for dir_name in dirs:
+                current_path += f"/{dir_name}"
+                try:
+                    ftp.cwd(f"/{current_path}")
+                except ftplib.error_perm:
+                    # Directory doesn't exist, create it
+                    try:
+                        # Go to parent directory first
+                        parent_path = "/".join(current_path.split('/')[:-1])
+                        if parent_path:
+                            ftp.cwd(f"/{parent_path}")
+                        else:
+                            ftp.cwd('/')
+                        
+                        ftp.mkd(dir_name)
+                        print(f"📁 Created directory: {current_path}")
+                    except ftplib.error_perm as e:
+                        print(f"⚠️  Could not create directory {current_path}: {e}")
+        
+        try:
+            # Connect to FTP server
+            ftp = ftplib.FTP()
+            ftp.connect(ftp_server, ftp_port)
+            ftp.login(ftp_username, ftp_password)
+            
+            print("✅ Connected to FTP server")
+            
+            deployed_count = 0
+            
+            for local_path, mapping_value in mappings.items():
+                if os.path.exists(local_path):
+                    try:
+                        # Get the remote path and target filename
+                        remote_path, target_filename = get_mapping_info(mapping_value)
+                        remote_dir = str(Path(remote_path).parent)
+                        
+                        print(f"📦 Processing: {local_path}")
+                        print(f"   → Target: {remote_path}")
+                        if target_filename != Path(local_path).name:
+                            print(f"   → Renaming: {Path(local_path).name} → {target_filename}")
+                        
+                        # Create remote directory structure
+                        ftp.cwd('/')  # Start from root
+                        if remote_dir and remote_dir != '.' and remote_dir != '/':
+                            create_ftp_directory(ftp, remote_dir)
+                            ftp.cwd(f"/{remote_dir}")
+                        
+                        # Upload the file with the target filename
+                        with open(local_path, 'rb') as file:
+                            ftp.storbinary(f'STOR {target_filename}', file)
+                        
+                        print(f"✅ Deployed: {local_path} → {remote_path}")
+                        deployed_count += 1
+                        
+                    except Exception as e:
+                        print(f"❌ Failed to deploy {local_path}: {e}")
+                        import traceback
+                        traceback.print_exc()
+                else:
+                    print(f"⚠️  File not found: {local_path}")
+            
+            ftp.quit()
+            print(f"\n🎉 Deployment complete! {deployed_count} files deployed successfully.")
+            
+        except Exception as e:
+            print(f"❌ FTP connection failed: {e}")
+            import traceback
+            traceback.print_exc()
+            exit(1)
+        EOF
+        
+    - name: Create deployment summary
+      if: always()
+      run: |
+        echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- **Repository**: ${{ github.repository }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Triggered by**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Config Files Processed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        python3 << 'EOF' >> $GITHUB_STEP_SUMMARY
+        import json
+        import urllib.parse
+        from pathlib import Path
+        
+        with open('config-mapping.json', 'r') as f:
+            mappings = json.load(f)
+        
+        for local_path, mapping_value in mappings.items():
+            if isinstance(mapping_value, str):
+                # Old format
+                remote_path = urllib.parse.unquote(mapping_value)
+                print(f"- `{local_path}` → `{remote_path}`")
+            elif isinstance(mapping_value, dict):
+                # New format
+                remote_path = urllib.parse.unquote(mapping_value['path'])
+                target_filename = mapping_value.get('filename', Path(remote_path).name)
+                if target_filename != Path(local_path).name:
+                    print(f"- `{local_path}` → `{remote_path}` (renamed to `{target_filename}`)")
+                else:
+                    print(f"- `{local_path}` → `{remote_path}`")
+        EOF
