@@ -1,5 +1,5 @@
 Config = {}
--- boop
+
 Config.defaultlang = 'en_lang' -- Set your language here current supported languages: "en_lang" = english
 
 Config.DevMode = false         -- false on live server
