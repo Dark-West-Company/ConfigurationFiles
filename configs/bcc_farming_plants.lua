@@ -1,6 +1,6 @@
 Plants = {
     {
-        webhooked = false,                 -- If true, it will send a message to the webhook when the plant is planted, and when it's harvested
+        webhooked = true,                 -- If true, it will send a message to the webhook when the plant is planted, and when it's harvested
         plantingToolRequired = true,       -- If true, the player will need a tool to plant the seed
         plantingTool = 'hoe',              -- Item name for the planting tool (Durability starts at 100)
         plantingToolUsage = 2,             -- Durability value removed from the tool when planting a seed
