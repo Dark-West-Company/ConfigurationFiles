@@ -102,5 +102,21 @@
   "configs/vorp_inventory_weapons.lua": {
     "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/weapons.lua",
     "filename": "weapons.lua"
+  },
+  "configs/sirevlc_herbs_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_herbs/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_horses_interactions_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_horses_interactions/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_horses_V3_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_horses_V3/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_wagons_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_wagons/config.lua",
+    "filename": "config.lua"
   }
 }
