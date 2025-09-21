@@ -7,8 +7,8 @@ Config.ShinyOreItem                 =               "shinyore"
 Config.WhetstoneItem                =               "whetstone"
 Config.PickaxeModel                 =               "p_pickaxe01x"
 Config.WhetstoneModel               =               "p_sharpeningstone01x"
-Config.WorkTime                     =               9 -- mining work time in seconds
-Config.WorkTimeCutGem               =               15 -- cutting gem work time in seconds
+Config.WorkTime                     =               5 -- mining work time in seconds
+Config.WorkTimeCutGem               =               9 -- cutting gem work time in seconds
 Config.ShinyOreLuck                 =               2 -- percentage to get shiny ore from every mine
 Config.Minigame                     =               {false, 5000, 7} -- speed and scale of syn minigame
 Config.StaminaDepletion             =               {false, 15.0, 10} -- if enabled depletes 15 stamina every 10 seconds when working
@@ -107,8 +107,8 @@ Config.StoneShop = {
                 ["b"] = {           -- stuff the npc buys (name label cash)
                                                     { "rock", "Rock", 0.1 },
                                                     { "goldnugget", "Gold Nugget", 0.5 },
-                                                    { "copper", "Copper", 0.05 },
-                                                    { "silverore", "Silver Ore", 0.10 },
+                                                    { "copper_ore", "copper_ore", 0.05 },
+                                                    { "silver_ore", "Silver Ore", 0.10 },
                 },
                 ["f"] = {
                                                     { "frockcrystal", "Flawed Rock Crystal", 1 },
@@ -193,7 +193,7 @@ Config.MinePoints = {
                                                     {x = 2731.414, y = 1329.381, z = 69.667, h = 165.45, luck = 35, amount = {2, 4}, items = {"coal_ore"},},
                                                     {x = 2728.172, y = 1329.764, z = 69.665, h = 155.33, luck = 35, amount = {2, 4}, items = {"coal_ore"},},
                                                     {x = 2728.438, y = 1332.413, z = 69.690, h = 351.13, luck = 35, amount = {2, 4}, items = {"coal_ore"},},
-                                                    {x = 2731.772, y = 1332.246, z = 69.693, h = 350.34, luck = 35, amount = {2, 4}, items = {"iron", "copper"},}, --tp 2731.772 1332.246 69.693
+                                                    {x = 2731.772, y = 1332.246, z = 69.693, h = 350.34, luck = 35, amount = {2, 4}, items = {"iron_ore", "copper_ore"},}, --tp 2731.772 1332.246 69.693
     },   
 
 ["Gaptooth Ridge"] ={
@@ -220,14 +220,14 @@ Config.MinePoints = {
                                                     {x = -2713.20, y = 718.2130, z = 171.35, h = 299.9, luck = 80, amount = {2, 4}, items = {"sulfur"},},
 },  
 ["Beavers Mine"] ={
-                                                    {x = 2342.456, y = 1437.400, z = 96.294, h = 297.18, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2342.789, y = 1435.732, z = 96.755, h = 282.07, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2343.279, y = 1431.479, z = 96.577, h = 96.577, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2335.417, y = 1429.727, z = 92.134, h = 258.52, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2336.473, y = 1432.507, z = 91.796, h = 241.27, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2276.190, y = 1490.053, z = 83.072, h = 16.88, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2273.913, y = 1489.216, z = 83.043, h = 21.69, luck = 90, amount = {2, 4}, items = {"iron"},},
-                                                    {x = 2272.051, y = 1487.929, z = 83.059, h = 32.63, luck = 90, amount = {2, 4}, items = {"iron"},},
+                                                    {x = 2342.456, y = 1437.400, z = 96.294, h = 297.18, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2342.789, y = 1435.732, z = 96.755, h = 282.07, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2343.279, y = 1431.479, z = 96.577, h = 96.577, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2335.417, y = 1429.727, z = 92.134, h = 258.52, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2336.473, y = 1432.507, z = 91.796, h = 241.27, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2276.190, y = 1490.053, z = 83.072, h = 16.88, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2273.913, y = 1489.216, z = 83.043, h = 21.69, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
+                                                    {x = 2272.051, y = 1487.929, z = 83.059, h = 32.63, luck = 90, amount = {2, 4}, items = {"iron_ore"},},
 },
 ["Elysian Cave"] ={
                                                     {x = 2305.582, y = 1131.099, z = 96.460, h = 267.3, luck = 10, amount = {2, 4}, items = {"goldnugget"},},
@@ -240,22 +240,22 @@ Config.MinePoints = {
                                                     {x = 2290.033, y = 1121.079, z = 96.516, h = 186.63, luck = 10, amount = {2, 4}, items = {"goldnugget"},},
 },
 ["Big Valley Cave"] ={
-                                                    {x = -2118.72, y = 126.3737, z = 236.05, h = 335.64, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2115.32, y = 124.6814, z = 236.63, h = 325.52, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2110.73, y = 122.9926, z = 237.34, h = 336.54, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2107.60, y = 121.4312, z = 237.77, h = 327.62, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2127.42, y = 127.5288, z = 237.04, h = 34.68, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2130.49, y = 126.5972, z = 237.00, h = 36.25, luck = 90, amount = {2, 4}, items = {"silverore"},},
-                                                    {x = -2133.25, y = 125.2374, z = 237.20, h = 32.82, luck = 90, amount = {2, 4}, items = {"silverore"},},
+                                                    {x = -2118.72, y = 126.3737, z = 236.05, h = 335.64, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2115.32, y = 124.6814, z = 236.63, h = 325.52, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2110.73, y = 122.9926, z = 237.34, h = 336.54, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2107.60, y = 121.4312, z = 237.77, h = 327.62, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2127.42, y = 127.5288, z = 237.04, h = 34.68, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2130.49, y = 126.5972, z = 237.00, h = 36.25, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
+                                                    {x = -2133.25, y = 125.2374, z = 237.20, h = 32.82, luck = 90, amount = {2, 4}, items = {"silver_ore"},},
 
-                                                    {x = -2368.19, y = 123.6851, z = 216.89, h = 62.12, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2366.86, y = 124.8132, z = 216.94, h = 333.39, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2366.67, y = 122.2273, z = 216.84, h = 136.95, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2364.98, y = 123.1393, z = 216.85, h = 313.02, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2363.10, y = 120.8217, z = 216.83, h = 256.94, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2363.61, y = 118.4302, z = 216.83, h = 202.2, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2369.08, y = 116.8300, z = 216.83, h = 348.92, luck = 90, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -2371.14, y = 116.7033, z = 216.81, h = 53.69, luck = 90, amount = {2, 4}, items = {"copper"},},
+                                                    {x = -2368.19, y = 123.6851, z = 216.89, h = 62.12, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2366.86, y = 124.8132, z = 216.94, h = 333.39, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2366.67, y = 122.2273, z = 216.84, h = 136.95, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2364.98, y = 123.1393, z = 216.85, h = 313.02, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2363.10, y = 120.8217, z = 216.83, h = 256.94, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2363.61, y = 118.4302, z = 216.83, h = 202.2, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2369.08, y = 116.8300, z = 216.83, h = 348.92, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -2371.14, y = 116.7033, z = 216.81, h = 53.69, luck = 90, amount = {2, 4}, items = {"copper_ore"},},
 },
 ["Mount Hagen Cave"] ={
                                                     {x = -1391.43, y = 1172.488, z = 222.18, h = 263.71, luck = 25, amount = {2, 4}, items = {"shinyore"},},
@@ -268,11 +268,11 @@ Config.MinePoints = {
                                                     {x = -1424.68, y = 1217.388, z = 222.99, h = 36.99, luck = 25, amount = {2, 4}, items = {"shinyore"},},
                                                     {x = -1421.86, y = 1218.806, z = 222.59, h = 322.46, luck = 25, amount = {2, 4}, items = {"shinyore"},},
 
-                                                    {x = -1446.26, y = 1195.385, z = 226.40, h = 130.18, luck = 50, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -1447.56, y = 1196.547, z = 226.42, h = 93.78, luck = 50, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -1441.73, y = 1194.018, z = 226.43, h = 323.65, luck = 50, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -1443.02, y = 1195.678, z = 226.48, h = 323.16, luck = 50, amount = {2, 4}, items = {"copper"},},
-                                                    {x = -1444.43, y = 1198.012, z = 226.47, h = 226.47, luck = 50, amount = {2, 4}, items = {"copper"},},
+                                                    {x = -1446.26, y = 1195.385, z = 226.40, h = 130.18, luck = 50, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -1447.56, y = 1196.547, z = 226.42, h = 93.78, luck = 50, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -1441.73, y = 1194.018, z = 226.43, h = 323.65, luck = 50, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -1443.02, y = 1195.678, z = 226.48, h = 323.16, luck = 50, amount = {2, 4}, items = {"copper_ore"},},
+                                                    {x = -1444.43, y = 1198.012, z = 226.47, h = 226.47, luck = 50, amount = {2, 4}, items = {"copper_ore"},},
 },
 ["Guarma"] ={
                                                     {x = 1501.715, y = -7164.81, z = 67.075, h = 354.78, luck = 90, amount = {2, 4}, items = {"salt"},},
