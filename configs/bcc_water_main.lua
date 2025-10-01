@@ -68,7 +68,7 @@ Config = {
 
     -- Sickness from Drinking Wild Water (Player Dies if Duration or Health Reaches 0)
     sickness = {
-        chance   = 25,  -- Range 1 - 100 (lower Number = lower Chance) / Set to 0 to Disable
+        chance   = 15,  -- Range 1 - 100 (lower Number = lower Chance) / Set to 0 to Disable
         duration = 600, -- Default: 600 / Death Timer in Seconds 
         interval = 15,  -- Default: 15 / Time in Seconds Between each Health Loss
         health   = 50,  -- Default: 50 / Health lost per Interval
