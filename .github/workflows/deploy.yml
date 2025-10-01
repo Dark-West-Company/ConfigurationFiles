@@ -71,17 +71,18 @@ jobs:
         import ftplib
         import urllib.parse
         from pathlib import Path
-        
+        import glob
+
         # Load configuration mapping
         with open('config-mapping.json', 'r') as f:
             mappings = json.load(f)
-        
+
         # FTP connection details
         ftp_server = os.environ['FTP_SERVER']
         ftp_username = os.environ['FTP_USERNAME']
         ftp_password = os.environ['FTP_PASSWORD']
         ftp_port = int(os.environ.get('FTP_PORT', '21'))
-        
+
         # SERVER_BASE is required - abort if not set
         server_base = os.environ.get('SERVER_BASE')
         if not server_base:
@@ -89,91 +90,99 @@ jobs:
             print("   Please configure the SERVER_BASE secret in GitHub repository settings.")
             print("   Example value: VORPCore_123456.base")
             exit(1)
-        
+
         print(f"🔗 Connecting to FTP server: {ftp_server}:{ftp_port}")
         print(f"🔧 Using server base: {server_base}")
-        
+
         def get_mapping_info(mapping_value):
             """Extract path and filename from mapping value"""
             if isinstance(mapping_value, dict):
-                # Object format with path and optional filename
                 path = urllib.parse.unquote(mapping_value['path'])
-                # Replace {SERVER_BASE} placeholder with actual value
                 path = path.replace('{SERVER_BASE}', server_base)
                 filename = mapping_value.get('filename', Path(path).name)
                 return path, filename
             else:
                 raise ValueError(f"Invalid mapping format: {mapping_value}. Expected object with 'path' and optional 'filename' keys.")
-        
+
         def create_ftp_directory(ftp, path):
-            """Create FTP directory structure, handling URL-decoded paths"""
-            dirs = [d for d in path.split('/') if d]  # Split and remove empty strings
+            dirs = [d for d in path.split('/') if d]
             current_path = ""
-            
             for dir_name in dirs:
                 current_path += f"/{dir_name}"
                 try:
                     ftp.cwd(f"/{current_path}")
                 except ftplib.error_perm:
-                    # Directory doesn't exist, create it
                     try:
-                        # Go to parent directory first
                         parent_path = "/".join(current_path.split('/')[:-1])
                         if parent_path:
                             ftp.cwd(f"/{parent_path}")
                         else:
                             ftp.cwd('/')
-                        
                         ftp.mkd(dir_name)
                         print(f"📁 Created directory: {current_path}")
                     except ftplib.error_perm as e:
                         print(f"⚠️  Could not create directory {current_path}: {e}")
-        
+
         try:
             # Connect to FTP server
             ftp = ftplib.FTP()
             ftp.connect(ftp_server, ftp_port)
             ftp.login(ftp_username, ftp_password)
-            
+
             print("✅ Connected to FTP server")
-            
+
             deployed_count = 0
-            
+
+            # Deploy config-mapped files
             for local_path, mapping_value in mappings.items():
                 if os.path.exists(local_path):
                     try:
-                        # Get the remote path and target filename
                         remote_path, target_filename = get_mapping_info(mapping_value)
                         remote_dir = str(Path(remote_path).parent)
-                        
                         print(f"📦 Processing: {local_path}")
                         print(f"   → Target: {remote_path}")
                         if target_filename != Path(local_path).name:
                             print(f"   → Renaming: {Path(local_path).name} → {target_filename}")
-                        
-                        # Create remote directory structure
-                        ftp.cwd('/')  # Start from root
+                        ftp.cwd('/')
                         if remote_dir and remote_dir != '.' and remote_dir != '/':
                             create_ftp_directory(ftp, remote_dir)
                             ftp.cwd(f"/{remote_dir}")
-                        
-                        # Upload the file with the target filename
                         with open(local_path, 'rb') as file:
                             ftp.storbinary(f'STOR {target_filename}', file)
-                        
                         print(f"✅ Deployed: {local_path} → {remote_path}")
                         deployed_count += 1
-                        
                     except Exception as e:
                         print(f"❌ Failed to deploy {local_path}: {e}")
                         import traceback
                         traceback.print_exc()
                 else:
                     print(f"⚠️  File not found: {local_path}")
-            
+
+            # Deploy all PNG images in images/ to vorp_inventory html img/items
+            images_dir = "images"
+            remote_img_dir = f"server/txData/{server_base}/resources/[VORP]/vorp_inventory/html/img/items"
+            png_files = glob.glob(f"{images_dir}/*.png")
+            if png_files:
+                print(f"🖼️ Found {len(png_files)} PNG images to deploy.")
+                create_ftp_directory(ftp, remote_img_dir)
+                ftp.cwd(f"/{remote_img_dir}")
+                for img_path in png_files:
+                    img_filename = Path(img_path).name
+                    try:
+                        with open(img_path, "rb") as img_file:
+                            ftp.storbinary(f"STOR {img_filename}", img_file)
+                        print(f"✅ Deployed image: {img_path} → {remote_img_dir}/{img_filename}")
+                        deployed_count += 1
+                    except Exception as e:
+                        print(f"❌ Failed to deploy image {img_path}: {e}")
+                        import traceback
+                        traceback.print_exc()
+            else:
+                print("ℹ️ No PNG images found in images/.")
+
             ftp.quit()
             print(f"\n🎉 Deployment complete! {deployed_count} files deployed successfully.")
-            
+
         except Exception as e:
             print(f"❌ FTP connection failed: {e}")
             import traceback
