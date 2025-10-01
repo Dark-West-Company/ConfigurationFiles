@@ -102,5 +102,105 @@
   "configs/vorp_inventory_weapons.lua": {
     "path": "server/txData/{SERVER_BASE}/resources/%5BVORP%5D/vorp_inventory/config/weapons.lua",
     "filename": "weapons.lua"
+  },
+  "configs/sirevlc_herbs_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_herbs/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_horses_interactions_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_horses_interactions/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_horses_V3_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_horses_V3/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_wagons_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_wagons/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_butcher_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_butcher/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_hunting_script_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_hunting_script/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_hunting_wagon_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_hunting_wagon/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/sirevlc_legendaries_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/sirevlc_legendaries/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/556_mining_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/556_mining/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/gum_farming_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_farming/cfg/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/gum_farming_configHerbs.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_farming/cfg/configHerbs.lua",
+    "filename": "configHerbs.lua"
+  },
+  "configs/gum_ranch_configAnimals.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_ranch/cfg/configAnimals.lua",
+    "filename": "configAnimals.lua"
+  },
+  "configs/gum_ranch_configBase.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_ranch/cfg/configBase.lua",
+    "filename": "configBase.lua"
+  },
+  "configs/gum_ranch_configLang.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_ranch/cfg/configLang.lua",
+    "filename": "configLang.lua"
+  },
+  "configs/gum_ranch_configRanchs.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/gum_ranch/cfg/configRanchs.lua",
+    "filename": "configRanchs.lua"
+  },
+  "configs/murphy_banking_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/murphy_banking/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/open_brew_telegram_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/open_brew_telegram/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/syn_stores_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_stores/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/syn_stores_language.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_stores/config/language.lua",
+    "filename": "language.lua"
+  },
+  "configs/syn_stores_normalstores.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_stores/config/normalstores.lua",
+    "filename": "normalstores.lua"
+  },
+  "configs/syn_stores_npc_creator.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_stores/config/npc_creator.lua",
+    "filename": "npc_creator.lua"
+  },
+  "configs/xakra_weapons_ammo.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/xakra_weapons/config/ammo.lua",
+    "filename": "ammo.lua"
+  },
+  "configs/xakra_weapons_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/xakra_weapons/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/xakra_weapons_craft.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/xakra_weapons/config/craft.lua",
+    "filename": "craft.lua"
+  },
+  "configs/xakra_weapons_stores.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/xakra_weapons/config/stores.lua",
+    "filename": "stores.lua"
   }
 }
