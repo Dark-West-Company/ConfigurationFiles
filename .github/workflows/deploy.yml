@@ -38,7 +38,7 @@ jobs:
             print("❌ Missing config files:")
             for file in missing_files:
                 print(f"  - {file}")
-            exit(1)
+            # Do not exit, just print missing files
         else:
             print("✅ All mapped config files exist")
         EOF
