@@ -112,7 +112,6 @@ Config.FarmHerbs = {
 			[0] = {"consumable_apple", 1},
 		},
 	},
-}
 
 	["seed_wheat"] = {
 		enableHerbToSeed = false,
