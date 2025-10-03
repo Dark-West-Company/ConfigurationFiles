@@ -45,7 +45,7 @@ Config.FarmHerbs = {
 
 	["seed_carrot"] = {
 		enableHerbToSeed = false,
-		multipleUse = true,
+		multipleUse = false,
 		multipleEvent = "gum_stables:eatFunctionForFarming",
 		herbToSeed = 3,
 		herbName = "Carrot",
@@ -80,7 +80,7 @@ Config.FarmHerbs = {
 
 	["seed_apple"] = {
 		enableHerbToSeed = false,
-		multipleUse = true,
+		multipleUse = false,
 		multipleEvent = "gum_stables:eatFunctionForFarming",
 		herbToSeed = 3,
 		herbName = "Apple",
@@ -110,6 +110,41 @@ Config.FarmHerbs = {
 			[50] = {"consumable_apple", 3},
 			[25] = {"consumable_apple", 2},
 			[0] = {"consumable_apple", 1},
+		},
+	},
+
+	["seed_wheat"] = {
+		enableHerbToSeed = false,
+		multipleUse = false,
+		multipleEvent = "gum_stables:eatFunctionForFarming",
+		herbToSeed = 5,
+		herbName = "Wheat",
+		herbItem = "crop_wheat",
+		itIsTree = false,
+		canPickAfterGrow = 0,
+		potStageProps = {
+			[1] = {"crp_wheat_sap_ac", 301, 3.0},
+			[2] = {"crp_wheat_sap_long_aa_sim", 250, 2.2},
+			[3] = {"crp_wheat_sap_long_ab_sim", 100, 1.4},
+			[4] = {"crp_wheat_dry_long_aa_sim", 1, 0.8},
+		},
+		weatherAffect = true,
+		growTime = 300,
+		temperatureSlow = -3,
+		temperatureGood = {-3, 30},
+		temperatureHot = 30,
+
+		fertilizer = 0,
+		quality = 100,
+		procure = 100,
+		jerks = 0,
+
+		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		rewardItem = {
+			[80] = {"crop_wheat", 10},
+			[50] = {"crop_wheat", 5},
+			[25] = {"crop_wheat", 3},
+			[0] = {"crop_wheat", 1},
 		},
 	},
 }
