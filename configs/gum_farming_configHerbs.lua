@@ -53,9 +53,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"s_inv_wildcarrot01x", 301, 0.8},
-			[2] = {"s_inv_wildcarrot01x", 250, 0.6},
-			[3] = {"s_inv_wildcarrot01x", 100, 0.3},
+			[1] = {"s_inv_wildcarrot01x", 5, 0.8},
+			[2] = {"s_inv_wildcarrot01x", 3, 0.6},
+			[3] = {"s_inv_wildcarrot01x", 2, 0.3},
 			[4] = {"s_inv_wildcarrot01x", 1, 0.0},
 		},
 		weatherAffect = true,
@@ -88,9 +88,9 @@ Config.FarmHerbs = {
 		itIsTree = true,
 		canPickAfterGrow = 10,
 		potStageProps = {
-			[1] = {"p_tree_apple_01", 301, 3.0},
-			[2] = {"p_tree_apple_01", 250, 2.2},
-			[3] = {"p_tree_apple_01", 100, 1.4},
+			[1] = {"p_tree_apple_01", 5, 3.0},
+			[2] = {"p_tree_apple_01", 3, 2.2},
+			[3] = {"p_tree_apple_01", 2, 1.4},
 			[4] = {"p_tree_apple_01", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -123,9 +123,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"crp_wheat_dry_long_aa_sim", 301, 3.0},
-			[2] = {"crp_wheat_dry_long_aa_sim", 250, 2.2},
-			[3] = {"crp_wheat_dry_long_aa_sim", 100, 1.4},
+			[1] = {"crp_wheat_dry_long_aa_sim", 5, 3.0},
+			[2] = {"crp_wheat_dry_long_aa_sim", 3, 2.2},
+			[3] = {"crp_wheat_dry_long_aa_sim", 2, 1.4},
 			[4] = {"crp_wheat_dry_long_aa_sim", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -139,7 +139,7 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
 			[80] = {"crop_wheat", 5},
 			[50] = {"crop_wheat", 3},
@@ -158,9 +158,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"crp_cornstalks_ab_sim", 301, 3.0},
-			[2] = {"crp_cornstalks_ab_sim", 250, 2.2},
-			[3] = {"crp_cornstalks_ab_sim", 100, 1.4},
+			[1] = {"crp_cornstalks_ab_sim", 5, 3.0},
+			[2] = {"crp_cornstalks_ab_sim", 3, 2.2},
+			[3] = {"crp_cornstalks_ab_sim", 2, 1.4},
 			[4] = {"crp_cornstalks_ab_sim", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -174,7 +174,7 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
 			[80] = {"crop_corn", 5},
 			[50] = {"crop_corn", 3},
@@ -209,7 +209,7 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
 			[80] = {"crop_potato", 5},
 			[50] = {"crop_potato", 3},
@@ -228,9 +228,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"p_pumpkingroup01x", 301, 3.0},
-			[2] = {"p_pumpkingroup01x", 250, 2.2},
-			[3] = {"p_pumpkingroup01x", 100, 1.4},
+			[1] = {"p_pumpkingroup01x", 5, 3.0},
+			[2] = {"p_pumpkingroup01x", 3, 2.2},
+			[3] = {"p_pumpkingroup01x", 2, 1.4},
 			[4] = {"p_pumpkingroup01x", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -244,7 +244,7 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
 			[80] = {"crop_pumpkin", 5},
 			[50] = {"crop_pumpkin", 3},
@@ -263,9 +263,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"crp_lettuce_aa_sim", 301, 3.0},
-			[2] = {"crp_lettuce_aa_sim", 250, 2.2},
-			[3] = {"crp_lettuce_aa_sim", 100, 1.4},
+			[1] = {"crp_lettuce_aa_sim", 5, 3.0},
+			[2] = {"crp_lettuce_aa_sim", 3, 2.2},
+			[3] = {"crp_lettuce_aa_sim", 2, 1.4},
 			[4] = {"crp_lettuce_aa_sim", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -279,7 +279,7 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
 			[80] = {"crop_lettuce", 5},
 			[50] = {"crop_lettuce", 3},
@@ -316,10 +316,10 @@ Config.FarmHerbs = {
 
 		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
 		rewardItem = {
-			[80] = {"seed_orange", 5},
-			[50] = {"seed_orange", 3},
-			[25] = {"seed_orange", 2},
-			[0] = {"seed_orange", 1},
+			[80] = {"crop_orange", 5},
+			[50] = {"crop_orange", 3},
+			[25] = {"crop_orange", 2},
+			[0] = {"crop_orange", 1},
 		},
 	},
 			
@@ -333,9 +333,9 @@ Config.FarmHerbs = {
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
-			[1] = {"orchid_v_p", 301, 3.0},
-			[2] = {"orchid_v_p", 250, 2.2},
-			[3] = {"orchid_v_p", 100, 1.4},
+			[1] = {"orchid_v_p", 5, 3.0},
+			[2] = {"orchid_v_p", 3, 2.2},
+			[3] = {"orchid_v_p", 2, 1.4},
 			[4] = {"orchid_v_p", 1, 0.8},
 		},
 		weatherAffect = true,
@@ -349,12 +349,12 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
-			[80] = {"seed_grape", 5},
-			[50] = {"seed_grape", 3},
-			[25] = {"seed_grape", 2},
-			[0] = {"seed_grape", 1},
+			[80] = {"crop_grape", 5},
+			[50] = {"crop_grape", 3},
+			[25] = {"crop_grape", 2},
+			[0] = {"crop_grape", 1},
 		},
 	},
 				
@@ -384,12 +384,12 @@ Config.FarmHerbs = {
 		procure = 100,
 		jerks = 0,
 
-		gatherAnimation = {"mech_pickup@plant@orchid_tree","base", 5},
+		gatherAnimation = {"mech_pickup@plant@orchid_plant","base", 5},
 		rewardItem = {
-			[80] = {"seed_onion", 5},
-			[50] = {"seed_onion", 3},
-			[25] = {"seed_onion", 2},
-			[0] = {"seed_onion", 1},
+			[80] = {"crop_onion", 5},
+			[50] = {"crop_onion", 3},
+			[25] = {"crop_onion", 2},
+			[0] = {"crop_onion", 1},
 		},
 	},
 }
