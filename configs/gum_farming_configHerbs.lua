@@ -498,13 +498,13 @@ Config.FarmHerbs = {
 		},
 	},
 		
-				["seed_tobacco"] = {
+				["seed_indian_tobacco"] = {
 		enableHerbToSeed = false,
 		multipleUse = false,
 		multipleEvent = "gum_stables:eatFunctionForFarming",
 		herbToSeed = 3,
-		herbName = "Tobacco",
-		herbItem = "seed_tobacco",
+		herbName = "Indian Tobacco",
+		herbItem = "seed_indian_tobacco",
 		itIsTree = false,
 		canPickAfterGrow = 0,
 		potStageProps = {
