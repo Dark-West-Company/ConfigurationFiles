@@ -162,49 +162,89 @@ Config.TelegramStations = {
 		label = "Annesburg Telegram Station",
 		cityLabel = "AN",
 		jobLock = false,
-		coords = { 2939.5635, 1288.5471, 44.6028, 156.2168 }
+		coords = { 2939.5635, 1288.5471, 44.6028, 156.2168 },
+		blipSettings = {
+			name = "Annesburg Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Valentine Telegram Station",
 		cityLabel = "VA",
 		jobLock = false,
-		coords = { -178.7319, 626.5564, 114.0396, 327.0764 }
+		coords = { -178.7319, 626.5564, 114.0396, 327.0764 },
+		blipSettings = {
+			name = "Valentine Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Rhodes Telegram Station",
 		cityLabel = "RH",
 		jobLock = false,
-		coords = { 1225.3855, -1294.0931, 76.8592, 229.7048 }
+		coords = { 1225.3855, -1294.0931, 76.8592, 229.7048 },
+		blipSettings = {
+			name = "Rhodes Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Armadillo Telegram Station",
 		cityLabel = "AR",
 		jobLock = false,
-		coords = { -3729.0464, -2602.9436, -12.9877, 2.4934 }
+		coords = { -3729.0464, -2602.9436, -12.9877, 2.4934 },
+		blipSettings = {
+			name = "Armadillo Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Tumbleweed Telegram Station",
 		cityLabel = "TW",
 		jobLock = false,
-		coords = { -5533.4243, -2951.3579, -0.7328, 0.3415 }
+		coords = { -5533.4243, -2951.3579, -0.7328, 0.3415 },
+		blipSettings = {
+			name = "Tumbleweed Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Blackwater Telegram Station",
 		cityLabel = "BW",
 		jobLock = false,
-		coords = { -875.0049, -1328.7344, 43.9080, 4.5289 }
+		coords = { -875.0049, -1328.7344, 43.9080, 4.5289 },
+		blipSettings = {
+			name = "Blackwater Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Strawberry Telegram Station",
 		cityLabel = "SB",
 		jobLock = false,
-		coords = { -1765.0322, -384.2863, 157.6920, 231.4073 }
+		coords = { -1765.0322, -384.2863, 157.6920, 231.4073 },
+		blipSettings = {
+			name = "Strawberry Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Van Horn Telegram Station",
 		cityLabel = "VH",
 		jobLock = false,
-		coords = { 2985.9883, 568.5570, 44.6279, 345.4350 }
+		coords = { 2985.9883, 568.5570, 44.6279, 345.4350 },
+		blipSettings = {
+			name = "Van Horn Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Government Telegram Station",
@@ -212,7 +252,12 @@ Config.TelegramStations = {
 		jobLock = {
 			{ job = "gov",    grade = 1 },
 		},
-		coords = { 2358.0686, -1164.2098, 47.1194, 184.2444 }
+		coords = { 2358.0686, -1164.2098, 47.1194, 184.2444 },
+		blipSettings = {
+			name = "Government Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 	{
 		label = "Marshal Telegram Station",
@@ -222,7 +267,12 @@ Config.TelegramStations = {
 			{ job = "marshal", grade = 1 },
 			{ job = "gov",     grade = 1 },
 		},
-		coords = { 2368.2827, -1161.4650, 52.6704, 194.2622 }
+		coords = { 2368.2827, -1161.4650, 52.6704, 194.2622 },
+		blipSettings = {
+			name = "Marshal Telegram Station",
+			sprite = "blip_ambient_tithing",
+			color = "PINKISH"
+		}
 	},
 }
 
