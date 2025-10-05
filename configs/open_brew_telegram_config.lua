@@ -21,8 +21,49 @@ Config.UseCitys = false               -- This sets if the telegrams stations are
 
 --Citylabel and and company number are not allowed to be the same
 Config.CompanyNumbers = {
-	["sdwoodworker"] = { number = "SDWOOD", grade = 2 }, -- This is an example of how to add a company number to a job
-	["gov"] = { number = "GOV", grade = 1 }, -- This is an example of how to add a company number to a job
+    ["gov"] = { number = "GOV", grade = 1 }, -- Example
+
+    ["marshal"] = { number = "FED", grade = 1 },
+    ["policeVal"] = { number = "POL", grade = 1 },
+    ["policeSD"] = { number = "POL", grade = 1 },
+    ["policeBW"] = { number = "POL", grade = 1 },
+    ["policeArm"] = { number = "POL", grade = 1 },
+    ["doj"] = { number = "DOJ", grade = 1 },
+    ["doctor"] = { number = "MED", grade = 1 },
+
+    ["gs_val"] = { number = "GSV", grade = 1 },
+    ["gs_straw"] = { number = "GSS", grade = 1 },
+    ["gs_rho"] = { number = "GSR", grade = 1 },
+    ["gs_annes"] = { number = "GSA", grade = 1 },
+    ["gs_vanhorn"] = { number = "GSH", grade = 1 },
+    ["gs_arm"] = { number = "GSARM", grade = 1 },
+    ["gs_bw"] = { number = "GSBW", grade = 1 },
+    ["gs_tumbl"] = { number = "GST", grade = 1 },
+    ["gs_sd"] = { number = "GSSD", grade = 1 },
+
+    ["sal_val1"] = { number = "SALVS", grade = 1 },
+    ["sal_val2"] = { number = "SALVK", grade = 1 },
+    ["sal_sd1"] = { number = "SALSDB", grade = 1 },
+    ["sal_sd2"] = { number = "SALSDD", grade = 1 },
+    ["sal_rho"] = { number = "SALR", grade = 1 },
+    ["sal_annes"] = { number = "SALA", grade = 1 },
+    ["sal_vanhorn"] = { number = "SALH", grade = 1 },
+    ["sal_straw"] = { number = "SALS", grade = 1 },
+    ["sal_bw"] = { number = "SALBW", grade = 1 },
+    ["sal_arm"] = { number = "SALARM", grade = 1 },
+    ["sal_tumbl"] = { number = "SALT", grade = 1 },
+
+    ["gun_val"] = { number = "GUNV", grade = 1 },
+    ["gun_straw"] = { number = "GUNS", grade = 1 },
+    ["gun_sd"] = { number = "GUNSD", grade = 1 },
+    ["gun_arm"] = { number = "GUNARM", grade = 1 },
+    ["gun_bw"] = { number = "GUNBW", grade = 1 },
+    ["gun_annes"] = { number = "GUNARM", grade = 1 },
+    ["gun_rho"] = { number = "GUNR", grade = 1 },
+
+    ["ran_prong"] = { number = "PRON", grade = 1 },
+    ["ran_emcross"] = { number = "EMCROSS", grade = 1 },
+    ["ran_mcfar"] = { number = "MCFAR", grade = 1 },
 }
 
 --Reserve Number spaces for players to set manual numbers
@@ -66,15 +107,12 @@ Config.TelegramStations = {
 		label = "Law Telegram",                          -- This is the label of the telegram station
 		cityLabel = "VA",                                -- This is the city label of the telegram station
 		jobLock = {
-			{ job = "Valentine", grade = 0 },                  -- This is an example of how to add a job to the job lock                 -- This is an example of how to add a job to the job lock
-			{ job = "Blackwater", grade = 0 },
-			{ job = "Rhodes", grade = 0 },
-			{ job = "SaintDenis", grade = 0 },
-			{ job = "Armadillo", grade = 0 },
-			{ job = "Tumbleweed", grade = 0 },
-			{ job = "Annesburg", grade = 0 },
-			{ job = "Sisika", grade = 0 },
-
+			{ job = "policeVal", grade = 0 },                  -- This is an example of how to add a job to the job lock                 -- This is an example of how to add a job to the job lock
+			{ job = "policeSD", grade = 0 },
+			{ job = "policeBW", grade = 0 },
+			{ job = "policeArm", grade = 0 },
+			{ job = "marshal", grade = 0 },
+			{ job = "doj", grade = 0 },
 		},
 		checkerStation = true,
 		coords = { 2602.69, -1307.13, 52.27, 195.8145 }, -- This is the coords of the telegram station
@@ -163,17 +201,16 @@ Config.TelegramStations = {
 		coords = { -1765.0322, -384.2863, 157.6920, 231.4073 }
 	},
 	{
-		label = "van Horn Telegram Station",
+		label = "Van Horn Telegram Station",
 		cityLabel = "VH",
 		jobLock = false,
 		coords = { 2985.9883, 568.5570, 44.6279, 345.4350 }
 	},
 	{
-		label = "Gouvernment Telegram Station",
+		label = "Government Telegram Station",
 		cityLabel = "SD",
 		jobLock = {
 			{ job = "gov",    grade = 1 },
-			{ job = "makler", grade = 1 },
 		},
 		coords = { 2358.0686, -1164.2098, 47.1194, 184.2444 }
 	},
