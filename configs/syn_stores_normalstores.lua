@@ -19,12 +19,13 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
             {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "ironhammer", label = "Iron hammer", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "pickaxe", label = "Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "lumberaxe", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "lumberaxe", label = "Wood Axe", price = "1",type = "item_standard"}, -- change label of items shown
              {name = "iron_ore", label = "Iron Ore", price = "1",type = "item_standard"}, -- change label of items shown
              {name = "wood", label = "Soft Wood", price = "1",type = "item_standard"}, -- change label of items shown
              {name = "hwood", label = "Hardwood", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "water", label = "water", price = "2",type = "item_standard"}, -- change label of items shown 
             {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "wateringcan_empty", label = "Empty Bucket", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "rake", label = "rake", price = "1",type = "item_standard"}, -- change label of items shown 
             {name = "hoe", label = "hoe", price = "1",type = "item_standard"}, -- change label of items shown 
             {name = "seed_hop", label = "Hop Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
