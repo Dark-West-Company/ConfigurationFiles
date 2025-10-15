@@ -23,6 +23,7 @@ Config.UseCitys = false               -- This sets if the telegrams stations are
 Config.CompanyNumbers = {
     ["gov"] = { number = "GOV", grade = 1 }, -- Example
 
+    -- Law & Government
     ["marshal"] = { number = "FED", grade = 1 },
     ["policeVal"] = { number = "POL", grade = 1 },
     ["policeSD"] = { number = "POL", grade = 1 },
@@ -31,6 +32,7 @@ Config.CompanyNumbers = {
     ["doj"] = { number = "DOJ", grade = 1 },
     ["doctor"] = { number = "MED", grade = 1 },
 
+    -- General Stores
     ["gs_val"] = { number = "GSV", grade = 1 },
     ["gs_straw"] = { number = "GSS", grade = 1 },
     ["gs_rho"] = { number = "GSR", grade = 1 },
@@ -41,6 +43,7 @@ Config.CompanyNumbers = {
     ["gs_tumbl"] = { number = "GST", grade = 1 },
     ["gs_sd"] = { number = "GSSD", grade = 1 },
 
+    -- Saloons
     ["sal_val1"] = { number = "SALVS", grade = 1 },
     ["sal_val2"] = { number = "SALVK", grade = 1 },
     ["sal_sd1"] = { number = "SALSDB", grade = 1 },
@@ -53,6 +56,7 @@ Config.CompanyNumbers = {
     ["sal_arm"] = { number = "SALARM", grade = 1 },
     ["sal_tumbl"] = { number = "SALT", grade = 1 },
 
+    -- Gun Stores
     ["gun_val"] = { number = "GUNV", grade = 1 },
     ["gun_straw"] = { number = "GUNS", grade = 1 },
     ["gun_sd"] = { number = "GUNSD", grade = 1 },
@@ -61,9 +65,18 @@ Config.CompanyNumbers = {
     ["gun_annes"] = { number = "GUNARM", grade = 1 },
     ["gun_rho"] = { number = "GUNR", grade = 1 },
 
+    -- Ranches
     ["ran_prong"] = { number = "PRON", grade = 1 },
     ["ran_emcross"] = { number = "EMCROSS", grade = 1 },
     ["ran_mcfar"] = { number = "MCFAR", grade = 1 },
+
+    -- Stables (New Additions)
+    ["sta_val"] = { number = "STVAL", grade = 1 },
+    ["sta_straw"] = { number = "STSTRA", grade = 1 },
+    ["sta_annes"] = { number = "STANNES", grade = 1 },
+    ["sta_sd"] = { number = "STSD", grade = 1 },
+    ["sta_bw"] = { number = "STBW", grade = 1 },
+    ["sta_rhodes"] = { number = "STR", grade = 1 },
 }
 
 --Reserve Number spaces for players to set manual numbers
