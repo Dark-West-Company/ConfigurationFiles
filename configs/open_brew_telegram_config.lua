@@ -118,7 +118,7 @@ Config.TelegramStations = {
 		label = "Law Telegram",                          -- This is the label of the telegram station
 		cityLabel = "VA",                                -- This is the city label of the telegram station
 		jobLock = {
-			{ job = "police", grade = 0 },                  -- This is an example of how to add a job to the job lock                 -- This is an example of how to add a job to the job lock
+			{ job = "policeVal", grade = 0 },                  -- This is an example of how to add a job to the job lock                 -- This is an example of how to add a job to the job lock
 			{ job = "marshal", grade = 0 },
 			{ job = "doj", grade = 0 },
 		},
