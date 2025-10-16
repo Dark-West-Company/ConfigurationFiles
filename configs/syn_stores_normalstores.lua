@@ -15,6 +15,7 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         sellitems = { -- items sold by shop
             {name = "craftbook", label = "Craftbook", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "consumable_handpie", label = "Meat Handpie", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "antibiotic", label = "Cold Medicine", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "meat", label = "Meat", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "ironhammer", label = "Iron hammer", price = "1",type = "item_standard"}, -- change label of items shown
