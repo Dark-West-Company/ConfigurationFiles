@@ -13,7 +13,7 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "craftbook", label = "Craftbook", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "craftbook", label = "Craftbook", price = "2",type = "item_standard"}, -- change label of items shown
             {name = "consumable_handpie", label = "Meat Handpie", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "antibiotic", label = "Cold Medicine", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
