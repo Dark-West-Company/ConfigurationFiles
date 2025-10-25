@@ -45,8 +45,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 14 },
-                    { label = 'Wood', item = 'wood', amount = 7 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Knife')] = { 
@@ -60,8 +60,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 2 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 10 },
-                    { label = 'Wood', item = 'wood', amount = 2 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('RusticKnife')] = { 
@@ -75,8 +75,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 2 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
-                    { label = 'Wood', item = 'wood', amount = 2 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('JawBoneKnife')] = { 
@@ -90,8 +90,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
-                    { label = 'Wood', item = 'wood', amount = 2 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Cleaver')] = { 
@@ -105,8 +105,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 22 },
-                    { label = 'Wood', item = 'wood', amount = 7 },
+                   { label = 'Axe Head', item = 'head_axe', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Hatchet')] = { 
@@ -120,8 +120,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
-                    { label = 'Wood', item = 'wood', amount = 4 },
+                    { label = 'Axe Head', item = 'head_axe', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('HunterHatchet')] = { 
@@ -135,8 +135,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 25 },
-                    { label = 'Wood', item = 'wood', amount = 5 },
+                    { label = 'Axe Head', item = 'head_axe', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Machete')] = { 
@@ -150,8 +150,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
-                    { label = 'Wood', item = 'wood', amount = 8 },
+                    { label = 'Long Blade', item = 'blade_long', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 10 },
                 },
             },
             [_U('CollectorMachete')] = { 
@@ -165,8 +165,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 40 },
-                    { label = 'Wood', item = 'wood', amount = 10 },
+                    { label = 'Long Blade', item = 'blade_long', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 10 },
                 },
             },
             [_U('KnifeHorror')] = { 
@@ -180,7 +180,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Hammer')] = { 
@@ -194,8 +195,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 10 },
-                    { label = 'Hard wood', item = 'hwood', amount = 5 },
+                    { label = 'Hammer Head', item = 'head_hammer', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 5 },
                 },
             },
             [_U('Torch')] = { 
@@ -240,8 +241,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Hard wood', item = 'hwood', amount = 10 },
-                    { label = 'Wood', item = 'wood', amount = 4 },
+                     { label = 'Hardwood', item = 'hwood', amount = 10 },
+                     { label = 'Softwood', item = 'wood', amount = 4 },
                 },
             },
             [_U('ImprovedBow')] = { 
@@ -255,8 +256,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Hard wood', item = 'hwood', amount = 40 },
-                    { label = 'Wood', item = 'wood', amount = 10 },
+                     { label = 'Hardwood', item = 'hwood', amount = 15 },
+                     { label = 'Softwood', item = 'wood', amount = 10 },
                 },
             },
         },
@@ -272,8 +273,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 100 },
-                    { label = 'Wood', item = 'wood', amount = 40 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 45 },
                 },
             },
             [_U('VarmintRifle')] = { 
@@ -287,8 +288,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 50 },
-                    { label = 'Wood', item = 'wood', amount = 30 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
             [_U('RollingblockRifle')] = { 
@@ -302,8 +303,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 150 },
-                    { label = 'Wood', item = 'wood', amount = 60 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 70 },
                 },
             },
             [_U('CarcanoRifle')] = { 
@@ -317,8 +318,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 250 },
-                    { label = 'Wood', item = 'wood', amount = 100 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 75 },
                 },
             },
             [_U('SpringfieldRifle')] = { 
@@ -332,8 +333,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 180 },
-                    { label = 'Wood', item = 'wood', amount = 70 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
             [_U('BoltactionRifle')] = { 
@@ -347,8 +348,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 65 },
-                    { label = 'Wood', item = 'wood', amount = 120 },
+                     { label = 'Rifle Gunkit', item = 'gunkit_rifle', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
         },
@@ -364,8 +365,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 150 },
-                    { label = 'Wood', item = 'wood', amount = 50 },
+                     { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
             [_U('HenryRepeater')] = { 
@@ -379,8 +380,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 110 },
-                    { label = 'Wood', item = 'wood', amount = 40 },
+                     { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
             [_U('EvansRepeater')] = { 
@@ -394,8 +395,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 105 },
-                    { label = 'Wood', item = 'wood', amount = 40 },
+                     { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
             [_U('CarbineRepeater')] = { 
@@ -409,8 +410,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 95 },
-                    { label = 'Wood', item = 'wood', amount = 35 },
+                     { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
         },
@@ -426,8 +427,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 50 },
-                    { label = 'Wood', item = 'wood', amount = 10 },
+                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('M1899')] = { 
@@ -441,8 +442,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 45 },
-                    { label = 'Wood', item = 'wood', amount = 9 },
+                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('SemiAuto')] = { 
@@ -456,8 +457,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 43 },
-                    { label = 'Wood', item = 'wood', amount = 8 },
+                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('Mauser')] = { 
@@ -471,8 +472,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 45 },
-                    { label = 'Wood', item = 'wood', amount = 11 },
+                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                     { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
         },
@@ -488,8 +489,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 38 },
-                    { label = 'Wood', item = 'wood', amount = 8 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('Lemat')] = { 
@@ -503,8 +504,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 42 },
-                    { label = 'Wood', item = 'wood', amount = 7 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('DoubleAction')] = { 
@@ -518,8 +519,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 37 },
-                    { label = 'Wood', item = 'wood', amount = 7 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('DoubleActionGambler')] = { 
@@ -533,8 +534,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 40 },
-                    { label = 'Wood', item = 'wood', amount = 10 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('Cattleman')] = { 
@@ -548,8 +549,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
-                    { label = 'Wood', item = 'wood', amount = 5 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('CattlemanMexican')] = { 
@@ -563,8 +564,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
-                    { label = 'Wood', item = 'wood', amount = 5 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('Navy')] = { 
@@ -578,8 +579,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 65 },
-                    { label = 'Wood', item = 'wood', amount = 15 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('NavyCrossover')] = { 
@@ -593,8 +594,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 75 },
-                    { label = 'Wood', item = 'wood', amount = 25 },
+                    { label = 'Revolver Gunkit', item = 'gunkit_revolver', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
         },
@@ -610,8 +611,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 45 },
-                    { label = 'Wood', item = 'wood', amount = 10 },
+                    { label = 'Axe Head', item = 'head_axe', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 10 },
                 },
             },
             [_U('Knives')] = { 
@@ -625,8 +626,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 55 },
-                    { label = 'Wood', item = 'wood', amount = 15 },
+                    { label = 'Short Blade', item = 'blade_short', amount = 5 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('PoisonBottle')] = { 
@@ -762,8 +763,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 150 },
-                    { label = 'Wood', item = 'wood', amount = 47 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
             [_U('Sawedoff')] = { 
@@ -777,8 +779,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 125 },
-                    { label = 'Wood', item = 'wood', amount = 44 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
             [_U('Repeating')] = { 
@@ -792,8 +795,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 175 },
-                    { label = 'Wood', item = 'wood', amount = 67 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
             [_U('Pump')] = { 
@@ -807,8 +811,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 80 },
-                    { label = 'Wood', item = 'wood', amount = 25 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
             [_U('Doublebarrel')] = { 
@@ -822,8 +827,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 55 },
-                    { label = 'Wood', item = 'wood', amount = 19 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
             [_U('DoublebarrelExotic')] = { 
@@ -837,8 +843,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 55 },
-                    { label = 'Wood', item = 'wood', amount = 19 },
+                    {{ label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
             },
         },
@@ -1002,7 +1009,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 23 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RepeaterAmmoExpress')] = { 
@@ -1016,7 +1025,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 29 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RepeaterAmmoExplosive')] = { 
@@ -1030,7 +1041,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 60 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RepeaterAmmoVelocity')] = { 
@@ -1044,7 +1057,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 29 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RepeaterAmmoSplitpoint')] = { 
@@ -1058,7 +1073,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 29 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
@@ -1075,7 +1092,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RevolverAmmoExpress')] = { 
@@ -1089,7 +1108,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 25 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RevolverAmmoExplosive')] = { 
@@ -1103,7 +1124,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 50 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RevolverAmmoVelocity')] = { 
@@ -1117,7 +1140,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 25 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RevolverAmmoSplitpoint')] = { 
@@ -1131,7 +1156,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 25 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
@@ -1147,7 +1174,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('ElephantRifleAmmo')] = { 
@@ -1161,7 +1190,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RifleAmmoExpress')] = { 
@@ -1175,7 +1206,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RifleAmmoExplosive')] = { 
@@ -1189,7 +1222,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 70 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RifleAmmoVelocity')] ={ 
@@ -1203,7 +1238,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('RifleAmmoSplitpoint')] = { 
@@ -1217,7 +1254,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 35 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
@@ -1233,7 +1272,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 30 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('ShotgunAmmoExplosive')] = { 
@@ -1247,7 +1288,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 60 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('ShotgunAmmoNormal')] = { 
@@ -1261,7 +1304,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 19 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             ['Shotgun Ammo Slug'] = { 
@@ -1275,7 +1320,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 23 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
@@ -1291,7 +1338,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 10 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('PistolAmmoExpress')] = { 
@@ -1305,7 +1354,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('PistolAmmoExplosive')] = { 
@@ -1319,7 +1370,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 50 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('PistolAmmoVelocity')] = { 
@@ -1333,7 +1386,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('PistolAmmoSplitpoint')] = { 
@@ -1347,14 +1402,16 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
         [_U('ArrowAmmo')] = {
             [_U('ArrowNormal')] = { 
                 item = 'ammoarrownormal',
-                amount = 1,
+                amount = 5,
                 locations = { 'all' },
                 -- costcraft = {   -- list or false
                 --     label = _U('Money'),
@@ -1363,8 +1420,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 10 },
-                    { label = 'Wood', item = 'wood', amount = 4 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 1 },
                 },
             },
             [_U('ArrowFire')] = { 
@@ -1442,7 +1499,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 5 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
             [_U('VarmintTranquilizerAmmo')] = { 
@@ -1456,7 +1515,9 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 10 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 5 },
+                    { label = 'Nitrate', item = 'nitrite', amount = 5 },
+                    { label = 'Box of Bullet Casings', item = 'casings_bullet', amount = 5 },
                 },
             },
         },
@@ -1472,7 +1533,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 15 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 10 },
                 },
             },
             [_U('TomahawkAmmo')] = { 
@@ -1486,7 +1547,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 10 },
                 },
             },
             [_U('HatchetAmmo')] = { 
@@ -1500,7 +1561,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 10 },
                 },
             },
             [_U('HatchetCleaverAmmo')] = { 
@@ -1514,7 +1575,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 10 },
                 },
             },
             [_U('HatchetHunterAmmo')] = { 
@@ -1528,7 +1589,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    { label = 'Iron', item = 'bar_iron', amount = 20 },
+                    { label = 'Iron Bar', item = 'bar_iron', amount = 10 },
                 },
             },
             [_U('PoisonBottleAmmo')] = { 
