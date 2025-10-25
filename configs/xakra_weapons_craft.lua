@@ -410,8 +410,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                     { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
-                     { label = 'Softwood', item = 'wood', amount = 30 },
+                    { label = 'Repeater Gunkit', item = 'gunkit_repeater', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 30 },
                 },
             },
         },
@@ -427,8 +427,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
-                     { label = 'Softwood', item = 'wood', amount = 15 },
+                    { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('M1899')] = { 
@@ -442,8 +442,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
-                     { label = 'Softwood', item = 'wood', amount = 15 },
+                    { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('SemiAuto')] = { 
@@ -457,8 +457,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
-                     { label = 'Softwood', item = 'wood', amount = 15 },
+                    { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
             [_U('Mauser')] = { 
@@ -472,8 +472,8 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                     { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
-                     { label = 'Softwood', item = 'wood', amount = 15 },
+                    { label = 'Pistol Gunkit', item = 'gunkit_pistol', amount = 1 },
+                    { label = 'Softwood', item = 'wood', amount = 15 },
                 },
             },
         },
@@ -843,7 +843,7 @@ ConfigCraft.Crafts = {
                 -- },
                 exp = { required = 0, reward = 5 },
                 craft = {
-                    {{ label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
+                    { label = 'Shotgun Gunkit', item = 'gunkit_shotgun', amount = 1 },
                     { label = 'Softwood', item = 'wood', amount = 30 },
                     { label = 'Iron Bar', item = 'bar_iron', amount = 5},
                 },
