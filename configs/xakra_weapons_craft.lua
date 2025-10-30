@@ -37,7 +37,7 @@ ConfigCraft.Crafts = {
             [_U('TraddersKnife')] = { 
                 hashname = 'WEAPON_MELEE_KNIFE_TRADER',
                 amount = 1,
-                locations = { 'Rhodes', 'Valentine', 'Annesburg' },
+                locations = { 'all' },
                 -- costcraft = {   -- list or false
                 --     label = _U('Money'),
                 --     type = 0,   -- 0 = money, 1 = gold, 2 = rol
