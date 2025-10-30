@@ -24,7 +24,7 @@ Config.weatherTypes = Config.isRDR and RDR2WeatherTypes or GTAVWeatherTypes
 Config.time = DHMSToTime(0, 6, 0, 0)
 
 -- Default ratio of in-game seconds to real seconds. Standard game time is 30:1, or 1 in-game minute = 2 real seconds. A value of 0 means time will be synced with the real server time.
-Config.timescale = 30
+Config.timescale = 6
 
 -- If Config.timescale is 0, offset the real server time by this many seconds.
 Config.realTimeOffset = 0
