@@ -200,7 +200,7 @@ Config.ondutyinstant = true -- instantly go on duty when command is used
 Config.ondutytime = 2.5 -- minutes 
 
 
-Config.dutystationsenabled = true -- 
+Config.dutystationsenabled = false -- 
 Config.menuoption = true -- if set to true players can still use the onduty command but will be prompted to select their region
 Config.dutystationjobs = {
     "policeVal",

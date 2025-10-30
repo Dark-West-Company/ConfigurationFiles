@@ -114,7 +114,7 @@ ConfigMain.RadialOnDutyJobs = {
     -- 'annsheriff',
     'marshal',
     -- 'pinkerton',
-    'police',
+    'policeVal',
 }
 
 
