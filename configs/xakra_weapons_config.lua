@@ -33,7 +33,13 @@ Config.WeaponsCondition = {
         Enable = false,  -- (THIS OPTION WILL REMOVE WEAPONS WITHOUT CONDITION) Enable or disable if weapons will break when the weapon has no condition
         Item = 'brokenweapon', -- item name (Item that the player will receive when the weapon is broken, saved in metadata) or false (the player will lose the weapon without receiving anything)
         jobs = {    -- List of jobs required to use the item and repair the weapon or false
-            { job = 'gunsmithR', grade = false },
+            { job = 'gun_val', grade = false },
+            { job = 'gun_straw', grade = false },
+            { job = 'gun_sd', grade = false },
+            { job = 'gun_arm', grade = false },
+            { job = 'gun_bw', grade = false },
+            { job = 'gun_annes', grade = false },
+            { job = 'gun_rho', grade = false },
         },
         ItemsRequired = {   -- Items required to use the item and repair the weapon or false
             { label = 'Iron', item = 'iron', amount = 14 },
@@ -62,11 +68,13 @@ Config.ItemsCleanGun = {    -- Items to clean the weapon with a rag, choose whet
         item = 'guncloth',  -- Item name
         uses = false,   -- -- number (Number of uses each item) or false (never consumed)
         jobs = {    -- List of jobs and degree to use the item or false
-            { job = 'gunsmithR', grade = false },
-            { job = 'gunsmithS', grade = false },
-            { job = 'gunsmithV', grade = false },
-            { job = 'gunsmithA', grade = false },
-            { job = 'gunsmithT', grade = false },
+            { job = 'gun_val', grade = false },
+            { job = 'gun_straw', grade = false },
+            { job = 'gun_sd', grade = false },
+            { job = 'gun_arm', grade = false },
+            { job = 'gun_bw', grade = false },
+            { job = 'gun_annes', grade = false },
+            { job = 'gun_rho', grade = false },
         },
     },
     { 
@@ -126,7 +134,7 @@ Config.Locations = {
         --     'vip',
         -- },
 		jobs = {    -- List of jobs and grade to access customization and crafting or false
-			{ job = 'gunsmithR', grade = false },
+			{ job = 'gun_rho', grade = false },
 		},
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
@@ -167,7 +175,7 @@ Config.Locations = {
         --     'vip',
         -- },
 		jobs = {    -- List of jobs and grade to access customization and crafting or false
-			{ job = 'gunsmithS', grade = 2 },
+			{ job = 'gun_sd', grade = 2 },
 		},
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
@@ -208,7 +216,7 @@ Config.Locations = {
         --     'vip',
         -- },
 		jobs = {    -- List of jobs and grade to access customization and crafting or false
-			{ job = 'gunsmithV', grade = 3 },
+			{ job = 'gun_val', grade = 3 },
 		},
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
@@ -249,7 +257,7 @@ Config.Locations = {
         --     'vip',
         -- },
 		jobs = {    -- List of jobs and grade to access customization and crafting or false
-			{ job = 'gunsmithA', grade = 1 },
+			{ job = 'gun_annes', grade = 1 },
 		},
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
@@ -269,20 +277,20 @@ Config.Locations = {
         Custom = {  -- Custom list or false
             SpawnWeapon = { coords = vector3(-1790.55, -383.51, 160.2), heading = 322.64 },    -- Location to open weapon customization and spawn menu, the weapon will point to the right of the header
             OpenCoords = vector3(-1790.67, -384.37, 160.33), -- vector3 (Coordinates to open the weapon customization menu)
-            CategoryBlacklist = { -- Blacklist of the personalization category List, indicates the categories of the Config.CustomPrices list that you do not want to appear in this location or false
-                'Name',
-                'Serial',
-                'Description',
-                'Scope',
-            },
-            CompsBlacklist = { -- List of components that will not be able to use [https://github.com/femga/rdr3_discoveries/blob/master/weapons/weapon_components.lua] or false
-                'COMPONENT_RIFLE_SCOPE03',
-                'COMPONENT_RIFLE_SCOPE04',
-            },
-            weaponWhitelist = { -- List of weapons allowed in the location or false
-                'WEAPON_BOW',
-                'WEAPON_BOW_IMPROVED',
-            },
+            -- CategoryBlacklist = { -- Blacklist of the personalization category List, indicates the categories of the Config.CustomPrices list that you do not want to appear in this location or false
+            --     'Name',
+            --     'Serial',
+            --     'Description',
+            --     'Scope',
+            -- },
+            -- CompsBlacklist = { -- List of components that will not be able to use [https://github.com/femga/rdr3_discoveries/blob/master/weapons/weapon_components.lua] or false
+            --     'COMPONENT_RIFLE_SCOPE03',
+            --     'COMPONENT_RIFLE_SCOPE04',
+            -- },
+            -- weaponWhitelist = { -- List of weapons allowed in the location or false
+            --     'WEAPON_BOW',
+            --     'WEAPON_BOW_IMPROVED',
+            -- },
         },
         -- Groups = {  -- List of groups to access customization and crafting or false
         --     'admin',
@@ -290,7 +298,7 @@ Config.Locations = {
         --     'vip',
         -- },
         jobs = {    -- List of jobs and grade to access customization and crafting or false
-            { job = 'gunsmithS', grade = false },
+            { job = 'gun_straw', grade = false },
         },
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
@@ -331,7 +339,7 @@ Config.Locations = {
         --     'vip',
         -- },
 		jobs = {    -- List of jobs and grade to access customization and crafting or false
-			{ job = 'gunsmithT', grade = false },
+			{ job = 'gun_tumbl', grade = false },
 		},
         Store = {   -- Store list or false
             blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip

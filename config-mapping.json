@@ -150,5 +150,65 @@
   "configs/xakra_weapons_stores.lua": {
     "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/xakra_weapons/config/stores.lua",
     "filename": "stores.lua"
+  },
+  "configs/fx-fishing_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/fx-fishing/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/556_robbery_cfg.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/556_robbery/cfg.lua",
+    "filename": "cfg.lua"
+  },
+  "configs/kd_clotheswheel_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/kd_clotheswheel/shared/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigCabinets.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigJail.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigMain.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigPoliceRdial.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigService.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/pogue_police_ConfigWebhook.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/pogue_police/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/spooni_build_my_home_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/spooni_build_my_home/shared/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/spooni_build_my_home_furniture.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/spooni_build_my_home/shared/furniture.lua",
+    "filename": "furniture.lua"
+  },
+  "configs/syn_clan_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_clan/config/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/syn_clan_missions.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_clan/config/missions.lua",
+    "filename": "missions.lua"
+  },
+  "configs/syn_housingV2_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_housingV2/config.lua",
+    "filename": "config.lua"
+  },
+  "configs/syn_society_config.lua": {
+    "path": "server/txData/{SERVER_BASE}/resources/%5BIMPORTS%5D/syn_society/config.lua",
+    "filename": "config.lua"
   }
 }
