@@ -67,7 +67,7 @@ Config.SpawnPosition = {
     -- Vanhorn
     {
         options = {
-            timecycle = { name = "teaser_trainShot", strenght = 1.0 },                                         -- you can find more in RDR3 discoveries github
+            timecycle = { name = "teaser_trainShot", strength = 1.0 },                                         -- you can find more in RDR3 discoveries github
             music = "REHR_START",                                                                              -- you can find more in RDR3 discoveries github
             weather = { type = "sunny", transition = 10, snow = false },                                       -- weather to choose
             time = { hour = 12, transition = 10 },                                                             -- time to choose
@@ -168,7 +168,7 @@ Config.SpawnPosition = {
     --Vanhorn 2
     {
         options = {
-            timecycle = { name = "Finale1_outrohighhon_bidging2", strenght = 1.0 },
+            timecycle = { name = "Finale1_outrohighhon_bidging2", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -243,7 +243,7 @@ Config.SpawnPosition = {
     -- Saloon of Armadillo
     {
         options = {
-            timecycle = { name = "teaser_trainShot", strenght = 1.0 },                                             -- you can find more in RDR3 discoveries github
+            timecycle = { name = "teaser_trainShot", strength = 1.0 },                                             -- you can find more in RDR3 discoveries github
             music = "REHR_START",                                                                                  -- you can find more in RDR3 discoveries github
             weather = { type = "sunny", transition = 10, snow = false },                                           -- weather to choose
             time = { hour = 12, transition = 10 },                                                                 -- time to choose
@@ -344,7 +344,7 @@ Config.SpawnPosition = {
     -- Cotorra Springs
     {
         options = {
-            timecycle = { name = "finale2_campMoonPos", strenght = 1.0 },
+            timecycle = { name = "finale2_campMoonPos", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -417,7 +417,7 @@ Config.SpawnPosition = {
     -- Donner Falls
     {
         options = {
-            timecycle = { name = "trailer2_shot1", strenght = 1.0 },
+            timecycle = { name = "trailer2_shot1", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -490,7 +490,7 @@ Config.SpawnPosition = {
     -- The HeartLands 1
     {
         options = {
-            timecycle = { name = "martson1_intromod2", strenght = 1.0 },
+            timecycle = { name = "martson1_intromod2", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -563,7 +563,7 @@ Config.SpawnPosition = {
     -- The HeartLands 2
     {
         options = {
-            timecycle = { name = "FINALE2_campMoonPos", strenght = 1.0 },
+            timecycle = { name = "FINALE2_campMoonPos", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -638,7 +638,7 @@ Config.SpawnPosition = {
     -- Swamps 1
     {
         options = {
-            timecycle = { name = "Finale1_outrohighhon_bidging2", strenght = 1.0 },
+            timecycle = { name = "Finale1_outrohighhon_bidging2", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -713,7 +713,7 @@ Config.SpawnPosition = {
     -- Colter
     {
         options = {
-            timecycle = { name = "mod5_int_lessfog", strenght = 1.0 },
+            timecycle = { name = "mod5_int_lessfog", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -788,7 +788,7 @@ Config.SpawnPosition = {
     -- Manzanita Post
     {
         options = {
-            timecycle = { name = "winter4_ride_sunstrength2", strenght = 1.0 },
+            timecycle = { name = "winter4_ride_sunstrength2", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -862,7 +862,7 @@ Config.SpawnPosition = {
     -- Armadillo Cemetery
     {
         options = {
-            timecycle = { name = "finale2_campmoonpos", strenght = 1.0 },
+            timecycle = { name = "finale2_campmoonpos", strength = 1.0 },
             music     = "",
             weather   = { type = "sunny", transition = 10, snow = false },
             time      = { hour = 10, transition = 10 },
@@ -1016,7 +1016,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_001",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_001",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_001",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_001"
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_001",
@@ -1024,7 +1023,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_001",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_001",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_001",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_001"
         },
 
         Albedo = {
@@ -1062,7 +1060,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_002",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_002",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_002",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_002",
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_002",
@@ -1070,7 +1067,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_002",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_002",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_002",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_002",
         },
 
         Albedo = { "MP_HEAD_%sR1_SC01_C0_000_AB" },
@@ -1107,7 +1103,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_003",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_003",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_003",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_003",
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_003",
@@ -1115,7 +1110,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_003",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_003",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_003",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_003",
         },
 
         Albedo = { "MP_HEAD_%sR1_SC02_C0_000_AB" },
@@ -1152,7 +1146,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_004",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_004",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_004",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_004",
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_004",
@@ -1160,7 +1153,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_004",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_004",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_004",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_004",
         },
 
         Albedo = { "MP_HEAD_%sR1_SC03_C0_000_AB" },
@@ -1196,7 +1188,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_005",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_005",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_005",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_005",
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_005",
@@ -1204,7 +1195,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_005",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_005",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_005",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_005",
         },
 
         Albedo = { "MP_HEAD_%sR1_SC04_C0_000_AB" },
@@ -1240,7 +1230,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_UPPER_003_V_006",
             "CLOTHING_ITEM_%s_BODIES_UPPER_004_V_006",
             "CLOTHING_ITEM_%s_BODIES_UPPER_005_V_006",
-            "CLOTHING_ITEM_%s_BODIES_UPPER_006_V_006",
         },
         Legs = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_001_V_006",
@@ -1248,7 +1237,6 @@ Config.DefaultChar = {
             "CLOTHING_ITEM_%s_BODIES_LOWER_003_V_006",
             "CLOTHING_ITEM_%s_BODIES_LOWER_004_V_006",
             "CLOTHING_ITEM_%s_BODIES_LOWER_005_V_006",
-            "CLOTHING_ITEM_%s_BODIES_LOWER_006_V_006",
         },
 
         Albedo = { "MP_HEAD_%sR1_SC05_C0_000_AB" },

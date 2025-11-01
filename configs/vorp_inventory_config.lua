@@ -58,7 +58,21 @@ Config = {
 		Time = 10, -- after this time pick up wll be deleted, IN MINUTES
 	},
 
-	DuelWield                  = true, -- If true duel wielding will be allowed.
+	DuelWield                  = true, 	  -- If true duel wielding will be allowed.
+
+	SpamDelay				   = 2000,    -- ms | The minimum time that must elapse between using one item and being able to use another item in the inventory.
+
+	-- ==================== SOUND CONFIGURATION ==================== --
+	SFX = {								  -- Inventory Sound Effects
+		OpenInventory = true,			  -- The sound effect when open the inventory
+		CloseInventory = true,			  -- The sound effect when close the inventory
+		ItemHover = true,				  -- The sound effect when hovering the mouse cursor over an item/choose the item in the inventory
+
+		ItemDrop = true,                  -- The sound effect when drop the item
+		MoneyDrop = true,                 -- The sound effect when drop the money
+		GoldDrop = true,                  -- The sound effect when drop the gold
+		PickUp = true,                    -- The sound effect when pick up the item
+	},
 
 	-- =================== CLEAR ITEMS WEAPONS MONEY GOLD ===================== --
 
