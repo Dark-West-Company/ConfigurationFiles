@@ -16,7 +16,7 @@ Config.REDEMRP2023REBOOT 				 = false
 Config.VORP              				 = true
 Config.RSG               				 = false
  
-Config.EnableEagleEye 					 = true  -- Enable Eagle eye to see the clues 
+Config.EnableEagleEye 					 = false  -- Enable Eagle eye to see the clues 
 Config.EnableRunningEagleEye             = true  -- Enable Eagle while running
 
 Config.CooldownEnabled                   = true  -- Enable / Disable the cooldown after every mission completed and every mission failed
