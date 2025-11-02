@@ -17,7 +17,7 @@ Config.VORP              				 = true
 Config.RSG               				 = false
  
 Config.EnableEagleEye 					 = false  -- Enable Eagle eye to see the clues 
-Config.EnableRunningEagleEye             = true  -- Enable Eagle while running
+Config.EnableRunningEagleEye             = false  -- Enable Eagle while running
 
 Config.CooldownEnabled                   = true  -- Enable / Disable the cooldown after every mission completed and every mission failed
 Config.CooldownTimer                     = 4     -- In minutes Cooldown after every mission before you can do another one / 1 min minimum
