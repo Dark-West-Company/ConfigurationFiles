@@ -1,5 +1,5 @@
 Config = {}
-
+-- woah look a testing comment
 Config.Debug                        =               false -- debug prints
 Config.Pickaxe                      =               {"pickaxe", "pickaxe2"}
 Config.BasicLoot                    =               {"rock", "limestone"} -- for multiple baseloots use something like {"rock", "clay"} it will choose one randomly
