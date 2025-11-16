@@ -86,7 +86,6 @@ Config.Ranch_Coords = {
         modelNpc = "a_m_m_rancher_01",
         clear = true,
         price = 300,
-        rent = false,
         center = {-2412.92822265625, -2457.755615234375, 60.25156784057617, 50.0},
         buystore = {-2390.359130859375, -2474.82275390625, 60.32158660888672, 2.0, 190.0},
         rent = false,

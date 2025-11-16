@@ -273,45 +273,45 @@ Config.Locations = {
         },
 	},
     ['Strawberry'] = {
-        craftCoords = vector3(-1790.14, -389.74, 160.33),   -- Location to open the crafting menu or false
-        Custom = {  -- Custom list or false
-            SpawnWeapon = { coords = vector3(-1790.55, -383.51, 160.2), heading = 322.64 },    -- Location to open weapon customization and spawn menu, the weapon will point to the right of the header
-            OpenCoords = vector3(-1790.67, -384.37, 160.33), -- vector3 (Coordinates to open the weapon customization menu)
-            -- CategoryBlacklist = { -- Blacklist of the personalization category List, indicates the categories of the Config.CustomPrices list that you do not want to appear in this location or false
-            --     'Name',
-            --     'Serial',
-            --     'Description',
-            --     'Scope',
-            -- },
-            -- CompsBlacklist = { -- List of components that will not be able to use [https://github.com/femga/rdr3_discoveries/blob/master/weapons/weapon_components.lua] or false
-            --     'COMPONENT_RIFLE_SCOPE03',
-            --     'COMPONENT_RIFLE_SCOPE04',
-            -- },
-            -- weaponWhitelist = { -- List of weapons allowed in the location or false
-            --     'WEAPON_BOW',
-            --     'WEAPON_BOW_IMPROVED',
-            -- },
-        },
-        -- Groups = {  -- List of groups to access customization and crafting or false
-        --     'admin',
-        --     'moderator',
-        --     'vip',
+        -- craftCoords = vector3(-1790.14, -389.74, 160.33),   -- Location to open the crafting menu or false
+        -- Custom = {  -- Custom list or false
+        --     SpawnWeapon = { coords = vector3(-1790.55, -383.51, 160.2), heading = 322.64 },    -- Location to open weapon customization and spawn menu, the weapon will point to the right of the header
+        --     OpenCoords = vector3(-1790.67, -384.37, 160.33), -- vector3 (Coordinates to open the weapon customization menu)
+        --     -- CategoryBlacklist = { -- Blacklist of the personalization category List, indicates the categories of the Config.CustomPrices list that you do not want to appear in this location or false
+        --     --     'Name',
+        --     --     'Serial',
+        --     --     'Description',
+        --     --     'Scope',
+        --     -- },
+        --     -- CompsBlacklist = { -- List of components that will not be able to use [https://github.com/femga/rdr3_discoveries/blob/master/weapons/weapon_components.lua] or false
+        --     --     'COMPONENT_RIFLE_SCOPE03',
+        --     --     'COMPONENT_RIFLE_SCOPE04',
+        --     -- },
+        --     -- weaponWhitelist = { -- List of weapons allowed in the location or false
+        --     --     'WEAPON_BOW',
+        --     --     'WEAPON_BOW_IMPROVED',
+        --     -- },
         -- },
-        jobs = {    -- List of jobs and grade to access customization and crafting or false
-            { job = 'gun_straw', grade = false },
-        },
-        Store = {   -- Store list or false
-            blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
-            SpawnObject = { coords = vector3(-1790.57, -387.6, 160.4), heading = 235.82 },  -- Spawn location of weapons/items in shop products
-            OpenCoords = vector3(-1791.19, -387.06, 160.33), -- vector3 (Coordinates to open the store)
-            StoreOpen = 7,  -- AM or false
-            StoreClose = 21,    -- PM or false
-            NPC = { coords = vector4(-1789.73, -388.17, 159.38, 44.94), model = 'U_M_M_AsbGunsmith_01', scenario = 'SC_WORLD_HUMAN_STAND_BAR' },    -- Location of the npc, the model and scenario or false
-            -- jobs = {    -- List of jobs and grade to access store or false
-            --     { job = 'example1', grade = false },
-            --     { job = 'example2', grade = false },
-            -- },
-        },
+        -- -- Groups = {  -- List of groups to access customization and crafting or false
+        -- --     'admin',
+        -- --     'moderator',
+        -- --     'vip',
+        -- -- },
+        -- jobs = {    -- List of jobs and grade to access customization and crafting or false
+        --     { job = 'gun_straw', grade = false },
+        -- },
+        -- Store = {   -- Store list or false
+        --     blip = { enable = true, sprite = GetHashKey('blip_shop_gunsmith') },    -- Enable or disable store blip sprite and blip
+        --     SpawnObject = { coords = vector3(-1790.57, -387.6, 160.4), heading = 235.82 },  -- Spawn location of weapons/items in shop products
+        --     OpenCoords = vector3(-1791.19, -387.06, 160.33), -- vector3 (Coordinates to open the store)
+        --     StoreOpen = 7,  -- AM or false
+        --     StoreClose = 21,    -- PM or false
+        --     NPC = { coords = vector4(-1789.73, -388.17, 159.38, 44.94), model = 'U_M_M_AsbGunsmith_01', scenario = 'SC_WORLD_HUMAN_STAND_BAR' },    -- Location of the npc, the model and scenario or false
+        --     -- jobs = {    -- List of jobs and grade to access store or false
+        --     --     { job = 'example1', grade = false },
+        --     --     { job = 'example2', grade = false },
+        --     -- },
+        -- },
 	},
     ['Tumbleweed'] = {
         craftCoords = vector3(-5508.44, -2969.02, -0.63),   -- Location to open the crafting menu or false
