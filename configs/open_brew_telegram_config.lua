@@ -62,7 +62,7 @@ Config.CompanyNumbers = {
     ["gun_sd"] = { number = "GUNSD", grade = 1 },
     ["gun_arm"] = { number = "GUNARM", grade = 1 },
     ["gun_bw"] = { number = "GUNBW", grade = 1 },
-    ["gun_annes"] = { number = "GUNARM", grade = 1 },
+    ["gun_annes"] = { number = "GUNANS", grade = 1 },
     ["gun_rho"] = { number = "GUNR", grade = 1 },
 
     -- Ranches
@@ -70,13 +70,20 @@ Config.CompanyNumbers = {
     ["ran_emcross"] = { number = "EMCROSS", grade = 1 },
     ["ran_mcfar"] = { number = "MCFAR", grade = 1 },
 
-    -- Stables (New Additions)
+    -- Stables
     ["sta_val"] = { number = "STVAL", grade = 1 },
     ["sta_straw"] = { number = "STSTRA", grade = 1 },
     ["sta_annes"] = { number = "STANNES", grade = 1 },
     ["sta_sd"] = { number = "STSD", grade = 1 },
     ["sta_bw"] = { number = "STBW", grade = 1 },
     ["sta_rhodes"] = { number = "STR", grade = 1 },
+
+	-- Smithy's
+    ["smth_val"] = { number = "SMTHVAL", grade = 1 },
+    ["smth_rho"] = { number = "SMTHRHO", grade = 1 },
+    ["smth_sd"] = { number = "SMTHSD", grade = 1 },
+    ["smth_straw"] = { number = "SMTHSTRAW", grade = 1 },
+    ["smth_arm"] = { number = "SMTHARM", grade = 1 },
 }
 
 --Reserve Number spaces for players to set manual numbers
@@ -132,16 +139,16 @@ Config.TelegramStations = {
 		-- 	z = 113.0896,
 		-- 	h = 148.5947,
 		-- },
-		object = {                                                               --Spawn object at the station
-			model = "p_mailbox01x",                                              -- Model of the object
-			coords = vector3(-277.18, 808.48, 118.38), -- Location of the object
-			rotation = vector3(0, 0, 52.17405319213867),                         -- Rotation of the object
-			range = 5.0,
-		},
+		-- object = {                                                               --Spawn object at the station
+		-- 	model = "p_mailbox01x",                                              -- Model of the object
+		-- 	coords = vector3(-277.18, 808.48, 118.38), -- Location of the object
+		-- 	rotation = vector3(0, 0, 52.17405319213867),                         -- Rotation of the object
+		-- 	range = 5.0,
+		-- },
 		blipSettings = {
-			name = "DOJ Telegram",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			name = "Law Telegram",
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -151,8 +158,8 @@ Config.TelegramStations = {
 		coords = { 2731.5298, -1402.3912, 46.1331, 212.5984 },
 		blipSettings = {
 			name = "Saint Denis Telegram",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -162,8 +169,8 @@ Config.TelegramStations = {
 		coords = { 1522.0232, 439.5628, 90.6307, 7.0644 },
         blipSettings = {
 			name = "Emerald Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -173,8 +180,8 @@ Config.TelegramStations = {
 		coords = { 2939.5635, 1288.5471, 44.6028, 156.2168 },
 		blipSettings = {
 			name = "Annesburg Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -184,8 +191,8 @@ Config.TelegramStations = {
 		coords = { -178.7319, 626.5564, 114.0396, 327.0764 },
 		blipSettings = {
 			name = "Valentine Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -195,8 +202,8 @@ Config.TelegramStations = {
 		coords = { 1225.3855, -1294.0931, 76.8592, 229.7048 },
 		blipSettings = {
 			name = "Rhodes Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -206,8 +213,8 @@ Config.TelegramStations = {
 		coords = { -3729.0464, -2602.9436, -12.9877, 2.4934 },
 		blipSettings = {
 			name = "Armadillo Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -217,8 +224,8 @@ Config.TelegramStations = {
 		coords = { -5533.4243, -2951.3579, -0.7328, 0.3415 },
 		blipSettings = {
 			name = "Tumbleweed Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -228,8 +235,8 @@ Config.TelegramStations = {
 		coords = { -875.0049, -1328.7344, 43.9080, 4.5289 },
 		blipSettings = {
 			name = "Blackwater Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -239,8 +246,8 @@ Config.TelegramStations = {
 		coords = { -1765.0322, -384.2863, 157.6920, 231.4073 },
 		blipSettings = {
 			name = "Strawberry Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -250,8 +257,8 @@ Config.TelegramStations = {
 		coords = { 2985.9883, 568.5570, 44.6279, 345.4350 },
 		blipSettings = {
 			name = "Van Horn Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -263,8 +270,8 @@ Config.TelegramStations = {
 		coords = { 2596.52, -1297.35, 51.1194, -82.55 },
 		blipSettings = {
 			name = "Government Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 	{
@@ -278,8 +285,8 @@ Config.TelegramStations = {
 		coords = { 2598.59, -1301.20, 54.87, 158.40 },
 		blipSettings = {
 			name = "Marshal Telegram Station",
-			sprite = "blip_ambient_tithing",
-			color = "PINKISH"
+			sprite = "blip_post_office",
+			color = "WHITE"
 		}
 	},
 }

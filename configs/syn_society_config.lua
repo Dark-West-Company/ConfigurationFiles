@@ -93,13 +93,30 @@ Config.jobs = {
         webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
         salary = true, -- (added line) enable/disable salary system.
     },
+    marshal = {	   
+        Pos = { 
+            {x=2598.01, y=-1299.41, z=51.82},
+        }, 
+        jobmenu = { 
+            {x=2598.01, y=-1299.41, z=51.82},
+        },
+        blipsprite = -592068833,
+		Name = 'Fedral Marshals',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 5,
+        containername = "Marshals Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
     doj = {	   
         Pos = { 
-            {x=-288.89, y=808.89, z=119.38},
+            {x=-291.44, y=784.12, z=120.90}, -- Valentine Law Firm 
             
         }, 
         jobmenu = { 
-            {x=-288.89, y=808.89, z=119.38},
+            {x=-291.44, y=784.12, z=120.90}, -- Valentine Law Firm 
             
         },
         blipsprite = -592068833,
@@ -111,7 +128,6 @@ Config.jobs = {
         billing = true,
         webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
         salary = true,
-
     },
     doctor = {	   
         Pos = { 
@@ -147,11 +163,717 @@ Config.jobs = {
         salary = true,
 
     },
+    sta_val = {	   
+        Pos = { 
+            {x=-363.84, y=791.39, z=118.71},
+            
+        }, 
+        jobmenu = { 
+            {x=-363.84, y=791.39, z=118.71},
+        },
+        blipsprite = -592068833,
+		Name = 'Valentine Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 3,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sta_straw = {	   
+        Pos = {
+            {x=-1823.63, y=-558.85, z=155.07},
+        },
+        jobmenu = {
+            {x=-1823.63, y=-558.85, z=155.07},
+        },
+        blipsprite = -592068833,
+		Name = 'Strawberry Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 42,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sta_bw = {	   
+        Pos = {
+            {x=-877.91, y=-1361.54, z=42.53},
+        },
+        jobmenu = {
+            {x=-877.91, y=-1361.54, z=42.53},
+        },
+        blipsprite = -592068833,
+		Name = 'Blackwater Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 45,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sta_annes = {	   
+        Pos = { 
+            {x=2969.97, y=794.65, z=50.40}, -- Stables near Van Horn, in SireVLC marked as Van Horn Stables. Fix it.
+        }, 
+        jobmenu = { 
+            {x=2969.97, y=794.65, z=50.40},
+        },
+        blipsprite = -592068833,
+		Name = 'Roanoke Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 43,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sta_sd = {	   
+        Pos = { 
+            {x=2508.48, y=-1462.46, z=45.32},
+        }, 
+        jobmenu = { 
+            {x=2508.48, y=-1462.46, z=45.32},
+        },
+        blipsprite = -592068833,
+		Name = 'Saint Denis Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 44,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sta_rhodes = {	   
+        Pos = { 
+            {x=1458.49, y=-1364.54, z=79.59},
+        },
+        jobmenu = { 
+            {x=1458.49, y=-1364.54, z=79.59},
+        },
+        blipsprite = -592068833,
+		Name = 'Rhodes Stables',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 46,
+        containername = "Stables Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    smth_val = {	   
+        Pos = { 
+            {x=-368.84, y=796.38, z=117.61},
+        }, 
+        jobmenu = { 
+            {x=-368.84, y=796.38, z=117.61},
+        },
+        blipsprite = -592068833,
+		Name = 'Valentine Smithy',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 47,
+        containername = "Smithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    smth_rho = {	   
+        Pos = {
+            {x=1308.31, y=-1348.51, z=76.58},
+        },
+        jobmenu = {
+            {x=1308.31, y=-1348.51, z=76.58},
+        },
+        blipsprite = -592068833,
+		Name = 'Rhodes Smithy',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 48,
+        containername = "Smithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    smth_sd = {	   
+        Pos = { 
+            {x=2513.49, y=-1452.64, z=45.31},
+        }, 
+        jobmenu = { 
+            {x=2513.49, y=-1452.64, z=45.31},
+        },
+        blipsprite = -592068833,
+		Name = 'Saint Denis Smithy',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 49,
+        containername = "Smithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    smth_straw = {	   
+        Pos = {
+            {x=-1822.57, y=-570.41, z=155.01},
+        },
+        jobmenu = {
+            {x=-1822.57, y=-570.41, z=155.01},
+        },
+        blipsprite = -592068833,
+		Name = 'Strawberry Smithy',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 50,
+        containername = "Smithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    smth_arm = {	   
+        Pos = {
+            {x=-3684.41, y=-2564.15, z=-14.58},
+        },
+        jobmenu = {
+            {x=-3684.41, y=-2564.15, z=-14.58},
+        },
+        blipsprite = -592068833,
+		Name = 'Armadillo Smithy',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 51,
+        containername = "Smithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    ran_prong = {	   
+        Pos = {
+            {x=-2559.97, y=404.66, z=147.34},
+        },
+        jobmenu = {
+            {x=-2559.97, y=404.66, z=147.34},
+        },
+        blipsprite = -592068833,
+		Name = 'Pronghorn Ranch',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 39,
+        containername = "Ranch Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    ran_emcross = {	   
+        Pos = {
+            {x=1400.95, y=280.20, z=88.16},
+        },
+        jobmenu = {
+            {x=1400.95, y=280.20, z=88.16},
+        },
+        blipsprite = -592068833,
+		Name = 'Emerald Crossing Ranch',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 40,
+        containername = "Ranch Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    ran_mcfar = {	   
+        Pos = {
+            {x=-2417.45, y=-2425.65, z=59.25},
+        },
+        jobmenu = {
+            {x=-2417.45, y=-2425.65, z=59.25},
+        },
+        blipsprite = -592068833,
+		Name = 'MacFarlens Ranch',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 41,
+        containername = "Ranch Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gun_val = {	   
+        Pos = { 
+            {x=-283.05, y=777.53, z=121.11},
+        }, 
+        jobmenu = { 
+            {x=-283.05, y=777.53, z=121.11},
+        },
+        blipsprite = -592068833,
+		Name = 'Valentine Gunsmith',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 32,
+        containername = "Gunsmithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    -- gun_straw = { --TODO: No suitable location, add buisness when we get one. 
+    --     Pos = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     }, 
+    --     jobmenu = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     },
+    --     blipsprite = -592068833,
+	-- 	Name = 'Strawberry Gunsmith',
+    --     recruitmentrank = 0,
+    --     bossrank = 3,
+    --     containerid = 33,
+    --     containername = "Gunsmithy Inv.",
+    --     billing = true,
+    --     webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+    --     salary = true,
+    -- },
+    gun_sd = {	   
+        Pos = { 
+            {x=2711.66, y=-1290.80, z=48.63},
+        }, 
+        jobmenu = { 
+            {x=-288.89, y=808.89, z=119.38},
+        },
+        blipsprite = -592068833,
+		Name = 'Saint Denis Gunsmith',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 34,
+        containername = "Gunsmithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    -- gun_arm = { --TODO: No suitable location, need MLO
+    --     Pos = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     }, 
+    --     jobmenu = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     },
+    --     blipsprite = -592068833,
+	-- 	Name = 'Armadillo Gunsmith',
+    --     recruitmentrank = 0,
+    --     bossrank = 3,
+    --     containerid = 35,
+    --     containername = "Gunsmithy Inv.",
+    --     billing = true,
+    --     webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+    --     salary = true,
+    -- },
+    -- gun_bw = {  --TODO: Vanilla Blackwater has no suitable building??? Like at all. Once we get it - place the buisness
+    --     Pos = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     }, 
+    --     jobmenu = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     },
+    --     blipsprite = -592068833,
+	-- 	Name = 'Blackwater Gunsmith',
+    --     recruitmentrank = 0,
+    --     bossrank = 3,
+    --     containerid = 36,
+    --     containername = "Gunsmithy Inv.",
+    --     billing = true,
+    --     webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+    --     salary = true,
+    -- },
+    gun_annes = {	   
+        Pos = { 
+            {x=2949.96, y=1321.56, z=43.82},
+        }, 
+        jobmenu = { 
+            {x=2949.96, y=1321.56, z=43.82},
+        },
+        blipsprite = -592068833,
+		Name = 'Annesburg Gunsmith',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 37,
+        containername = "Gunsmithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gun_rho = {	   
+        Pos = {
+            {x=1320.59, y=-1325.90, z=76.88},
+        },
+        jobmenu = {
+            {x=1320.59, y=-1325.90, z=76.88},
+        },
+        blipsprite = -592068833,
+		Name = 'Rhodes Gunsmith',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 38,
+        containername = "Gunsmithy Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_val1 = {	   
+        Pos = { 
+            {x=-314.13, y=809.87, z=117.98},
+        }, 
+        jobmenu = { 
+            {x=-314.13, y=809.87, z=117.98},
+        },
+        blipsprite = -592068833,
+		Name = 'Smithfield\'s Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 31,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_val2 = {	   
+        Pos = { 
+            {x=-238.97, y=770.30, z=117.10},
+        }, 
+        jobmenu = { 
+            {x=-238.97, y=770.30, z=117.10},
+        },
+        blipsprite = -592068833,
+		Name = 'Keane\'s Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 22,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_sd1 = {	   
+        Pos = { 
+            {x=2639.92, y=-1223.51, z=52.38},
+        }, 
+        jobmenu = { 
+            {x=2639.92, y=-1223.51, z=52.38},
+        },
+        blipsprite = -592068833,
+		Name = 'The Bastille Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 23,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_sd2 = {	   
+        Pos = { 
+            {x=2793.49, y=-1165.76, z=46.93},
+        }, 
+        jobmenu = { 
+            {x=2793.49, y=-1165.76, z=46.93},
+        },
+        blipsprite = -592068833,
+		Name = 'Doyle\'s Tavern',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 24,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_rho = {	   
+        Pos = {
+            {x=1336.62, y=-1372.87, z=79.49},
+        },
+        jobmenu = {
+            {x=1336.62, y=-1372.87, z=79.49},
+        },
+        blipsprite = -592068833,
+		Name = 'Rhodes Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 25,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_annes = {	   
+        Pos = { 
+            {x=2952.16, y=1359.57, z=43.86}, -- TODO: temp position until we get Annesburg Reborn.
+        }, 
+        jobmenu = { 
+            {x=2952.16, y=1359.57, z=43.86},
+        },
+        blipsprite = -592068833,
+		Name = 'Annesburg Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 26,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_vanhorn = {	   
+        Pos = { 
+            {x=2948.50, y=529.21, z=44.33},
+        }, 
+        jobmenu = { 
+            {x=2948.50, y=529.21, z=44.33},
+        },
+        blipsprite = -592068833,
+		Name = 'Van Horn Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 27,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    -- sal_straw = { --TODO: No suitable place, need MLO or smth. 
+    --     Pos = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     }, 
+    --     jobmenu = { 
+    --         {x=-288.89, y=808.89, z=119.38},
+            
+    --     },
+    --     blipsprite = -592068833,
+	-- 	Name = 'Strawberry Saloon',
+    --     recruitmentrank = 0,
+    --     bossrank = 3,
+    --     containerid = 28,
+    --     containername = "Saloon Inv.",
+    --     billing = true,
+    --     webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+    --     salary = true,
+    -- },
+    sal_bw = {
+        Pos = {
+            {x=-819.63, y=-1320.41, z=42.68},
+        },
+        jobmenu = {
+            {x=-819.63, y=-1320.41, z=42.68},
+        },
+        blipsprite = -592068833,
+		Name = 'Blackwater Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 29,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_arm = {	   
+        Pos = {
+            {x=-3698.25, y=-2600.91, z=-14.31},
+        },
+        jobmenu = {
+            {x=-3698.25, y=-2600.91, z=-14.31},
+        },
+        blipsprite = -592068833,
+		Name = 'Armadillo Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 30,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    sal_tumbl = {	   
+        Pos = {
+            {x=-5515.42, y=-2902.97, z=-2.75},
+        },
+        jobmenu = {
+            {x=-5515.42, y=-2902.97, z=-2.75},
+        },
+        blipsprite = -592068833,
+		Name = 'Tumbleweed Saloon',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 31,
+        containername = "Saloon Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_val = {	   
+        Pos = { 
+            {x=-325.53, y=803.98, z=116.88},
+        }, 
+        jobmenu = { 
+            {x=-325.53, y=803.98, z=116.88},
+        },
+        blipsprite = -592068833,
+		Name = 'Valentine General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 12,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_straw = {	   
+        Pos = {
+            {x=-1789.35, y=-388.38, z=159.33},
+        },
+        jobmenu = {
+            {x=-1789.35, y=-388.38, z=159.33},
+        },
+        blipsprite = -592068833,
+		Name = 'Strawberry General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 13,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_rho = {	   
+        Pos = {
+            {x=1331.45, y=-1290.89, z=76.02},
+        },
+        jobmenu = {
+            {x=1331.45, y=-1290.89, z=76.02},
+        },
+        blipsprite = -592068833,
+		Name = 'Rhodes General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 14,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_annes = {	   
+        Pos = { 
+            {x=2933.31, y=1367.28, z=44.18}, -- TODO: Temp location until we get Annesburg Reborn
+        }, 
+        jobmenu = { 
+            {x=2933.31, y=1367.28, z=44.18},
+        },
+        blipsprite = -592068833,
+		Name = 'Annesburg Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 15,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_vanhorn = {	   
+        Pos = { 
+            {x=3022.81, y=558.57, z=43.73},
+        }, 
+        jobmenu = { 
+            {x=3022.81, y=558.57, z=43.73},
+        },
+        blipsprite = -592068833,
+		Name = 'Van Horn Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 16,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_arm = {	   
+        Pos = {
+            {x=-3690.19, y=-2627.08, z=-14.41},
+        },
+        jobmenu = {
+            {x=-3690.19, y=-2627.08, z=-14.41},
+        },
+        blipsprite = -592068833,
+		Name = 'Armadillo General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 17,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_bw = {	   
+        Pos = {
+            {x=-777.09, y=-1320.97, z=42.88},
+        },
+        jobmenu = {
+            {x=-777.09, y=-1320.97, z=42.88},
+        },
+        blipsprite = -592068833,
+		Name = 'Blackwater General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 18,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_tumbl = {	   
+        Pos = {
+            {x=-5483.10, y=-2934.11, z=-1.40},
+        },
+        jobmenu = {
+            {x=-5483.10, y=-2934.11, z=-1.40},
+        },
+        blipsprite = -592068833,
+		Name = 'Tumbleweed General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 19,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
+    gs_sd = {	   
+        Pos = { 
+            {x=2821.61, y=-1318.24, z=45.76},
+        }, 
+        jobmenu = { 
+            {x=2821.61, y=-1318.24, z=45.76},
+        },
+        blipsprite = -592068833,
+		Name = 'Saint Denis General Store',
+        recruitmentrank = 0,
+        bossrank = 3,
+        containerid = 20,
+        containername = "General Store Inv.",
+        billing = true,
+        webhook = true, -- set true if you want to use webhooks for this job, input your webhook link in the Logs.dutywebhooks table in logs.lua
+        salary = true,
+    },
 }
 -------------------
-Config.alertsfunction = true 
+Config.alertsfunction = true
 
-Config.alerts = { 
+Config.alerts = {
     police = { -- job name
         command = "alertpolice",
         jobs = {
@@ -201,86 +923,86 @@ Config.ondutytime = 2.5 -- minutes
 
 
 Config.dutystationsenabled = false -- 
-Config.menuoption = true -- if set to true players can still use the onduty command but will be prompted to select their region
+Config.menuoption = false -- if set to true players can still use the onduty command but will be prompted to select their region
 Config.dutystationjobs = {
-    "policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm"
+    -- "policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm"
 }
 
 -- TODO: When theres multiple departments - configure access properly
 Config.dutystationlocations = {
-    ["armadillo"] = {
-        coords = {x = -3620.92, y = -2606.35, z = -13.33},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Armadillo Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["blackwater"] = {
-        coords = {x = -761.7, y = -1268.1, z = 44.0},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Blackwater Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["strawberry"] = {
-        coords = {x = -1814.0, y = -354.8, z = 164.6},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Strawberry Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["valentine"] = {
-        coords = {x = -278.4, y = 805.3, z = 119.3},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Valentine Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["annes"] = {
-        coords = {x = 2908.3, y = 1308.9, z = 44.9},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Annesburg Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["rhodes"] = {
-        coords = {x = 1361.95, y = -1298.9, z = 77.76},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Rhodes Duty Station",
-        blipsprite = -1656531561,
-    },
-    ["sd"] = {
-        coords = {x = 2511.99, y = -1309.1, z = 48.95},
-        job = {"policeVal",
-    "policeSD",
-    "policeBW",
-    "policeArm","marshal"},
-        showblip = true,
-        blipname = "Saint Denis Duty Station",
-        blipsprite = -1656531561,
-    },
+    -- ["armadillo"] = {
+    --     coords = {x = -3620.92, y = -2606.35, z = -13.33},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Armadillo Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["blackwater"] = {
+    --     coords = {x = -761.7, y = -1268.1, z = 44.0},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Blackwater Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["strawberry"] = {
+    --     coords = {x = -1814.0, y = -354.8, z = 164.6},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Strawberry Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["valentine"] = {
+    --     coords = {x = -278.4, y = 805.3, z = 119.3},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Valentine Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["annes"] = {
+    --     coords = {x = 2908.3, y = 1308.9, z = 44.9},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Annesburg Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["rhodes"] = {
+    --     coords = {x = 1361.95, y = -1298.9, z = 77.76},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Rhodes Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
+    -- ["sd"] = {
+    --     coords = {x = 2511.99, y = -1309.1, z = 48.95},
+    --     job = {"policeVal",
+    -- "policeSD",
+    -- "policeBW",
+    -- "policeArm","marshal"},
+    --     showblip = true,
+    --     blipname = "Saint Denis Duty Station",
+    --     blipsprite = -1656531561,
+    -- },
 }
 
 ----------------

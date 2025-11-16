@@ -57,13 +57,13 @@ Config.KeyBinds = {
 }
 
 Config.WanderAnimals = 3.0--If you want to enable the wandering of animals, set this to "true". If disabled, animals will not wander and will stay in their designated area. (its not synced with another players)
-Config.EnableStorage = true--If you enable this setting, ranches in the ranch menu will have storage.
+Config.EnableStorage = false--If you enable this setting, ranches in the ranch menu will have storage.
 Config.StorageSize = 500--Size
 
 Config.BlockMenuSell = true --If you want to block the sale of animals from the ranch menu.
 Config.EnableSpotMenu = true --If you want to enable the sale of animals at designated locations. This means you must lead the animals to the specified place and sell them there.
 Config.SellAnimalSpot = {
-    ["Valentine Ranch Sell"] = {
+    ["Valentine Livestock Yard"] = {
         blipSetting = {
             blipEnabled = true,
             blipSprite = 423351566,
@@ -72,15 +72,15 @@ Config.SellAnimalSpot = {
             coords = {-223.98753356933597, 640.5254516601562, 113.21456146240236},
         }
     },
-    ["Emerald Ranch Sell"] = {
-        blipSetting = {
-            blipEnabled = true,
-            blipSprite = 423351566,
-        },
-        baseSetting = {
-            coords = {1316.8935546875,292.3488464355469,87.83221435546875},
-        }
-    },
+    -- ["Emerald Ranch Sell"] = {
+    --     blipSetting = {
+    --         blipEnabled = true,
+    --         blipSprite = 423351566,
+    --     },
+    --     baseSetting = {
+    --         coords = {1316.8935546875,292.3488464355469,87.83221435546875},
+    --     }
+    -- },
 }
 
 Config.BlipRanchColor = "BLIP_STYLE_AREA_FOW"--Blip color for ranch
