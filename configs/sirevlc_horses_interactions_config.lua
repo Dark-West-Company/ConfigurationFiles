@@ -1,23 +1,23 @@
 Config = {}
 
  
--- Version 3.0 | 01.08.25
+-- Version 3.33 | 02.11.25
  
 -------------------------------------------
                --MENU --
 -------------------------------------------
 
-Config.MENU_ACTIVE   				= true  
-Config.OpenMenuKey  				= 0x8F9F9E58 -- [4] by default 
-Config.OPEN_MENU_COMMAND_ENABLED    = true
-Config.OPEN_MENU_COMMAND        	= "horse_menu"
+Config.MENU_ACTIVE   				 = true  
+Config.OpenMenuKey  				 = 0x8F9F9E58 -- [4] by default 
+Config.OPEN_MENU_COMMAND_ENABLED     = true
+Config.OPEN_MENU_COMMAND        	 = "horse_menu"
+									 
+Config.NOTIFICATION_DURATION_1  	 = 5000
 
-Config.NOTIFICATION_DURATION_1  = 5000
+Config.DRINKING_DURATION  			 = 15 -- IN SECONDS
+Config.GRAZING_DURATION   			 = 15 -- IN SECONDS
 
-Config.DRINKING_DURATION  = 15 -- IN SECONDS
-Config.GRAZING_DURATION   = 15 -- IN SECONDS
-
-Config.FollowDistanceOffset 	= 5.0 -- THE HORSE WILL AIM TO FOLLOW THIS DISTANCE BEHIND YOU
+Config.FollowDistanceOffset 		 = 5.0 -- THE HORSE WILL AIM TO FOLLOW THIS DISTANCE BEHIND YOU
 -- TO ENABLE OR DISABLE OPTIONS YOU CAN DIRECTLY DISABLE THEM IN THE MENUS BELOW.
 
 -- SPECIAL EQUIPMENTS --
@@ -59,12 +59,12 @@ Config.HORSE_DISPLAYED_INFOS = {
 "HORSE_BREED_NAME",      
 "HORSE_COAT_NAME",       
 "HORSE_AGE",             
---"HORSE_COURAGE",         
---"HORSE_AGILITY",         
---"HORSE_HEALTH",          
---"HORSE_STAMINA",        
---"HORSE_ACCELERATION",    
---"HORSE_SPEED",           
+-- "HORSE_COURAGE",         
+-- "HORSE_AGILITY",         
+-- "HORSE_HEALTH",          
+-- "HORSE_STAMINA",        
+-- "HORSE_ACCELERATION",    
+-- "HORSE_SPEED",           
 }
  
 Config.EquipmentsCategoriesTitle = "NPC HORSE TACK"
@@ -169,12 +169,20 @@ Config.EquipmentsCategories = {
 -----------------
 -- TRICKS --
 -----------------
--- TriggerEvent("SIREVLC_STABLES_TRICKS", "GRAZING" 		)
--- TriggerEvent("SIREVLC_STABLES_TRICKS", "DRINKING" 		)
--- TriggerEvent("SIREVLC_STABLES_TRICKS", "SLEEPING"  		)
--- TriggerEvent("SIREVLC_STABLES_TRICKS", "LAYING_DOWN" 	)
--- TriggerEvent("SIREVLC_STABLES_TRICKS", "SHOE_CLEANING"   )
- 
+-- TriggerEvent("SIREVLC_STABLES_TRICKS", "GRAZING" )
+-- TriggerEvent("SIREVLC_STABLES_TRICKS", "DRINKING" )
+-- TriggerEvent("SIREVLC_STABLES_TRICKS", "SLEEPING"  )
+-- TriggerEvent("SIREVLC_STABLES_TRICKS", "LAYING_DOWN")
+
+-----------------
+-- GENERAL ---
+-----------------
+-- TriggerEvent("SIREVLC_HORSES_SELL_MY_HORSE") -- START SELLING HORSE 
+-- TriggerEvent("SIREVLC_HORSES_STOP_SELL_MY_HORSE") -- STOP SELLING HORSE 
+-- TriggerEvent("SIREVLC_STABLES_SHOW_HORSE_INFOS") -- DISPLAY INFOS
+-- TriggerEvent("SIREVLC_STABLES_TRICKS_STOP_ACTION") -- STOP ACTION (WILL NOT HAVE ANY EFFECT ON METABOLISM RELATED INTERACTIONS)
+
+  
 --MAIN HORSE MENU--
 --HERE YOU CAN ENABLE OR DISABLE A CATEGORY, TRANSLATE THE TEXTS AND CHANGE THE IMAGES. TO DISABLE ONE CATEGORY JUST ADD -- IN FRONT OF THE LINE TO COMMENT IT OUT
  
@@ -221,16 +229,17 @@ Config.HORSE_INTERACTION_FOOT = {
  
 Config.HORSE_INTERACTION_MOUNT_TITLE = "On Mount"
 Config.HORSE_INTERACTION_MOUNT = {
-		{label = "Point Right",        		value = "POINT_RIGHT",   	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Point Right",        				 image ='items/emote_action_point_left.png'     },
-		{label = "Point Left",         		value = "POINT_LEFT",   		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Point Left",         				 image ='items/emote_action_point.png'          },
-		{label = "Check Saddle",  	   		value = "CHECK_SADDLE",       	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Saddle Back",  				 image ='items/generic_horse_equip_saddle.png'  },
- 		{label = "Check Stirrups",     		value = "CHECK_STIRRUPS", 	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Stirrups",     				 image ='items/generic_horse_equip_stirrup.png' },
-		{label = "Adjust Saddle",      		value = "ADJUST_SADDLE",   	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Adjust Seat#1",      				 image ='items/adjust_seat.png'                 },
-		{label = "Pet Horse #1",       		value = "PET_HORSE_1",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #1",       				 image ='items/pet_horse.png'                   },
-		{label = "Pet Horse #2",       		value = "PET_HORSE_2",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #2",       				 image ='items/pet_horse.png'                   },
-		{label = "Pet Horse #3",       		value = "PET_HORSE_3",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #3",       				 image ='items/pet_horse.png'                   },
-		{label = "Check Balance",      		value = "CHECK_BALANCE",  	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Balance",      				 image ='items/emote_dance_drunk_b.png'         },
+		{label = "Point Right",        		value = "POINT_RIGHT",   	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Point Right",        				 image = 'items/emote_action_point_left.png'     },
+		{label = "Point Left",         		value = "POINT_LEFT",   		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Point Left",         				 image = 'items/emote_action_point.png'          },
+		{label = "Check Saddle",  	   		value = "CHECK_SADDLE",       	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Saddle Back",  				 image = 'items/generic_horse_equip_saddle.png'  },
+ 		{label = "Check Stirrups",     		value = "CHECK_STIRRUPS", 	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Stirrups",     				 image = 'items/generic_horse_equip_stirrup.png' },
+		{label = "Adjust Saddle",      		value = "ADJUST_SADDLE",   	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Adjust Seat#1",      				 image = 'items/adjust_seat.png'                 },
+		{label = "Pet Horse #1",       		value = "PET_HORSE_1",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #1",       				 image = 'items/pet_horse.png'                   },
+		{label = "Pet Horse #2",       		value = "PET_HORSE_2",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #2",       				 image = 'items/pet_horse.png'                   },
+		{label = "Pet Horse #3",       		value = "PET_HORSE_3",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Pet Horse #3",       				 image = 'items/pet_horse.png'                   },
+		{label = "Check Balance",      		value = "CHECK_BALANCE",  	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Check Balance",      				 image = 'items/emote_dance_drunk_b.png'         },
  	    {label = "Lean on saddle",     		value = "LEAN_ON_SADDLE",  	 	 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Lean on saddle",     				 image = 'items/generic_horse_equip_saddle.png' },
+ 	    {label = "Go Wild",     			value = "GO_WILD",  	 		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Lean on saddle",     				 image = 'items/generic_horse_equip_saddle.png' },
  
 } 
 
@@ -241,7 +250,7 @@ Config.HORSE_INTERACTION_MOUNT = {
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS",""BRUSHING_HORSE_3")
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS",""BRUSHING_HORSE_4")
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS",""PISSING"         )
--- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","WALLOW"     )
+-- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","WALLOW"    		  )
 
  
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","POINT_RIGHT"   	)   
@@ -257,6 +266,7 @@ Config.HORSE_INTERACTION_MOUNT = {
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","LEAN_ON_SADDLE" )   
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","REAR_UP"  		)   
 -- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","FORCE_FALL"  	)   
+-- TriggerEvent("SIREVLC_STABLES_INTERACTIONS","GO_WILD")   
    
  
 -- STANDARD INTERACTIONS 
@@ -267,7 +277,6 @@ Config.MENU_METABOLISM_INTERACTIONS = {
   	{label = "Sleep",               value = "SLEEPING",  		     xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Time to rest for your noble steed", image = 'items/horse_sleep.png'       		 	},
 	{label = "Lay Down",            value = "LAYING_DOWN",  		 xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Make your horse lay down",          image = 'items/horse_lay.png'		 		 	},
     {label = "Clean Shoes",   		value = "SHOE_CLEANING", 	     xp_lock = true, xp_required = 0, player_lock = false, player_list = {[1] = {identifier = "steam_99", charid = 1}}, job_lock = false, job_list = {"horsetrainer"}, desc = "Clean the shoes of your horse",     image = 'items/horse_shoe.png'					},
-	
 }
  
 	
@@ -279,8 +288,6 @@ Config.HORSES_INTERACTION_RIDING_STYLE = {
 		{label = "Side Saddle Passenger",    value = "action3", desc = "Ride side saddle for passenger", image ='items/emote_dance_confident_a.png'},
 		{label = "Normal Style Passenger",   value = "action4", desc = "Ride your horse normal style",   image ='items/ridenormal.png'},
 }
-   
- 
  
 --REMOVE EQUIPMENT MENU
 Config.TextMenuRemoveEquipmentTitle1 = "Remove"
@@ -296,8 +303,7 @@ Config.MenuRemoveEquipment = {
 	{label = "Extras",          value = "action10",  desc = "Extras",         image ='items/generic_horse_equip_lantern.png'}, 
 	{label = "Masks",           value = "action11",  desc = "Masks",          image ='items/generic_horse_equip_mask.png'}, 
 }
-
-
+ 
 --RESET EQUIPMENT MENU
 Config.MenuResetBasicEquipmentTitle1 = "Reset"
 Config.MenuResetBasicEquipment = {
