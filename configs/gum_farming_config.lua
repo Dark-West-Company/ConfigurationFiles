@@ -73,8 +73,8 @@ Config.Banned_Towns_List = {
 Config.PumpModel = "p_waterpump01x"
 Config.ToolsSystem = {
 	hoeItemId = "hoe",--For mark and prepare lands
-	bucketItemId = {"wateringcan_empty", 5, 100},--Item | Capacity | How much water on herb
-	wateringCanId = {"wateringcan_empty", 5, 100},
+	bucketItemId = {"wateringcan", 5, 100},--Item | Capacity | How much water on herb
+	wateringCanId = {"wateringcan_small", 3, 50},
 
 	--Its presetuped for gum stables
 	--model = capacity for water
@@ -114,8 +114,8 @@ Config.plantSetting = {
 
 	----------------------------------------------------
 	-- Values are setuped while update time tick
-	waterDecrease = 1,--1% decrease on water
-	fertilizeDecrease = 1,--1% decrease on fertilize
+	waterDecrease = 5,--1% decrease on water
+	fertilizeDecrease = 5,--1% decrease on fertilize
 
 	procureIncrease = 50,--50% increase
 	jerkDecrease = 10,--10% decrease on Pests
@@ -237,9 +237,13 @@ Config.AnimationsDelay = {
 	destroyHerbAnimation = 5, --default 10
 }
 
---TODO: configure with default jobs list eventually like damn
 Config.CanDestroyJobs = {
-    ["Sheriff_VL"] = true,
+    ["policeVal"] = true,
+    ["policeBW"] = true,
+    ["policeSD"] = true,
+    ["PoliceArm"] = true,
+    ["marshal"] = true,
+    ["gov"] = true,
 }
 
 --Via clean zones you can clean specific farms in game. Like caliga lands, or brainwater lands etc.
