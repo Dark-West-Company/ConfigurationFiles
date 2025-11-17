@@ -1,6 +1,6 @@
 Config = {}
 
--- Version 2.92 - 15.08.25
+-- Version 2.97 - 04.11.25
 
 -- EXPORTS 
 
@@ -13,7 +13,12 @@ Config = {}
 -- TriggerEvent("sirevlc_wagons_remove_wagon")
 
 --
+Config.SEND_BACK_NEAR_STABLES     		= false -- IF TRUE WAGONS CAN ONLY BE SENT BACK WHEN THE PLAYER IS NEAR A STABLE 
+Config.SEND_BACK_NEAR_STABLES_DISTANCE 	= 50.0
+ 
 Config.Debug 					  = false 
+
+Config.INSTANCE_DELETE_DELAY	  = 1000  -- SET THE DELAY BEFORE REMOVING THE HORSE (ON SOME SERVERS DELAY MAY BE NEEDED AFTER INSTANCE CHANGE TO RETURN THE CORRECT ENTITY ID VALUES) 
 
 Config.HuntingWagonExpansion 	  = true  -- TURN THIS TO TRUE ONLY IF YOU ARE USING SIREVLC_HUNTING_WAGON EXPANSION 
 --
@@ -44,6 +49,7 @@ Config.StashRoles = {						-- Roles that are authorized to search other player's
 "trapper",
 }
 
+Config.ENABLE_FLASH_PULSE        = true 	-- IF TRUE IT WILL ENABLE THE GAME PULSE EFFECT WHEN YOUR HORSE LEAVE
 --------------------------------- 
 --  VORP STASH OPTIONS --
 --------------------------------- 
@@ -1560,7 +1566,11 @@ Config.Customization = {
             [2] = {2,"Extra#2", 100},
             [3] = {3,"Extra#3", 100},
             [4] = {5,"Extra#4", 100},				
-        },                      
+        },    
+
+		[`wagon05x`] = {        
+            [1]  = {5,"Extra#1", 100},
+        }, 		
 							    
         [`wagon06x`] = {        
             [1] = {0,"Extra#1", 100},

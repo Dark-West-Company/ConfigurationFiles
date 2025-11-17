@@ -125,7 +125,7 @@ Config.huntingwagon = true -- set to true if you want to allow players to buy hu
 Config.huntingwagoncost = 1000 -- cost to buy a hunting wagon for the camp
 Config.maxanimals = 30 -- max animals and pelts stored in wagon 
 -----------------
-Config.clanflagprop = `mp001_s_mpcorona01x`
+Config.clanflagprop = "mp001_s_mpcorona01x"
 ------------------------
 Config.stocktime = 30 -- time in minutes where material is changed to stock. 
 Config.stockprocessing = 10 -- amount of materials that is turned into stock as Config.stocktime passes 
@@ -270,53 +270,53 @@ Config.stewpot = {
 --------------------------------------
 Config.publicbutcher = false -- set to true as a replacement of vorp hunting
 Config.butchers = {
-    ["Valentine's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=-339.0141,y =767.6358,z = 115.5645,h =100.4},
-        joblocked = false,
-        jobs = {"butcher","doctor"}
-    },
-    ["Strawberry's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=-1753.143,y =-392.4201,z = 155.2578,h =181.3},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Blackwater's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=-754.0,y =-1285.1,z = 42.8,h =273.579},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Annesburg's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=2934.8,y=1307.02,z=44.48,h =70.5},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Rhodes's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=1297.5,y =-1277.5,z = 74.8,h =146.6},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Armadillo's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=-3691.4,y =-2623.1,z = -14.7,h =0.4},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Saint Denis Butcher"] = {
-        blip = 1369919445,
-        coords = {x=2835.13,y =-1304.52,z = 45.7,h =179.88},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
-    ["Tumbleweed's Butcher"] = {
-        blip = 1369919445,
-        coords = {x=-5510.3,y =-2947.0,z = -1.89,h =251.5},
-        joblocked = false, 
-        jobs = {"butcher","doctor"}
-    },
+    -- ["Valentine's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=-339.0141,y =767.6358,z = 115.5645,h =100.4},
+    --     joblocked = false,
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Strawberry's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=-1753.143,y =-392.4201,z = 155.2578,h =181.3},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Blackwater's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=-754.0,y =-1285.1,z = 42.8,h =273.579},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Annesburg's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=2934.8,y=1307.02,z=44.48,h =70.5},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Rhodes's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=1297.5,y =-1277.5,z = 74.8,h =146.6},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Armadillo's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=-3691.4,y =-2623.1,z = -14.7,h =0.4},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Saint Denis Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=2835.13,y =-1304.52,z = 45.7,h =179.88},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
+    -- ["Tumbleweed's Butcher"] = {
+    --     blip = 1369919445,
+    --     coords = {x=-5510.3,y =-2947.0,z = -1.89,h =251.5},
+    --     joblocked = false, 
+    --     jobs = {"butcher","doctor"}
+    -- },
 }
 ---------------------------------

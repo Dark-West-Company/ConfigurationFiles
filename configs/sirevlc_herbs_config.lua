@@ -1,7 +1,7 @@
 Config = {}
 
  
--- VERSION 2.2 - 04.08.25
+-- VERSION 2.6 - 16.11.25
  
 --------------------------------------------------
 
@@ -28,6 +28,8 @@ Config.CooldownTimer                     = 4     -- In minutes Cooldown after ev
 			
 -------------------------------------------------- 
  
+Config.HERB_SPAWN_LIMIT                  = 120 	 -- THIS WILL LIMIT THE MAX NUMBER OF HERBS THAT CAN SPAWN IN THE AREA
+ 
 Config.Debug 							 = false  -- This will display debug prints / only use if you encounter an issue
 Config.Sirevlc_Horses_Is_Used            = true   -- Turn this to true if you're using sirevlc_horses
 
@@ -35,9 +37,9 @@ Config.TextHerbNotif 			   		 = "Herbs"
 Config.TextHerbNotifCantGatherMore 		 = "You can't gather more of this herb" 
 Config.EnableGoldCurrencyNotifications   = true  -- ONLY FOR VORP  
  
---Config.DeleteDistance must be superior to Config.SpawnDistance
-Config.DeleteDistance     				 = 160.0  -- If the player distance to any herb zone coords is > 160.0 then it will remove the herbs. I recommend not going over 200 since it's reaching the culling zone limit
-Config.SpawnDistance      				 = 150.0  -- If the player distance to any herb zone coords is < 150.0 this will spawn the herbs.
+--Config.DeleteDistance must be superior to Config.SpawnDistance !!
+Config.DeleteDistance     				 = 90.0  -- If the player distance to any herb zone coords is > 160.0 then it will remove the herbs from the previous zone. I recommend not going over 200 since it's reaching the culling zone limit
+Config.SpawnDistance      				 = 80.0  -- If the player distance to any herb zone coords is < 150.0 this will spawn the herbs.
 Config.RoleRestriction    				 = false  -- ENABLE / DISABLE ROLES RESTRICTION FOR ALLOWING TO ACCESS HERBS SHOPS AND MISSIONS  
 Config.Roles = { -- LIST THE ROLES ALLOWED TO GATHER AND ACCESS HERBS SHOPS
 "trapper",
@@ -46,9 +48,13 @@ Config.Roles = { -- LIST THE ROLES ALLOWED TO GATHER AND ACCESS HERBS SHOPS
 ------------------
 -- COMMANDS --
 ------------------
-Config.Herbalist_Map_Command = true  -- If set to true this will enable the herbalist compendium menu to display through this command. 
+Config.Herbalist_Map_Command 		 = true  -- If set to true this will enable the herbalist compendium menu to display through this command. 
+Config.Herbalist_Map_Command_Name 	 = "herbalist_map"
+Config.Herbalist_Saddle_Command 	 = true 
+Config.Herbalist_Saddle_Command_Name = "herbalistsaddle" 
+
+-- LIST OF USABLE EVENTS :
 --TriggerEvent("sirevlc_herbs_display_map")
-Config.Herbalist_Saddle_Command = true 
 --TriggerEvent("sirevlc_Herbalist_Saddle")
 
 ------------------
@@ -242,7 +248,7 @@ Config.Missions_herbs = {
   	[4] = {
   		herb 		     = "COMPOSITE_LOOTABLE_CARDINAL_FLOWER_DEF",
   		CompositeID      = 1175863601,
-         Label            = "Cardinal FLower",
+         Label           = "Cardinal FLower",
   		StartingDistrict = {"all"},
   	    EatHealthAdd     = 20,
   	    EatStaminaAdd    = 20.0, -- FLOAT
@@ -267,7 +273,7 @@ Config.Missions_herbs = {
   	[5] = {
   		herb 		     = "COMPOSITE_LOOTABLE_CHOC_DAISY_DEF",
   		CompositeID      = 988637426,
-         Label            = "Chocolate Daisy",
+        Label            = "Chocolate Daisy",
   		StartingDistrict = {"all"},
   	    EatHealthAdd     = 20,
   	    EatStaminaAdd    = 20.0, -- FLOAT
@@ -295,10 +301,10 @@ Config.Missions_herbs = {
   
   
   	[6] = {
-  	herb 		     = "COMPOSITE_LOOTABLE_CREEKPLUM_DEF",
-  	CompositeID      = -1964504874,
-        Label            = "Creek Plum",
-  	StartingDistrict = {"all"},
+  	herb 		       = "COMPOSITE_LOOTABLE_CREEKPLUM_DEF",
+  	CompositeID        = -1964504874,
+    Label         	   = "Creek Plum",
+  	StartingDistrict   = {"all"},
       EatHealthAdd     = 20,
       EatStaminaAdd    = 20.0, -- FLOAT
       EatHealthBoost   = 0.0,  -- FLOAT
@@ -323,7 +329,7 @@ Config.Missions_herbs = {
    	[7] = {
   		herb 		     = "COMPOSITE_LOOTABLE_TEXAS_BONNET_DEF",
   		CompositeID      = -2015527411,
-          Label            = "Texas Bluebonnet",
+          Label          = "Texas Bluebonnet",
   		StartingDistrict = {"all"},
   	    EatHealthAdd     = 20,
   	    EatStaminaAdd    = 20.0, -- FLOAT
@@ -351,7 +357,7 @@ Config.Missions_herbs = {
    	[8] = {
   		herb 		     = "COMPOSITE_LOOTABLE_WILD_RHUBARB_DEF",
   		CompositeID      = -2029085880,
-          Label            = "Wild Rhubarb",
+          Label          = "Wild Rhubarb",
   		StartingDistrict = {"all"},
   	    EatHealthAdd     = 20,
   	    EatStaminaAdd    = 20.0, -- FLOAT
@@ -1066,18 +1072,19 @@ Config.Herbs_Districts = {
 		{"COMPOSITE_LOOTABLE_HUMMINGBIRD_SAGE_DEF", 40},
  		{"COMPOSITE_LOOTABLE_WINTERGREEN_BERRY_DEF", 30},
 	},
-	district_scarlett_meadows = {
-		{"COMPOSITE_LOOTABLE_YARROW_DEF", 60},
-		{"COMPOSITE_LOOTABLE_RED_RASPBERRY_DEF", 40},
-		{"COMPOSITE_LOOTABLE_OREGANO_DEF", 80},
-		{"COMPOSITE_LOOTABLE_OLEANDER_SAGE_DEF", 60},  
-		{"COMPOSITE_LOOTABLE_MILKWEED_DEF", 50},
-		{"COMPOSITE_LOOTABLE_INDIAN_TOBACCO_DEF", 50},
-		{"COMPOSITE_LOOTABLE_HUMMINGBIRD_SAGE_DEF", 40},
- 		{"COMPOSITE_LOOTABLE_AMERICAN_GINSENG_ROOT_DEF", 30},
- 		{"COMPOSITE_LOOTABLE_GOLDEN_CURRANT_DEF", 40},
-		{"COMPOSITE_LOOTABLE_COMMON_BULRUSH_DEF", 80},
- 	},
+ 	district_scarlett_meadows = {
+ 		{"COMPOSITE_LOOTABLE_YARROW_DEF", 60},
+ 		{"COMPOSITE_LOOTABLE_RED_RASPBERRY_DEF", 40},
+ 		{"COMPOSITE_LOOTABLE_OREGANO_DEF", 80},
+ 		{"COMPOSITE_LOOTABLE_OLEANDER_SAGE_DEF", 60},  
+ 		{"COMPOSITE_LOOTABLE_MILKWEED_DEF", 50},
+ 		{"COMPOSITE_LOOTABLE_INDIAN_TOBACCO_DEF", 50},
+ 		{"COMPOSITE_LOOTABLE_HUMMINGBIRD_SAGE_DEF", 40},
+  		{"COMPOSITE_LOOTABLE_AMERICAN_GINSENG_ROOT_DEF", 30},
+  		{"COMPOSITE_LOOTABLE_GOLDEN_CURRANT_DEF", 40},
+ 		{"COMPOSITE_LOOTABLE_COMMON_BULRUSH_DEF", 80},
+  	},
+ 
 	district_tall_trees = {
 		{"COMPOSITE_LOOTABLE_BURDOCK_ROOT_DEF", 50},
 		{"COMPOSITE_LOOTABLE_BLACK_BERRY_DEF", 50},

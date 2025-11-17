@@ -1,6 +1,6 @@
 Config = {}
  
--- VERSION 2.3 - 04.08.25
+-- VERSION 2.4 - 10.10.25
  
 --------------------------------------------------
 
@@ -13,6 +13,9 @@ Config.REDEMRP2          				 			= false
 Config.REDEMRP2023REBOOT 				 			= false
 Config.VORP              				 			= true
 Config.RSG               				 			= false
+
+
+Config.FREE_ROAM_TRIGGER                            = true   -- IF TRUE IT WILL ENABLE LEGENDARY SPAWN OUTSIDE OF MISSIONS WHEN USING BAITS 
 			
 Config.Debug 							 			= false   -- ONLY SET TO TRUE FOR SUPPORT
 Config.EnableGoldCurrencyNotifications   			= true   -- ONLY FOR VORP 
@@ -634,11 +637,11 @@ Config.LegendaryAnimals = {
   			["health"] 					= 1000,			
   			["missionzones"]  			= {
   			-- SOUTH WEST OF SAINT DENIS 
-  			{2022.0264892578125, -1984.932373046875, 41.97107696533203,    40.0, 100, 20},   
-  			{2056.535400390625, -1918.07470703125, 42.33666229248047,      40.0, 100, 20},   
-  			{2119.84765625, -1863.5611572265625, 41.60231018066406,    	   40.0, 100, 20},   
-  			{2059.850830078125, -1769.132080078125, 41.56644439697265,     40.0, 100, 20},   
-  			},
+  			 {2022.0264892578125, -1984.932373046875, 41.97107696533203,    40.0, 100, 20},   
+  			 {2056.535400390625, -1918.07470703125, 42.33666229248047,      40.0, 100, 20},   
+  			 {2119.84765625, -1863.5611572265625, 41.60231018066406,    	   40.0, 100, 20},   
+  			 {2059.850830078125, -1769.132080078125, 41.56644439697265,     40.0, 100, 20},   
+   			},
   			["baittype"]      			= "potent_predator_bait",
   			["ispredator"]    			= true,				
   			["timeofspawn"]   			= {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23},

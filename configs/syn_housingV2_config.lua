@@ -27,10 +27,6 @@ Config.keys = {
 Config.disable_normal_ledger = false -- set to true to completely disable normal ledger, and not allow players to save money in their house
 Config.normalledger_limit = 5000 -- set max limit to how much money players can save in their house, set to 0 if u dont want a limit 
 
-
-Config.adminwebhook = ""
-Config.webhookavatar = "https://www.pngall.com/wp-content/uploads/2016/04/Home-PNG-HD.png"
-
 Config.metadata = true -- set to true when using meta data inventory update needs to be true if useing Vorp inv 4.0 or higher 
 Config.useDecayitems = true -- set to false if you use old Vorp Inv under 4.0 
 
@@ -121,6 +117,8 @@ Config.Locations = { -- money for houses bought goes here. sellers have it to co
     },
 }
 
+
+Config.enablemotels = false -- set to false if you dont want motels to be used in your server, this will disable all motel related features and will not allow players to buy rooms or use motels
 Config.motellocation = { 
     Valentine = {
         PosEntrance = {x=-322.14, y=767.47, z=121.63}, 
@@ -396,9 +394,7 @@ Config.Language = {
     ["houseforsale"] = "House Sale",
     ["houseforsale2"] = "House Put For Sale id: ",
     ["alreadyowned"] = "Already Bought",
-
-    ["houseinvid"] = "House Inventory ID: ", -- new !
-
+    ["houseinvid"] = "House Inventory ID: ", 
     ["changeinterior"] = "Change House Interior",
     ["nomoney"] = "Not Enough Money $",
 	["qt"] = "Invalid quantity",
@@ -443,7 +439,6 @@ Config.Language = {
     ["extradoorsetup"] = "Extra Doors Setup",
     ["aresure"] = "Are You Sure?",
     ["upstore"] = "Upgrade Storage",
-    ["furni"] = "Furniture",
     ["furnicata"] = "Furniture Catagory",
     ["sellfurni"] = "Sell Furniture",
     ["keyholders"] = "Key Holders",
@@ -468,7 +463,7 @@ Config.Language = {
     ["inventoryspace"] = "Inventory Space",
     ["delhouse"] = "Remove House",
     ["houseid"] = "House ID : ",
-    ["depositcashtax"] = "tax ledger",
+    ["depositcashtax"] = "Tax ledger",
     ["depositcash"] = "normal ledger",
     ["givekey"] = "Give Keys",
     ["id"] = "ID",
@@ -557,6 +552,10 @@ Config.Language = {
     ["doorknocked"] = "Door is knocking",
     ["cantdepomore2"] = "Cant Deposit more than max amount: $",
     ["blacklistedItem"] = "Item Is Blacklisted",
+    ["houseforzero"] = "House cleared from menu for being set to 0$",
+    ["Withdrew"] = "Withdrew",
+    ["Deposited"] = "Deposited",
+
 
 }
 ---------------------------------------------------------
