@@ -112,7 +112,17 @@ Config = {
 
 	-- HERE YOU CAN SET THE MAX AMOUNT OF WEAPONS PER JOB (IF YOU WANT)
 	JobsAllowed                = {
-		police = 10 -- Job name and max weapons allowed dont allow less than the above
+		gun_val = 10, -- Job name and max weapons allowed dont allow less than the above
+		gun_straw = 10,
+		gun_sd = 10,
+		gun_arm = 10,
+		gun_bw = 10,
+		gun_annes = 10,
+		marshal = 10,
+		policeVal = 10,
+		policeSD = 10,
+		policeBW = 10,
+		policeArm = 10,
 	},
 
 	-- FIRST JOIN

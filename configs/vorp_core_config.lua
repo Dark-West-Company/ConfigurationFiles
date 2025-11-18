@@ -73,7 +73,7 @@ Config = {
 
     MaxCharacterJobs      = 5,    -- Maximum number of jobs a player can have. for multijob system, this is for new players, for old change in database column max_jobs
 
-    SwitchJobCoolDown     = 10,   -- Cool down time in minutes for switching jobs.
+    SwitchJobCoolDown     = 5,   -- Cool down time in minutes for switching jobs.
 
     --=============================================
     --             UI CORE SETTINGS              --
@@ -176,7 +176,7 @@ Config = {
 
     StaminaRecharge          = { enable = true, multiplier = 0.4 },  -- Auto-recharge for stamina, with a multiplier for speed.
 
-    RespawnTime              = 10,                                   -- Time in seconds before a player can respawn.
+    RespawnTime              = 120,                                   -- Time in seconds before a player can respawn.
 
     RespawnKey               = 0xDFF812F9,                           -- Key code for respawning (default is 'E').
 

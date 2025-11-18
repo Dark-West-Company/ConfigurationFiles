@@ -1,11 +1,11 @@
 Config = {}
- 
+
 -- VERSION 3.51 - 16.11.25
- 
+
 -- EXPORTS : 
 -- exports.sirevlc_horses_v3.GET_PLAYER_HORSE()  -- THIS WILL RETURN THE PLAYER HORSE ENTITY CLIENT ID / WILL RETURN FALSE IF the PLAYER_HORSE DOESNT EXIST
 -- exports.sirevlc_horses_v3.GET_PLAYER_HORSE_SERVER_ID()  -- THIS WILL RETURN THE PLAYER HORSE ENTITY SERVER ID / WILL RETURN FALSE IF the PLAYER_HORSE DOESNT EXIST
- 
+
 --------------------------------------------------
 			-- FRAMEWORK SELECTION --
 -------------------------------------------------- 
@@ -15,7 +15,7 @@ Config = {}
 Config.REDEMRP2023REBOOT 				 = false
 Config.VORP              				 = true
 Config.RSG               				 = false
- 
+
 --------------------------------------------------
 			-- GENERAL OPTIONS --
 --------------------------------------------------  
@@ -36,10 +36,10 @@ Config.HORSE_CALLING_COMMAND             = "spawn_my_horse" -- SET THE DESIRED C
 
 Config.HORSE_REVIVE_TIMER                = 60      			-- TIME IN SECONDS YOUR HORSE WILL REMAIN DOWNED IN A REVIVE STATE BEFORE IT DIES 
 Config.MenuMusic                         = true			    -- ENABLE / DISABLE MUSIC IN STABLE MENU
- 
+
 Config.CLASSIC_STABLES_RDO_CUTSCENES     = false   			-- ENABLE OR DISABLE THE CLASSIC RDO STYLE CUTSCENES WHEN ENTERING / EXITING THE STABLES
-Config.EnableNotifications               = true			
- 
+Config.EnableNotifications               = true
+
 Config.Debug                             = false    	    -- THIS IS TO SHOW DEBUG PRINTS
 
 Config.ENABLE_HORSE_PICKING 			 = true    			-- IF SET TO TRUE IT WILL ENABLE HORSE PICKING HERBS 
@@ -197,12 +197,16 @@ Config.OWNED_HORSE_LIMIT_USE_PLAYER                  = false 	-- IF SET TO TRUE 
 
 
 Config.OWNED_HORSE_LIMIT_ROLES_JOBS = {
-[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS",    LIMIT = 5 }, 		-- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS LIMIT IF Config.OWNED_HORSE_LIMIT = true 
---[2] = {DATABASE_JOB_LABEL = "horsetrainer",  LIMIT = 5 },
---[3] = {DATABASE_JOB_LABEL = "trapper"     ,  LIMIT = 5 },
---[4] = {DATABASE_JOB_LABEL = "doctor"      ,  LIMIT = 5 },
+	[1] = { DATABASE_JOB_LABEL = "OTHER_JOBS", LIMIT = 5 },   -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS LIMIT IF Config.OWNED_HORSE_LIMIT = true 
+
+	[2] = { DATABASE_JOB_LABEL = "sta_val",     LIMIT = 10 },
+	[3] = { DATABASE_JOB_LABEL = "sta_straw",   LIMIT = 10 },
+	[4] = { DATABASE_JOB_LABEL = "sta_annes",   LIMIT = 10 },
+	[5] = { DATABASE_JOB_LABEL = "sta_sd",      LIMIT = 10 },
+	[6] = { DATABASE_JOB_LABEL = "sta_bw",      LIMIT = 10 },
+	[7] = { DATABASE_JOB_LABEL = "sta_rhodes",  LIMIT = 10 },
 }
- 
+
 Config.OWNED_HORSE_LIMIT_ROLES_PLAYERS = {
 [1] = {IDENTIFIER = "OTHER_PLAYERS",  CHARID = "OTHER_PLAYERS",  LIMIT = 5 },   -- EVERY OTHER PLAYER THAN THE ONES LISTED BELOW WILL HAVE THIS LIMIT IF Config.OWNED_HORSE_LIMIT = true 
 [2] = {IDENTIFIER = 0,  CHARID = 0, LIMIT = 5 }, 								 
@@ -221,10 +225,13 @@ Config.OWNED_TACK_LIMIT_USE_PLAYER               = false 	-- IF SET TO TRUE IT W
 
  
 Config.OWNED_TACK_LIMIT_ROLES_JOBS = {
-[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS",    LIMIT = 5 }, -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS LIMIT IF Config.OWNED_TACK_LIMIT = true 
-[2] = {DATABASE_JOB_LABEL = "horsetrainer",  LIMIT = 5 },
-[3] = {DATABASE_JOB_LABEL = "trapper"     ,  LIMIT = 5 },
-[4] = {DATABASE_JOB_LABEL = "doctor"      ,  LIMIT = 5 },
+	[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS",    LIMIT = 5 }, -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS LIMIT IF Config.OWNED_TACK_LIMIT = true 
+	[2] = { DATABASE_JOB_LABEL = "sta_val",     LIMIT = 10 },
+	[3] = { DATABASE_JOB_LABEL = "sta_straw",   LIMIT = 10 },
+	[4] = { DATABASE_JOB_LABEL = "sta_annes",   LIMIT = 10 },
+	[5] = { DATABASE_JOB_LABEL = "sta_sd",      LIMIT = 10 },
+	[6] = { DATABASE_JOB_LABEL = "sta_bw",      LIMIT = 10 },
+	[7] = { DATABASE_JOB_LABEL = "sta_rhodes",  LIMIT = 10 },
 }
 
 Config.OWNED_TACK_LIMIT_ROLES_PLAYERS = {
@@ -340,7 +347,7 @@ Config.DATA_BREED_ICON_9  			 		= {0.18, 0.959}
 --------------------------------------
   -- HORSE TRAINING EXTRA --
 --------------------------------------
-Config.AFTER_TRAINING_WALLOW          = true  -- IN CASE OF SUCCESS YOUR HORSE WILL HAPPILY ROLL ON THE GROUND
+Config.AFTER_TRAINING_WALLOW          = false  -- IN CASE OF SUCCESS YOUR HORSE WILL HAPPILY ROLL ON THE GROUND
  
 ------------------------------------------
 		--TRAINING SETTINGS--
@@ -355,485 +362,504 @@ Config.AFTER_TRAINING_WALLOW          = true  -- IN CASE OF SUCCESS YOUR HORSE W
 Config.HORSETRAININGSETTINGS = {
 -- BLACKWATER --
 [1] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 60}, -- ANY OTHER PLAYER THAN THE ONES LISTED BELOW WILL GET THIS AMOUNT OF XP AND COUNTDOWN. IF TRAINING_ACCESS = false THEN TRAINING ACCESS WILL BE LOCKED FOR THEM
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 10, COUNTDOWN = 45}, -- ANY OTHER JOBS THAN THE ONES LISTED BELOW WILL GET THIS AMOUNT OF XP AND COUNTDOWN. IF TRAINING_ACCESS = false THEN TRAINING ACCESS WILL BE LOCKED FOR THEM
-			  [2]  = {TRAINING_ACCESS = true, LABEL = "horsetrainer",   XPGIVEN = 50, COUNTDOWN = 45},
-			  [3]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerSD", XPGIVEN = 50, COUNTDOWN = 45},
-			  [4]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerVH", XPGIVEN = 50, COUNTDOWN = 45},
-			  [5]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerAN", XPGIVEN = 50, COUNTDOWN = 45},
-			  [6]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerRH", XPGIVEN = 50, COUNTDOWN = 45},
-			  [7]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerVA", XPGIVEN = 50, COUNTDOWN = 45},
-			  [8]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerBW", XPGIVEN = 150, COUNTDOWN = 60},
-			  [9]  = {TRAINING_ACCESS = true, LABEL = "horsetrainerSB", XPGIVEN = 50, COUNTDOWN = 45},
-			  [10] = {TRAINING_ACCESS = true, LABEL = "horsetrainerPH", XPGIVEN = 50, COUNTDOWN = 45},
-			  [11] = {TRAINING_ACCESS = true, LABEL = "horsetrainerAM", XPGIVEN = 50, COUNTDOWN = 45},
-			  [12] = {TRAINING_ACCESS = true, LABEL = "horsetrainerTW", XPGIVEN = 50, COUNTDOWN = 45},
-			  [13] = {TRAINING_ACCESS = true, LABEL = "horsetrainerMX", XPGIVEN = 50, COUNTDOWN = 45},
-			  [14] = {TRAINING_ACCESS = true, LABEL = "horsetrainerGM", XPGIVEN = 50, COUNTDOWN = 45},
-			  },	
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      			= -1327110633,
-			  BLIPNAME        			= "HORSE TRAINING",	 
-			  BLIPCOORDS                = vector3(-948.1144409179688, -1339.1795654296875, 50.69696044921875), 	
-			  PROMPTNAME                = "BLACKWATER STABLES",
-			  PROMPTCOORDS              = vector3(-948.1144409179688, -1339.1795654296875, 50.69696044921875), 
-			  PROMPTDISTANCE            = 2.0,
-			  OBSTACLES_ENABLED         = true, 			  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-962.64, -1338.97, 49.72, 87.99 ) },   
-			  [2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-973.30, -1333.05, 50.62, 0.0   ) },   
-			  [3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-972.74, -1319.99, 50.21, 0.0   ) },   
-			  [4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-964.46, -1305.18, 49.39, -88.0 ) },   
-			  [5]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-947.61, -1305.44, 49.10, -84.20) },   
-			  },
-			  CUTSCENE 						= true,	
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
-			  },
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 60}, -- ANY OTHER PLAYER THAN THE ONES LISTED BELOW WILL GET THIS AMOUNT OF XP AND COUNTDOWN. IF TRAINING_ACCESS = false THEN TRAINING ACCESS WILL BE LOCKED FOR THEM
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},
+			DEFAULT_XP	            = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      			= -1327110633,
+			BLIPNAME        			= "HORSE TRAINING",	 
+			BLIPCOORDS                = vector3(-948.1144409179688, -1339.1795654296875, 50.69696044921875), 	
+			PROMPTNAME                = "BLACKWATER STABLES",
+			PROMPTCOORDS              = vector3(-948.1144409179688, -1339.1795654296875, 50.69696044921875), 
+			PROMPTDISTANCE            = 2.0,
+			OBSTACLES_ENABLED         = true, 			  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-962.64, -1338.97, 49.72, 87.99 ) },   
+			[2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-973.30, -1333.05, 50.62, 0.0   ) },   
+			[3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-972.74, -1319.99, 50.21, 0.0   ) },   
+			[4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-964.46, -1305.18, 49.39, -88.0 ) },   
+			[5]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", COORDS = vector4(-947.61, -1305.44, 49.10, -84.20) },   
+			},
+			CUTSCENE 						= true,	
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-993.92, -1353.48, 57.49, -7.58, 0.00, -46.65, 50.00}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4(-948.1144409179688, -1339.1795654296875, 50.69696044921875, 90.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-962.64, -1338.97, 49.72+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [2]  = { COORDS = vector3(-973.30, -1333.05, 50.62+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [3]  = { COORDS = vector3(-972.74, -1319.99, 50.21+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [4]  = { COORDS = vector3(-964.46, -1305.18, 49.36+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [5]  = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [6]  = { COORDS = vector3(-901.14, -1302.61, 42.46    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [7]  = { COORDS = vector3(-938.89, -1320.24, 49.22    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [8]  = { COORDS = vector3(-902.06, -1309.49, 42.43    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [9]  = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [10] = { COORDS = vector3(-973.30, -1333.05, 50.62+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [11] = { COORDS = vector3(-964.46, -1305.18, 49.36+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [12] = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [13] = { COORDS = vector3(-972.74, -1319.99, 50.21+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [14] = { COORDS = vector3(-962.64, -1338.97, 49.72+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",
+			STARTPLAYERCOORDS         = vector4(-948.1144409179688, -1339.1795654296875, 50.69696044921875, 90.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-962.64, -1338.97, 49.72+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[2]  = { COORDS = vector3(-973.30, -1333.05, 50.62+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[3]  = { COORDS = vector3(-972.74, -1319.99, 50.21+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[4]  = { COORDS = vector3(-964.46, -1305.18, 49.36+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[5]  = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[6]  = { COORDS = vector3(-901.14, -1302.61, 42.46    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[7]  = { COORDS = vector3(-938.89, -1320.24, 49.22    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[8]  = { COORDS = vector3(-902.06, -1309.49, 42.43    ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[9]  = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[10] = { COORDS = vector3(-973.30, -1333.05, 50.62+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[11] = { COORDS = vector3(-964.46, -1305.18, 49.36+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[12] = { COORDS = vector3(-947.61, -1305.44, 49.09+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[13] = { COORDS = vector3(-972.74, -1319.99, 50.21+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[14] = { COORDS = vector3(-962.64, -1338.97, 49.72+0.7), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",
 }, 
 	
 -- SAINT DENIS 
 [2] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },			  
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      			= -1327110633,
-			  BLIPNAME        		    = "HORSE TRAINING",	
-			  BLIPCOORDS                = vector3(2563.87, -789.95, 42.36), 	
-			  PROMPTNAME                = "SAINT DENIS STABLES",			  
-			  PROMPTCOORDS              = vector3(2563.87, -789.95, 42.36), 
-			  PROMPTDISTANCE            = 2.0,
-			  OBSTACLES_ENABLED         = true,  			  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2563.04, -801.44, 41.37, 0.0) },   
-			  [2]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2551.27, -808.40, 41.37, 0.0) },   
-			  [3]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2561.09, -820.31, 41.35, 0.0) },   
-			  [4]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2564.14, -843.82, 41.38, 0.0) },   
-			  [5]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
-			  [6]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
-			  [7]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
-			  [8]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
-			  [9]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
-   
-			  },
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {2548.37, -759.37, 46.38, -3.26, 0.00, -155.97, 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {2577.15, -843.31, 42.04, -0.29, 0.00,  48.56 , 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {2561.76, -803.26, 42.41,  0.99, 0.00, -5.61  , 50.00}, },
-			  },
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},
+			DEFAULT_XP	            = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      			= -1327110633,
+			BLIPNAME        		    = "HORSE TRAINING",	
+			BLIPCOORDS                = vector3(2563.87, -789.95, 42.36), 	
+			PROMPTNAME                = "SAINT DENIS STABLES",			  
+			PROMPTCOORDS              = vector3(2563.87, -789.95, 42.36), 
+			PROMPTDISTANCE            = 2.0,
+			OBSTACLES_ENABLED         = true,  			  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2563.04, -801.44, 41.37, 0.0) },   
+			[2]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2551.27, -808.40, 41.37, 0.0) },   
+			[3]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2561.09, -820.31, 41.35, 0.0) },   
+			[4]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2564.14, -843.82, 41.38, 0.0) },   
+			[5]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
+			[6]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
+			[7]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
+			[8]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
+			[9]  = {ENABLED = true, MODEL = "P_BARREL03X", COORDS = vector4(2573.92, -842.46, 41.25, 0.0) },   
 
-			  STARTPLAYERCOORDS         = vector4(2561.641845703125, -789.8933715820312, 42.29311752319336, -161.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(2565.18, -800.85, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [2]  = { COORDS = vector3(2556.93, -805.10, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [3]  = { COORDS = vector3(2549.03, -809.74, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [4]  = { COORDS = vector3(2562.91, -821.65, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [5]  = { COORDS = vector3(2559.35, -818.44, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [6]  = { COORDS = vector3(2575.78, -841.97, 41.25), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [7]  = { COORDS = vector3(2569.22, -840.36, 41.36), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [8]  = { COORDS = vector3(2562.41, -845.39, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [9]  = { COORDS = vector3(2562.98, -819.76, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [10] = { COORDS = vector3(2558.75, -821.64, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [11] = { COORDS = vector3(2562.93, -799.57, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [12] = { COORDS = vector3(2552.63, -810.44, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [13] = { COORDS = vector3(2557.90, -805.29, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
-			  [14] = { COORDS = vector3(2568.99, -842.44, 41.39), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",
+			},
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {2548.37, -759.37, 46.38, -3.26, 0.00, -155.97, 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {2577.15, -843.31, 42.04, -0.29, 0.00,  48.56 , 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {2561.76, -803.26, 42.41,  0.99, 0.00, -5.61  , 50.00}, },
+			},
+
+			STARTPLAYERCOORDS         = vector4(2561.641845703125, -789.8933715820312, 42.29311752319336, -161.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(2565.18, -800.85, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[2]  = { COORDS = vector3(2556.93, -805.10, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[3]  = { COORDS = vector3(2549.03, -809.74, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[4]  = { COORDS = vector3(2562.91, -821.65, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[5]  = { COORDS = vector3(2559.35, -818.44, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[6]  = { COORDS = vector3(2575.78, -841.97, 41.25), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[7]  = { COORDS = vector3(2569.22, -840.36, 41.36), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[8]  = { COORDS = vector3(2562.41, -845.39, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[9]  = { COORDS = vector3(2562.98, -819.76, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[10] = { COORDS = vector3(2558.75, -821.64, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[11] = { COORDS = vector3(2562.93, -799.57, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[12] = { COORDS = vector3(2552.63, -810.44, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[13] = { COORDS = vector3(2557.90, -805.29, 41.37), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },
+			[14] = { COORDS = vector3(2568.99, -842.44, 41.39), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138} },			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",
 }, 
 
  
 -- TUMBLEWEED
 [3] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },			  
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      		    = -1327110633,
-			  BLIPNAME        		    = "HORSE TRAINING",	  
-			  BLIPCOORDS                = vector3(-4817.98, -2681.13, -13.09),
-			  PROMPTNAME                = "TUMBLEWEED STABLES", 			  
-			  PROMPTCOORDS              = vector3(-4817.98, -2681.13, -13.09), 
-			  PROMPTDISTANCE            = 2.0,
-			  OBSTACLES_ENABLED         = true,  			  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4801.72, -2682.67, -13.56,  0.0  ) },   
-			  [2]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4793.88, -2683.80, -13.80, -19.50) },   
-			  [3]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4786.26, -2685.85, -13.82, -19.0 ) },   
-			  [4]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4790.59, -2675.63, -13.26, -15.0 ) },   
-			  [5]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4795.07, -2694.42, -14.42,  0.0  ) },   
-			  },
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-4753.97, -2738.65, -10.20, -2.24, 0.00, 43.20, 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-4763.77, -2691.91, -11.95, -1.49, 0.00, 75.26, 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-4814.03, -2682.54, -11.21, -1.54, 0.00, 70.69, 50.00}, },
-			  },
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},		  
+			DEFAULT_XP	            = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      		    = -1327110633,
+			BLIPNAME        		    = "HORSE TRAINING",	  
+			BLIPCOORDS                = vector3(-4817.98, -2681.13, -13.09),
+			PROMPTNAME                = "TUMBLEWEED STABLES", 			  
+			PROMPTCOORDS              = vector3(-4817.98, -2681.13, -13.09), 
+			PROMPTDISTANCE            = 2.0,
+			OBSTACLES_ENABLED         = true,  			  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4801.72, -2682.67, -13.56,  0.0  ) },   
+			[2]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4793.88, -2683.80, -13.80, -19.50) },   
+			[3]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4786.26, -2685.85, -13.82, -19.0 ) },   
+			[4]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4790.59, -2675.63, -13.26, -15.0 ) },   
+			[5]  = {ENABLED = true, MODEL = "P_HAYBALESTACK01X", COORDS = vector4(-4795.07, -2694.42, -14.42,  0.0  ) },   
+			},
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-4753.97, -2738.65, -10.20, -2.24, 0.00, 43.20, 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-4763.77, -2691.91, -11.95, -1.49, 0.00, 75.26, 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-4814.03, -2682.54, -11.21, -1.54, 0.00, 70.69, 50.00}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4(-4818.01, -2681.23, -12.19, -97.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-4794.92, -2696.57, -14.69 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [2]  = { COORDS = vector3(-4776.79, -2685.49, -13.87 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [3]  = { COORDS = vector3(-4790.39, -2673.62, -13.06 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [4]  = { COORDS = vector3(-4798.60, -2683.21, -13.67 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [5]  = { COORDS = vector3(-4805.28, -2682.76, -13.50 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [6]  = { COORDS = vector3(-4790.78, -2693.25, -14.44 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [7]  = { COORDS = vector3(-4799.26, -2694.66, -14.28 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [8]  = { COORDS = vector3(-4786.39, -2677.04, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [9]  = { COORDS = vector3(-4795.14, -2675.02, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [10] = { COORDS = vector3(-4781.30, -2684.79, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [11] = { COORDS = vector3(-4790.21, -2684.84, -13.89 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [12] = { COORDS = vector3(-4797.60, -2683.14, -13.69 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [13] = { COORDS = vector3(-4808.70, -2682.90, -13.35 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [14] = { COORDS = vector3(-4822.48, -2679.18, -13.17 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",
+			STARTPLAYERCOORDS         = vector4(-4818.01, -2681.23, -12.19, -97.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-4794.92, -2696.57, -14.69 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[2]  = { COORDS = vector3(-4776.79, -2685.49, -13.87 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[3]  = { COORDS = vector3(-4790.39, -2673.62, -13.06 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[4]  = { COORDS = vector3(-4798.60, -2683.21, -13.67 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[5]  = { COORDS = vector3(-4805.28, -2682.76, -13.50 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[6]  = { COORDS = vector3(-4790.78, -2693.25, -14.44 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[7]  = { COORDS = vector3(-4799.26, -2694.66, -14.28 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[8]  = { COORDS = vector3(-4786.39, -2677.04, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[9]  = { COORDS = vector3(-4795.14, -2675.02, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[10] = { COORDS = vector3(-4781.30, -2684.79, -13.21 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[11] = { COORDS = vector3(-4790.21, -2684.84, -13.89 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[12] = { COORDS = vector3(-4797.60, -2683.14, -13.69 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[13] = { COORDS = vector3(-4808.70, -2682.90, -13.35 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[14] = { COORDS = vector3(-4822.48, -2679.18, -13.17 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",
 		}, 
  
 
 -- PRONGHORN RANCH
-      [4] = {
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },			  
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      			= -1327110633,
-			  BLIPNAME        			= "HORSE TRAINING",	  
-			  BLIPCOORDS                = vector3(-2537.83, 461.15,  144.45), 
-			  PROMPTNAME                = "PRONGHORN RANCH",			  
-			  PROMPTCOORDS              = vector3(-2537.83, 461.15,  144.45), 
-			  PROMPTDISTANCE            = 2.0,
-			  OBSTACLES_ENABLED         = true,  			  
-			  OBSTACLES         		= { 
-			  [1]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2561.05, 454.33, 144.46,  -7.99  ) },   
-			  [2]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2562.75, 431.69, 146.11,  -15.99 ) },   
-			  [3]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2576.14, 434.34, 146.19,  -15.99 ) },   
-			  [4]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2574.84, 453.35, 144.81,  -7.99  ) },   
-			  [5]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.37, 446.99, 144.97,  0.0    ) },   
-			  [6]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.40, 443.81, 145.23,  0.0    ) },   
-			  [7]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.49, 440.27, 145.54,  0.0    ) },      
-			  },                                                                                                                  
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-2570.45,  392.03, 152.67, -3.32, 0.00, -38.67 , 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-2548.01,  482.26, 145.17, 1.84 , 0.00, 176.77 , 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-2547.79,  469.42, 144.66, 4.48 , 0.00, -146.02, 50.00}, },
-			  },
+	[4] = {
+			ENABLED                   = false,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},			  
+			DEFAULT_XP	            = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      			= -1327110633,
+			BLIPNAME        			= "HORSE TRAINING",	  
+			BLIPCOORDS                = vector3(-2537.83, 461.15,  144.45), 
+			PROMPTNAME                = "PRONGHORN RANCH",			  
+			PROMPTCOORDS              = vector3(-2537.83, 461.15,  144.45), 
+			PROMPTDISTANCE            = 2.0,
+			OBSTACLES_ENABLED         = true,  			  
+			OBSTACLES         		= { 
+			[1]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2561.05, 454.33, 144.46,  -7.99  ) },   
+			[2]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2562.75, 431.69, 146.11,  -15.99 ) },   
+			[3]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2576.14, 434.34, 146.19,  -15.99 ) },   
+			[4]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_FENCESHORT02", COORDS = vector4(-2574.84, 453.35, 144.81,  -7.99  ) },   
+			[5]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.37, 446.99, 144.97,  0.0    ) },   
+			[6]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.40, 443.81, 145.23,  0.0    ) },   
+			[7]   = {ENABLED = true, MODEL = "P_BARREL02X", 				   COORDS = vector4(-2568.49, 440.27, 145.54,  0.0    ) },      
+			},                                                                                                                  
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-2570.45,  392.03, 152.67, -3.32, 0.00, -38.67 , 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-2548.01,  482.26, 145.17, 1.84 , 0.00, 176.77 , 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-2547.79,  469.42, 144.66, 4.48 , 0.00, -146.02, 50.00}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4(-2545.42, 466.04, 143.99, 29.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-2561.05, 454.33, 144.46), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [2]  = { COORDS = vector3(-2562.75, 431.69, 146.11), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [3]  = { COORDS = vector3(-2576.14, 434.34, 146.19), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [4]  = { COORDS = vector3(-2574.84, 453.35, 144.81), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [5]  = { COORDS = vector3(-2568.88, 437.33, 145.79), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [6]  = { COORDS = vector3(-2568.36, 442.08, 145.38), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [7]  = { COORDS = vector3(-2568.25, 445.42, 145.09), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [8]  = { COORDS = vector3(-2568.25, 448.55, 144.85), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [9]  = { COORDS = vector3(-2568.25, 445.49, 145.09), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [10] = { COORDS = vector3(-2568.32, 442.02, 145.38), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [11] = { COORDS = vector3(-2568.44, 438.37, 145.70), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [12] = { COORDS = vector3(-2562.75, 431.69, 146.11), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [13] = { COORDS = vector3(-2574.84, 453.35, 144.81), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [14] = { COORDS = vector3(-2576.14, 434.34, 146.19), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",
+			STARTPLAYERCOORDS         = vector4(-2545.42, 466.04, 143.99, 29.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-2561.05, 454.33, 144.46), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[2]  = { COORDS = vector3(-2562.75, 431.69, 146.11), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[3]  = { COORDS = vector3(-2576.14, 434.34, 146.19), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[4]  = { COORDS = vector3(-2574.84, 453.35, 144.81), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[5]  = { COORDS = vector3(-2568.88, 437.33, 145.79), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[6]  = { COORDS = vector3(-2568.36, 442.08, 145.38), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[7]  = { COORDS = vector3(-2568.25, 445.42, 145.09), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[8]  = { COORDS = vector3(-2568.25, 448.55, 144.85), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[9]  = { COORDS = vector3(-2568.25, 445.49, 145.09), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[10] = { COORDS = vector3(-2568.32, 442.02, 145.38), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[11] = { COORDS = vector3(-2568.44, 438.37, 145.70), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[12] = { COORDS = vector3(-2562.75, 431.69, 146.11), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[13] = { COORDS = vector3(-2574.84, 453.35, 144.81), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[14] = { COORDS = vector3(-2576.14, 434.34, 146.19), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",
 	}, 
 
 -- DEWBERRY CREEK
-      [5] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45}, 
- 			  },			  
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      		    = -1327110633,
-			  BLIPNAME        		    = "HORSE TRAINING",	 
-			  BLIPCOORDS                = vector3(1202.10, -210.11, 100.25), 
-			  PROMPTNAME                = "DEWBERRY CREEK STABLES",			  
-			  PROMPTCOORDS              = vector3(1202.10, -210.11, 100.25), 
-			  PROMPTDISTANCE            = 2.0, 
-			  OBSTACLES_ENABLED         = true, 			  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1191.76, -226.36, 98.16 , -69.0) },   
-			  [2]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1181.07, -210.48, 99.41 , -51.0) },   
-			  [3]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1189.99, -202.61, 100.30, -57.0) },   
-			  [4]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1206.91, -223.28, 98.41 , -72.0) },   
-			  [5]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1193.11, -174.21, 99.19 , -74.0) },   
-			  [5]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1203.00, -233.10, 98.21 , -66.0) },   
-			  },
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {1191.58, -188.25,  102.37, -2.46,   0.00, -180.00,  50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {1224.63, -234.75,  106.87, -14.05,  0.00, 46.33  ,  50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {1183.75, -220.70,  101.37, -5.30,   0.00, 112.29 ,  50.00}, },
-			  },
+	[5] = { 
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},		  
+			DEFAULT_XP	            = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      		    = -1327110633,
+			BLIPNAME        		    = "HORSE TRAINING",	 
+			BLIPCOORDS                = vector3(1202.10, -210.11, 100.25), 
+			PROMPTNAME                = "DEWBERRY CREEK STABLES",			  
+			PROMPTCOORDS              = vector3(1202.10, -210.11, 100.25), 
+			PROMPTDISTANCE            = 2.0, 
+			OBSTACLES_ENABLED         = true, 			  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1191.76, -226.36, 98.16 , -69.0) },   
+			[2]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1181.07, -210.48, 99.41 , -51.0) },   
+			[3]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1189.99, -202.61, 100.30, -57.0) },   
+			[4]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1206.91, -223.28, 98.41 , -72.0) },   
+			[5]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1193.11, -174.21, 99.19 , -74.0) },   
+			[6]  = {ENABLED = true, MODEL = "MP001_P_JUMPHURDLES01X", COORDS = vector4(1203.00, -233.10, 98.21 , -66.0) },   
+			},
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {1191.58, -188.25,  102.37, -2.46,   0.00, -180.00,  50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {1224.63, -234.75,  106.87, -14.05,  0.00, 46.33  ,  50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {1183.75, -220.70,  101.37, -5.30,   0.00, 112.29 ,  50.00}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4( 1173.39, -224.70, 98.67,-65.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [2]  = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [3]  = { COORDS = vector3(1206.91, -223.27,  98.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [4]  = { COORDS = vector3(1191.76, -226.36,  98.160 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [5]  = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [6]  = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [7]  = { COORDS = vector3(1212.47, -207.13,  100.17 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [8]  = { COORDS = vector3(1197.62, -201.51,  100.55 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [9]  = { COORDS = vector3(1193.10, -174.21,  99.190 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [10] = { COORDS = vector3(1191.17, -194.11,  100.08 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [11] = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [12] = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [13] = { COORDS = vector3(1213.25, -229.19,  98.506 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
-			  [14] = { COORDS = vector3(1203.00, -233.10,  98.209 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",
+			STARTPLAYERCOORDS         = vector4( 1173.39, -224.70, 98.67,-65.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[2]  = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[3]  = { COORDS = vector3(1206.91, -223.27,  98.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[4]  = { COORDS = vector3(1191.76, -226.36,  98.160 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[5]  = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[6]  = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[7]  = { COORDS = vector3(1212.47, -207.13,  100.17 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[8]  = { COORDS = vector3(1197.62, -201.51,  100.55 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[9]  = { COORDS = vector3(1193.10, -174.21,  99.190 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[10] = { COORDS = vector3(1191.17, -194.11,  100.08 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[11] = { COORDS = vector3(1189.98, -202.61,  100.30 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[12] = { COORDS = vector3(1181.06, -210.47,  99.410 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[13] = { COORDS = vector3(1213.25, -229.19,  98.506 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },
+			[14] = { COORDS = vector3(1203.00, -233.10,  98.209 ), DETECTIONDISTANCE = 3.0, RGB = {138,138,138} },			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",
 		}, 	  
  
 -- MCFARLANE RANCH 
-      [6] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45}, 
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45}, 
-			  [2] = {TRAINING_ACCESS = true, LABEL = "horsetrainer", XPGIVEN = 40, COUNTDOWN = 50},  
-			  [3] = {TRAINING_ACCESS = true, LABEL = "trapper", XPGIVEN = 50, COUNTDOWN = 45},  
-			  [4] = {TRAINING_ACCESS = true, LABEL = "doctor", XPGIVEN = 20, COUNTDOWN = 45},  
-			  
- 			  },			  
-			  DEFAULT_XP	                = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      			= -1327110633,
-			  BLIPNAME        		    = "HORSE TRAINING",	  
-			  BLIPCOORDS                = vector3(-2415.03, -2337.38, 61.20),	
-			  PROMPTNAME                = "MCFARLANE RANCH STABLES",			  
-			  PROMPTCOORDS              = vector3(-2415.03, -2337.38, 61.20), 
-			  PROMPTDISTANCE            = 2.0,
-			  OBSTACLES_ENABLED         = true,  			  
-			  OBSTACLES         		= { 
-			  [1]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_SACKSHORT01", 		COORDS = vector4(-2440.34, -2348.53, 60.18,  33.9   ) },   
-			  [2]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_SACKSHORT01", 		COORDS = vector4(-2438.98, -2350.55, 60.18,  -145.0 ) },   
-			  [3]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2442.60, -2351.74, 60.17,  0.0    ) },   
-			  [4]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2445.31, -2353.76, 60.17,  0.0    ) },   
-			  [5]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2448.62, -2356.21, 60.17,  0.0    ) },   
-			  [6]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2463.06, -2365.89, 60.17,  -39.99 ) },   
-			  [7]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2466.49, -2382.47, 60.17,  14.0   ) },   
-			  [8]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2448.23, -2394.04, 60.17,  -74.99 ) },   
-			  [9]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2429.01, -2366.63, 60.17,  0.0    ) },   
- 			  },
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-2442.67, -2409.51, 62.04, -1.99,   0.00,  -15.80 , 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-2429.34, -2369.07, 92.44, -88.60,  0.00,  30.45  , 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-2420.84, -2336.14, 62.94, -7.12,   0.00,  -115.23, 50.00}, },
-			  },
+	[6] = { 
+			ENABLED                   = false,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45}, 
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},			  
+			DEFAULT_XP	                = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      			= -1327110633,
+			BLIPNAME        		    = "HORSE TRAINING",	  
+			BLIPCOORDS                = vector3(-2415.03, -2337.38, 61.20),	
+			PROMPTNAME                = "MCFARLANE RANCH STABLES",			  
+			PROMPTCOORDS              = vector3(-2415.03, -2337.38, 61.20), 
+			PROMPTDISTANCE            = 2.0,
+			OBSTACLES_ENABLED         = true,  			  
+			OBSTACLES         		= { 
+			[1]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_SACKSHORT01", 		COORDS = vector4(-2440.34, -2348.53, 60.18,  33.9   ) },   
+			[2]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_SACKSHORT01", 		COORDS = vector4(-2438.98, -2350.55, 60.18,  -145.0 ) },   
+			[3]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2442.60, -2351.74, 60.17,  0.0    ) },   
+			[4]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2445.31, -2353.76, 60.17,  0.0    ) },   
+			[5]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2448.62, -2356.21, 60.17,  0.0    ) },   
+			[6]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2463.06, -2365.89, 60.17,  -39.99 ) },   
+			[7]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2466.49, -2382.47, 60.17,  14.0   ) },   
+			[8]   = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01", 	COORDS = vector4(-2448.23, -2394.04, 60.17,  -74.99 ) },   
+			[9]   = {ENABLED = true, MODEL = "P_BARREL01AX", 						COORDS = vector4(-2429.01, -2366.63, 60.17,  0.0    ) },   
+			},
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-2442.67, -2409.51, 62.04, -1.99,   0.00,  -15.80 , 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-2429.34, -2369.07, 92.44, -88.60,  0.00,  30.45  , 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-2420.84, -2336.14, 62.94, -7.12,   0.00,  -115.23, 50.00}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4(-2414.09, -2339.14, 60.58, 118.20),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-2441.48, -2350.88, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [2]  = { COORDS = vector3(-2444.01, -2352.77, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [3]  = { COORDS = vector3(-2446.95, -2354.93, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [4]  = { COORDS = vector3(-2439.43, -2349.40, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [5]  = { COORDS = vector3(-2463.06, -2365.89, 60.21+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [6]  = { COORDS = vector3(-2466.49, -2382.47, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [7]  = { COORDS = vector3(-2448.23, -2394.04, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [8]  = { COORDS = vector3(-2436.31, -2371.18, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [9]  = { COORDS = vector3(-2436.95, -2368.62, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [10] = { COORDS = vector3(-2424.47, -2363.71, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [11] = { COORDS = vector3(-2431.87, -2371.35, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [12] = { COORDS = vector3(-2448.23, -2394.04, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [13] = { COORDS = vector3(-2466.49, -2382.47, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
-			  [14] = { COORDS = vector3(-2463.06, -2365.89, 60.21+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",	  		  
+			STARTPLAYERCOORDS         = vector4(-2414.09, -2339.14, 60.58, 118.20),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-2441.48, -2350.88, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[2]  = { COORDS = vector3(-2444.01, -2352.77, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[3]  = { COORDS = vector3(-2446.95, -2354.93, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[4]  = { COORDS = vector3(-2439.43, -2349.40, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[5]  = { COORDS = vector3(-2463.06, -2365.89, 60.21+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[6]  = { COORDS = vector3(-2466.49, -2382.47, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[7]  = { COORDS = vector3(-2448.23, -2394.04, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[8]  = { COORDS = vector3(-2436.31, -2371.18, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[9]  = { COORDS = vector3(-2436.95, -2368.62, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[10] = { COORDS = vector3(-2424.47, -2363.71, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[11] = { COORDS = vector3(-2431.87, -2371.35, 60.17     ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[12] = { COORDS = vector3(-2448.23, -2394.04, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[13] = { COORDS = vector3(-2466.49, -2382.47, 60.25+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},
+			[14] = { COORDS = vector3(-2463.06, -2365.89, 60.21+0.5 ), DETECTIONDISTANCE = 3.0 , RGB = {138,138,138}},			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",	  		  
 }, 	
 
 -- STRAWBERRY
       [7] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1] = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",  XPGIVEN = 30, COUNTDOWN = 45},  
-			  [2] = {TRAINING_ACCESS = true, LABEL = "horsetrainer", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },			  
-			  DEFAULT_XP	                = 30,	
-			  DEFAULT_COUNTDOWN	        = 45,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      			= -1327110633,
-			  BLIPNAME        		    = "HORSE TRAINING",	  
-			  BLIPCOORDS                = vector3(-1800.08, -564.31, 156.0), 
-			  PROMPTNAME                = "STRAWBERRY STABLES",			  
-			  PROMPTCOORDS              = vector3(-1800.08, -564.31, 156.0), 
-			  PROMPTDISTANCE            = 2.0, 	
-			  OBSTACLES_ENABLED         = true, 			  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1784.78, -561.57, 154.95, -55.0) },   
-			  [2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1797.83, -576.84, 154.99, -55.0) },   
-			  [3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1798.03, -556.62, 155.01, 161.0) },   
-			  [4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1803.51, -570.85, 154.83, 161.0) },     
- 			  },
-			  CUTSCENE 						= true, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-1814.20, -588.57,  157.48, -3.85, 0.00,  -51.60, 50.00,}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-1783.57, -579.92,  156.80, -1.01, 0.00,  12.59 , 50.00,}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-1785.86, -549.00,  156.66, 6.64,  0.00,  32.33 , 50.00,}, },
-			  },
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			[1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},			  
+			DEFAULT_XP	                = 30,	
+			DEFAULT_COUNTDOWN	        = 45,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      			= -1327110633,
+			BLIPNAME        		    = "HORSE TRAINING",	  
+			BLIPCOORDS                = vector3(-1800.08, -564.31, 156.0), 
+			PROMPTNAME                = "STRAWBERRY STABLES",			  
+			PROMPTCOORDS              = vector3(-1800.08, -564.31, 156.0), 
+			PROMPTDISTANCE            = 2.0, 	
+			OBSTACLES_ENABLED         = true, 			  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1784.78, -561.57, 154.95, -55.0) },   
+			[2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1797.83, -576.84, 154.99, -55.0) },   
+			[3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1798.03, -556.62, 155.01, 161.0) },   
+			[4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(-1803.51, -570.85, 154.83, 161.0) },     
+			},
+			CUTSCENE 						= true, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-1814.20, -588.57,  157.48, -3.85, 0.00,  -51.60, 50.00,}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-1783.57, -579.92,  156.80, -1.01, 0.00,  12.59 , 50.00,}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-1785.86, -549.00,  156.66, 6.64,  0.00,  32.33 , 50.00,}, },
+			},
 
-			  STARTPLAYERCOORDS         = vector4(-1787.85, -546.06, 156.32, -150.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [2]  = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [3]  = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [4]  = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [5]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [6]  = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [7]  = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [8]  = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [9]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [10] = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [11] = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [12] = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [13] = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
-			  [14] = { COORDS = vector3(-1794.35,  -566.89, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",		  
+			STARTPLAYERCOORDS         = vector4(-1787.85, -546.06, 156.32, -150.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[2]  = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[3]  = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[4]  = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[5]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[6]  = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[7]  = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[8]  = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[9]  = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[10] = { COORDS = vector3(-1797.82,  -576.84, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[11] = { COORDS = vector3(-1803.51,  -570.84, 154.91+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[12] = { COORDS = vector3(-1784.78,  -561.57, 155.03+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[13] = { COORDS = vector3(-1798.03,  -556.61, 155.09+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},
+			[14] = { COORDS = vector3(-1794.35,  -566.89, 154.99+0.5), DETECTIONDISTANCE = 3.0, RGB = {138,138,138}},			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",		  
 }, 	
- 
--- VALENTINE 
-      [8] = { 
-			  ENABLED                   = true,
-			  PLAYERLOCK                = false,
-			  PLAYER_LIST               = {
-			  [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
- 			  },	
-			  JOBLOCKED                 = true,
-			  JOB_LIST                  = {
-			  [1]  = {TRAINING_ACCESS = true, LABEL = "OTHER_JOBS",     XPGIVEN = 10, COUNTDOWN = 45},  
-			  [2]  = {TRAINING_ACCESS = true, LABEL = "horsetrainer",   XPGIVEN = 50, COUNTDOWN = 45},
-			  [3]  = {TRAINING_ACCESS = true, LABEL = "trapper",   		XPGIVEN = 50, COUNTDOWN = 45},
-			  [4]  = {TRAINING_ACCESS = true, LABEL = "unemployed",     XPGIVEN = 50, COUNTDOWN = 45},
-			  },				  
-			  DEFAULT_XP	            = 30,	
-			  DEFAULT_COUNTDOWN	        = 60,	
-			  BLIPENABLED 				= true,
-			  BLIPSPRITE      		    = -1327110633,
-			  BLIPNAME        			= "HORSE TRAINING",	
-			  BLIPCOORDS                = vector3(-391.262, 778.792, 115.683), 	
-			  PROMPTNAME                = "VALENTINE STABLES",			  
-			  PROMPTCOORDS              = vector3(-391.262, 778.792, 115.683), 
-			  PROMPTDISTANCE            = 5.0, 
-			  OBSTACLES_ENABLED         = false,  
-			  OBSTACLES         		= { 
-			  [1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
-			  [2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
-			  [3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
-			  [4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },     
- 			  },
-			  CUTSCENE 						= false, 				  
-			  CAMERACUTSCENE         	    = { 
-			  [1] = {DELAY = 2000, CAMERACOORDS = {-377.71, 760.87, 119.49, -8.18, 0.00, 38.32 , 50.00}, },
-			  [2] = {DELAY = 2000, CAMERACOORDS = {-397.34, 785.59, 115.52, 11.63, 0.00, -44.38, 50.00}, },
-			  [3] = {DELAY = 2000, CAMERACOORDS = {-394.81, 785.98, 116.26, 12.33, 0.00, -1.65 , 50.00}, },
-			  },
 
-			  STARTPLAYERCOORDS         = vector4(-394.64, 788.90, 115.24, -180.0),
-			  CHECKPOINTS               = {
-			  [1]  = { COORDS = vector3(-393.48, 781.64, 114.76), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [2]  = { COORDS = vector3(-392.73, 775.66, 114.66), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [3]  = { COORDS = vector3(-393.00, 770.35, 114.74), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [4]  = { COORDS = vector3(-393.16, 775.18, 114.65), DETECTIONDISTANCE = 2.0, RGB = {250,250,250}},
-			  [5]  = { COORDS = vector3(-393.53, 781.15, 114.75), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [6]  = { COORDS = vector3(-394.99, 786.48, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [7]  = { COORDS = vector3(-383.76, 770.28, 115.12), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [8]  = { COORDS = vector3(-398.56, 770.01, 114.85), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [9]  = { COORDS = vector3(-400.00, 787.26, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [10] = { COORDS = vector3(-385.71, 788.71, 114.86), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [11] = { COORDS = vector3(-394.61, 786.63, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [12] = { COORDS = vector3(-393.49, 781.73, 114.76), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [13] = { COORDS = vector3(-392.69, 775.70, 114.66), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
-			  [14] = { COORDS = vector3(-392.69, 769.87, 114.76), DETECTIONDISTANCE = 2.0, RGB = {250,250,250}},			  
-			  },
-			  MUSICENABLED               = true,
-			  MUSICUSED                  = "BOU1_START",	  
+-- VALENTINE 
+	[8] = { 
+			ENABLED                   = true,
+			PLAYERLOCK                = false,
+			PLAYER_LIST               = {
+			--   [1] = {TRAINING_ACCESS = true, IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", XPGIVEN = 30, COUNTDOWN = 45},  
+			},	
+			JOBLOCKED                 = true,
+			JOB_LIST = {
+					[1] = { TRAINING_ACCESS = true, LABEL = "sta_val",    XPGIVEN = 12, COUNTDOWN = 45 },
+					[2] = { TRAINING_ACCESS = true, LABEL = "sta_straw",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[3] = { TRAINING_ACCESS = true, LABEL = "sta_annes",  XPGIVEN = 12, COUNTDOWN = 45 },
+					[4] = { TRAINING_ACCESS = true, LABEL = "sta_sd",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[5] = { TRAINING_ACCESS = true, LABEL = "sta_bw",     XPGIVEN = 12, COUNTDOWN = 45 },
+					[6] = { TRAINING_ACCESS = true, LABEL = "sta_rhodes", XPGIVEN = 12, COUNTDOWN = 45 },
+			},
+			DEFAULT_XP	            	= 30,	
+			DEFAULT_COUNTDOWN	        = 60,	
+			BLIPENABLED 				= true,
+			BLIPSPRITE      		    = -1327110633,
+			BLIPNAME        			= "HORSE TRAINING",	
+			BLIPCOORDS                	= vector3(-391.262, 778.792, 115.683), 	
+			PROMPTNAME                	= "VALENTINE STABLES",			  
+			PROMPTCOORDS              	= vector3(-391.262, 778.792, 115.683), 
+			PROMPTDISTANCE            	= 5.0, 
+			OBSTACLES_ENABLED         	= false,  
+			OBSTACLES         		= { 
+			[1]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
+			[2]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
+			[3]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },   
+			[4]  = {ENABLED = true, MODEL = "MP001_P_MP_JUMP_HAYBALESHORT01",	COORDS = vector4(0.0, 0.0, 0.0, 0.0) },     
+			},
+			CUTSCENE 						= false, 				  
+			CAMERACUTSCENE         	    = { 
+			[1] = {DELAY = 2000, CAMERACOORDS = {-377.71, 760.87, 119.49, -8.18, 0.00, 38.32 , 50.00}, },
+			[2] = {DELAY = 2000, CAMERACOORDS = {-397.34, 785.59, 115.52, 11.63, 0.00, -44.38, 50.00}, },
+			[3] = {DELAY = 2000, CAMERACOORDS = {-394.81, 785.98, 116.26, 12.33, 0.00, -1.65 , 50.00}, },
+			},
+
+			STARTPLAYERCOORDS         = vector4(-394.64, 788.90, 115.24, -180.0),
+			CHECKPOINTS               = {
+			[1]  = { COORDS = vector3(-393.48, 781.64, 114.76), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[2]  = { COORDS = vector3(-392.73, 775.66, 114.66), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[3]  = { COORDS = vector3(-393.00, 770.35, 114.74), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[4]  = { COORDS = vector3(-393.16, 775.18, 114.65), DETECTIONDISTANCE = 2.0, RGB = {250,250,250}},
+			[5]  = { COORDS = vector3(-393.53, 781.15, 114.75), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[6]  = { COORDS = vector3(-394.99, 786.48, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[7]  = { COORDS = vector3(-383.76, 770.28, 115.12), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[8]  = { COORDS = vector3(-398.56, 770.01, 114.85), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[9]  = { COORDS = vector3(-400.00, 787.26, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[10] = { COORDS = vector3(-385.71, 788.71, 114.86), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[11] = { COORDS = vector3(-394.61, 786.63, 114.88), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[12] = { COORDS = vector3(-393.49, 781.73, 114.76), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[13] = { COORDS = vector3(-392.69, 775.70, 114.66), DETECTIONDISTANCE = 3.0, RGB = {250,250,250}},
+			[14] = { COORDS = vector3(-392.69, 769.87, 114.76), DETECTIONDISTANCE = 2.0, RGB = {250,250,250}},			  
+			},
+			MUSICENABLED               = true,
+			MUSICUSED                  = "BOU1_START",	  
 	}, 	
- 
+
 }  
  
  
@@ -1487,11 +1513,10 @@ Config.INTERACTIONS   = {
 	   
 	   INTERACTION_ITEMS_ENABLED   = true, 
 	   INTERACTION_ITEMS_LIST      = {
-	    { ITEM = "hay", 	 			 ITEMLABEL = "Hay",       TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_carrot", 	 ITEMLABEL = "Carrot",    TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",     ITEMREMOVED = true},
-	    { ITEM = "consumable_sugarcube", ITEMLABEL = "Sugarcube", TXTDICT = "inventory_items", TXTIMAGE = "consumable_sugarcube",  ITEMREMOVED = true},
+	    { ITEM = "consumable_herb_wild_carrots", 	 			 ITEMLABEL = "Carrot",       TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",    ITEMREMOVED = true},
+	    { ITEM = "crop_carrot", 	 ITEMLABEL = "Carrot",    TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",     ITEMREMOVED = true},
 	    { ITEM = "consumable_haycube", 	 ITEMLABEL = "Haycube",   TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_apple", 	 ITEMLABEL = "Apple",     TXTDICT = "inventory_items", TXTIMAGE = "consumable_apple", 	   ITEMREMOVED = true},
+	    { ITEM = "crop_apple", 	 ITEMLABEL = "Apple",     TXTDICT = "inventory_items", TXTIMAGE = "consumable_apple", 	   ITEMREMOVED = true},
  		},	   
 	   INTERACTION_HEALTH_BONUS    = {ENABLED = true,   AMOUNT = 50, OVERPOWER = 0.0 }, 
 	   INTERACTION_STAMINA_BONUS   = {ENABLED = true,   AMOUNT = 50, OVERPOWER = 0.0 }, 
@@ -1517,11 +1542,7 @@ Config.INTERACTIONS   = {
 	   
 	   INTERACTION_ITEMS_ENABLED   = true, 
 	   INTERACTION_ITEMS_LIST      = {
-	    { ITEM = "hay", 	 			 ITEMLABEL = "Hay",       TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_carrot", 	 ITEMLABEL = "Carrot",    TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",     ITEMREMOVED = true},
 	    { ITEM = "consumable_sugarcube", ITEMLABEL = "Sugarcube", TXTDICT = "inventory_items", TXTIMAGE = "consumable_sugarcube",  ITEMREMOVED = true},
-	    { ITEM = "consumable_haycube", 	 ITEMLABEL = "Haycube",   TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_apple", 	 ITEMLABEL = "Apple",     TXTDICT = "inventory_items", TXTIMAGE = "consumable_apple", 	   ITEMREMOVED = true},
  		},	   
 	   INTERACTION_HEALTH_BONUS    = {ENABLED = false,  AMOUNT = 0, OVERPOWER = 0.0 }, 
 	   INTERACTION_STAMINA_BONUS   = {ENABLED = false,  AMOUNT = 0, OVERPOWER = 0.0 }, 
@@ -1739,11 +1760,10 @@ Config.INTERACTIONS   = {
 	   
 	   INTERACTION_ITEMS_ENABLED   = true, 
 	   INTERACTION_ITEMS_LIST      = {
-	    { ITEM = "hay", 	 			 ITEMLABEL = "Hay",       TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_carrot", 	 ITEMLABEL = "Carrot",    TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",     ITEMREMOVED = true},
-	    { ITEM = "consumable_sugarcube", ITEMLABEL = "Sugarcube", TXTDICT = "inventory_items", TXTIMAGE = "consumable_sugarcube",  ITEMREMOVED = true},
+	    { ITEM = "consumable_herb_wild_carrots", 	 			 ITEMLABEL = "Carrot",       TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",    ITEMREMOVED = true},
+	    { ITEM = "crop_carrot", 	 ITEMLABEL = "Carrot",    TXTDICT = "inventory_items", TXTIMAGE = "consumable_carrot",     ITEMREMOVED = true},
 	    { ITEM = "consumable_haycube", 	 ITEMLABEL = "Haycube",   TXTDICT = "inventory_items", TXTIMAGE = "consumable_haycube",    ITEMREMOVED = true},
-	    { ITEM = "consumable_apple", 	 ITEMLABEL = "Apple",     TXTDICT = "inventory_items", TXTIMAGE = "consumable_apple", 	   ITEMREMOVED = true},
+	    { ITEM = "crop_apple", 	 ITEMLABEL = "Apple",     TXTDICT = "inventory_items", TXTIMAGE = "consumable_apple", 	   ITEMREMOVED = true},
  		},	    
 	   INTERACTION_HEALTH_BONUS    = {ENABLED = false,  AMOUNT = 0,  OVERPOWER = 0.0 }, 
 	   INTERACTION_STAMINA_BONUS   = {ENABLED = false,  AMOUNT = 0,  OVERPOWER = 0.0 }, 
@@ -2351,7 +2371,7 @@ Config.Stables = {
 		introcamerapos        = {-350.23, 777.28, 120.35, -6.37,  0.00, 46.36,   50.00},		 	   			-- CAMERA VIEW WHEN YOU'RE ENTERING THE STABLE IN CUTSCENE MODE
 		menucamera            = {-367.49, 788.41, 116.36, 1.69,   0.00, -26.87,  50.00},		 	   			-- CAMERA VIEW WHEN YOU'RE IN THE MAIN STABLE MENU		
 		breeding_camera       = {-353.12, 775.99, 117.46, -9.76, 0.00, 134.79, 50.0},		 	   				-- ONLY EFFECTIVE IF OWNING SIREVLC_BREEDING - CAMERA VIEW FOR THE BREEDING PROCESS		
-		breeding_menu_enabled = true,																			-- ONLY EFFECTIVE IF OWNING SIREVLC_BREEDING - ENABLE / DISABLE MENU BREEDING ACCESS FOR THAT STABLE
+		breeding_menu_enabled = false,																			-- ONLY EFFECTIVE IF OWNING SIREVLC_BREEDING - ENABLE / DISABLE MENU BREEDING ACCESS FOR THAT STABLE
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
 		[2] = {DATABASE_JOB_LABEL = "horsetrainer", GOLD = 0.0, DOLLARS = 500.0}, 							     
@@ -2396,7 +2416,7 @@ Config.Stables = {
 		introcamerapos        = {-843.67, -1380.75, 48.19, -3.98,   0.00,  41.33,   50.00},			  
 		menucamera            = {-873.34, -1362.55, 43.41, 1.20,    0.00,  -84.10,  50.00},	
 		breeding_camera       = {-864.30, -1362.21, 45.75, -12.89, 0.00, -179.69, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 						
+		breeding_menu_enabled = false,																			 						
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2486,7 +2506,7 @@ Config.Stables = {
 		introcamerapos     	  = {1213.88, -174.17, 104.71, -5.21,  0.00, 155.84,  50.00},			     
 		menucamera         	  = {1213.82, -186.68, 100.93, 1.22,   0.00, -144.06, 50.00},			     
 		breeding_camera       = {1217.92, -220.82, 101.18, -1.01, 0.00, -72.21, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2532,7 +2552,7 @@ Config.Stables = {
 		introcamerapos   	  = {2949.83, 805.00, 53.14, -2.48,  0.00, -126.83, 40.00},				     
 		menucamera       	  = {2969.31, 795.09, 51.62, -1.83,  0.00, -179.09, 40.00},	
 		breeding_camera       = {2966.25, 771.64, 52.49, -9.59, 0.00, 171.14, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2577,7 +2597,7 @@ Config.Stables = {
 		introcamerapos        = { -1321.58, 2407.67, 310.90, -4.78,  0.00,  111.65,  50.00},		    
 		menucamera            = { -1333.95, 2397.01, 307.90, -5.58,  0.00,  66.20,   50.00},		
 		breeding_camera       = {-1333.32, 2396.50, 309.08, -14.34, 0.00, 65.61, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2622,7 +2642,7 @@ Config.Stables = {
 		introcamerapos        = {-5499.48, -3054.33, 3.89,  -6.32,  0.00, 46.46,   50.00}, 			   
 		menucamera            = {-5514.21, -3042.11, -2.25, 0.02,   0.00, 30.36,   50.00}, 			   
 		breeding_camera       = {-5530.55, -3044.21, -0.31, -10.61, 0.00, 152.84, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2667,7 +2687,7 @@ Config.Stables = {
 		introcamerapos        = {-1806.73, -576.16, 159.52, -4.69,  0.00, 34.20,   50.00},			 
 		menucamera            = {-1817.18, -570.00, 157.53, -10.80, 0.00, 42.62,   50.00},			 
 		breeding_camera       = {-1818.53, -574.52, 157.09, -7.93, 0.00, 115.20, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2712,7 +2732,7 @@ Config.Stables = {
 		introcamerapos        = {-2372.44, -2385.69, 65.96, -3.72,  0.00, 91.90,   50.00}, 				 
 		menucamera            = {-2394.83, -2380.83, 60.97, 10.53,  0.00, -59.63,  50.00}, 				 
 		breeding_camera       = {-2413.85, -2384.23, 62.83, -9.17, 0.00, -176.30, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2758,7 +2778,7 @@ Config.Stables = {
 		introcamerapos        = {1515.93, -7066.14, 80.46,  -4.00, 0.00, 112.33, 50.00}, 		  
 		menucamera            = {1494.35, -7070.46, 77.13,  11.08, 0.00, -93.35, 50.00}, 		  
 		breeding_camera       = {1492.98, -7075.51, 78.15, -8.71, 0.00, -85.22, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
 		},																			 
@@ -2803,7 +2823,7 @@ Config.Stables = {
 		introcamerapos        = {481.04, 2239.04, 253.00, -10.79, 0.00, 160.35, 50.00}, 				 
 		menucamera            = {483.34, 2219.07, 247.40, -4.05,  0.00, 108.12, 50.00}, 				 
 		breeding_camera       = {486.63, 2222.62, 248.90, -12.44, 0.00, -170.54, 15.19},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -2848,7 +2868,7 @@ Config.Stables = {
 		introcamerapos        = {-2188.68, 719.41, 127.78, -3.58,  0.00, 75.99, 50.0}, 			 
 		menucamera            = {-2214.54, 709.75, 121.79, 13.23,  0.00, 22.43, 50.0}, 			 
 		breeding_camera       = {-2239.97, 694.19, 123.19, -9.51, 0.00, -21.16, 50.0},		 	   				 
-		breeding_menu_enabled = true,																			 							
+		breeding_menu_enabled = false,																			 							
  		breeding_price = {
 		[1] = {DATABASE_JOB_LABEL = "OTHER_JOBS", GOLD = 0.0, DOLLARS = 500.0}, 							    -- EVERY OTHER JOB THAN THE ONES LISTED BELOW WILL HAVE THIS PRICE 
  
@@ -3925,8 +3945,8 @@ Config.Horses_Breeds = {
 			[26] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Buckskin Overo",           DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CR",     	BREEDING_PATTERN = "PATTERN_OVERO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CR_O",	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {82,  1, 153,18,139}, 	COAT = {82, 1, 153,18,98},  	EYELASHES = { 138,138,138},   	MANE = { 6, 2, 138,138,138},        TAIL = { 2, 2, 138,138,138},    SCALE = 0.95, FEATHERS = {1,5, 83,83,83}, 		MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
 			[27] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Pangare Bay Brindle",      DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_P",      	BREEDING_PATTERN = "PATTERN_BRINDLE", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_P_BR",	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {61, 1, 123,123,138},  	COAT = {61, 1, 123,236,138},  	EYELASHES = { 138,138,138},   	MANE = { 6, 2, 138,138,138},    	TAIL = { 1, 2, 138,138,138},    SCALE = 0.95, FEATHERS = {1,5, 138,138,138}, 	MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
 			[28] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Amber Champagne Tobiano",  DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CH", 		BREEDING_PATTERN = "PATTERN_TOBIANO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CH_TO", 	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {35,  1, 68,99,109}, 		COAT = {35, 1, 68,99,80},  		EYELASHES = { 0,0,0},   		MANE = { 6, 2, 99,99,99},         	TAIL = { 1, 2, 99,99,99},     	SCALE = 0.95, FEATHERS = {1,5, 93,93,93}, 		MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
-			[28] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Minimal Buckskin Tobiano", DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CR", 		BREEDING_PATTERN = "PATTERN_TOBIANO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CR_TO", 	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {42,  1, 153,103,138}, 	COAT = {42, 1, 153,99,7},  		EYELASHES = { 0,0,0},   		MANE = { 10, 5, 138,83,138},        TAIL = { 6, 5, 83,138,83},     	SCALE = 0.95, FEATHERS = {1,5, 1,1,1}, 			MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
-			[29] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Minimal Buckskin Tobiano", DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CR", 		BREEDING_PATTERN = "PATTERN_TOBIANO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CR_TO", 	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {42,  1, 154,103,138}, 	COAT = {42, 1, 154,99,7},  		EYELASHES = { 0,0,0},   		MANE = { 10, 5, 138,83,138},        TAIL = { 6, 5, 83,138,83},     	SCALE = 0.95, FEATHERS = {1,5, 1,1,1}, 			MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
+			[29] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Minimal Buckskin Tobiano", DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CR", 		BREEDING_PATTERN = "PATTERN_TOBIANO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CR_TO", 	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {42,  1, 153,103,138}, 	COAT = {42, 1, 153,99,7},  		EYELASHES = { 0,0,0},   		MANE = { 10, 5, 138,83,138},        TAIL = { 6, 5, 83,138,83},     	SCALE = 0.95, FEATHERS = {1,5, 1,1,1}, 			MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
+			[30] = {STABLES_AVAILABILITY     = {1,2,3,4,5,6,7,8,9,10,11,12}, MODEL = "a_c_horse_mustang_wildbay",          LABEL = "Minimal Buckskin Tobiano", DOLLARS =  425,  GOLD = 0.0, BREEDING_COLOR = "COLOR_B_CR", 		BREEDING_PATTERN = "PATTERN_TOBIANO", 	BREEDING_SELECT_ENABLED = true, BREEDING_RESULT = "BREEDING_B_CR_TO", 	CUSTOMIZABLE = true, CUSTOM_ROLELOCK = false, CUSTOM_ROLES = {""}, CUSTOM_PLAYERLOCK = false, CUSTOM_PLAYERS = {""}, EYES = 1, HEAD = {42,  1, 154,103,138}, 	COAT = {42, 1, 154,99,7},  		EYELASHES = { 0,0,0},   		MANE = { 10, 5, 138,83,138},        TAIL = { 6, 5, 83,138,83},     	SCALE = 0.95, FEATHERS = {1,5, 1,1,1}, 			MUSTACHE = {0, 5, 0,0,0}, STATS = {HEALTH = 5, STAMINA = 8, COURAGE = 9, AGILITY = 8, SPEED = 6, ACCELERATION = 5}, ROLELOCK = false, ROLES = {"none"}, PLAYERLOCK = false, PLAYERS = {""}, DISPLAYINMENU = true, STASHLIMIT = 10, STASHSLOTS =10},
 		} 
     },
 	
@@ -6816,18 +6836,24 @@ Config.WILD_HORSE_BUYERS = {
 
 
 Config.WILD_HORSES_JOB_LOCKED	 = true 
-Config.WILD_HORSES_JOB_LIST	     = {
-[1] = {JOB = "OTHER_JOBS", CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
-[2] = {JOB = "horsetrainer", CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+Config.WILD_HORSES_JOB_LIST = {
+	[1] = { JOB = "OTHER_JOBS",   CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+
+	[3] = { JOB = "sta_val",     CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+	[4] = { JOB = "sta_straw",   CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+	[5] = { JOB = "sta_annes",   CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+	[6] = { JOB = "sta_sd",      CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+	[7] = { JOB = "sta_bw",      CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
+	[8] = { JOB = "sta_rhodes",  CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
 }
- 
+
 Config.WILD_HORSES_PLAYER_LOCKED = false 
 Config.WILD_HORSES_PLAYER_LIST	     = {
 [1] = {IDENTIFIER = "OTHER_PLAYERS", CHARID = "OTHER_PLAYERS", CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
 [2] = {IDENTIFIER = 99, CHARID = 99, CAN_SELL = true, CAN_ADOPT = true, WILD_HORSE_BUYERS_ACCESS = {1,2,3} },
 }
- 
- 
+
+
 -----------------------------------------------------
       -- WILD HORSES TABLE REFERENCE -- 
 ----------------------------------------------------- 

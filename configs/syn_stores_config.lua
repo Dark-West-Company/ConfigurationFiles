@@ -35,7 +35,7 @@ Config.metadata = true
 -----------------
 ------ IMPORTANT 
 -- IF YOU ARE UPDATING FROM OLD SYN STORES AND USING SYN SOCIETY MAKE SURE YOU READ updater.lua !!!!!!!!!!!!!!
-Config.synsociety = false -- set to true if you own syn society ! 
+Config.synsociety = true -- set to true if you own syn society ! 
 Config.societystoreblip = 249721687 -- blips for society shops 
 Config.maxsocietyshops = 1 -- max shops owned by 1 society
 Config.societytoken = "societytoken" -- item used to create society shop. can only be used by boss of society

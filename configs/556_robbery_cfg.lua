@@ -92,7 +92,7 @@ Config.DynamiteItem                                 =               "dynamite"
 Config.LockpickItem                                 =               "lockpick"
 Config.QbrCircles                                   =               {4,6}                                   -- only if above is qbr
 
-Config.PoliceJobs                                   =               {"sheriff","marshal","police","deputy"} -- only needed if alertall is true in a robbery setup
+Config.PoliceJobs                                   =               {"policeVal","policeBW","policeSD","policeArm","marshal"} -- only needed if alertall is true in a robbery setup
 Config.RequiredPoliceForGuardDisable                =               0                                       -- amount of online police needed to not spawn any guards (or 0 to use guards always)
 Config.NeedsBandanaForRobberies                     =               false                                    -- for jo libs ccheck readme
 Config.RemoveLockpickOnSuccess                      =               {chance = 0}                            -- chance to remove lockpick on minigame success
@@ -158,8 +158,8 @@ Config.Banks = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, -- can only rob with these jobs
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}}, -- can not rob with these jobs
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 4, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}}, -- can not rob with these jobs
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 4, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
                                                                     alert     = {enable = true, chance = 90, notify = "A bank robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -196,8 +196,8 @@ Config.Banks = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 4, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 4, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A bank robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -235,8 +235,8 @@ Config.Banks = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 4, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 4, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A bank robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -274,8 +274,8 @@ Config.Banks = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 4, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 4, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A bank robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -311,8 +311,8 @@ Config.Banks = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 4, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 4, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A bank robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -390,8 +390,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, -- can only rob with these jobs
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}}, -- can not rob with these jobs
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}}, -- can not rob with these jobs
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"}, 
                                                                     },
                                                                     extraitemneeded = {
@@ -424,8 +424,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -457,8 +457,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -491,8 +491,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -523,8 +523,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -555,8 +555,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -586,8 +586,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = false, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -619,8 +619,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = false, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A store robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -657,8 +657,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "An art gallery robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -687,8 +687,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "An art gallery robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -717,8 +717,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "An art gallery robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -747,8 +747,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "An art gallery robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -781,8 +781,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A fort robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -816,8 +816,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A fort robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -854,8 +854,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A fort robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -889,8 +889,8 @@ Config.CashRegisters = {
                                                                     },
                                                                     jobs = {
                                                                     whitelist = {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist = {enable = true, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police    = {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist = {enable = true, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police    = {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert     = {enable = true, chance = 90, notify = "A fort robbery has been reported at"},
                                                                     },
                                                                     extraitemneeded = {
@@ -937,8 +937,8 @@ Config.WagonRob = {                                                 -- works on 
                                                                     },
                                                                     jobs            =       {
                                                                     whitelist       =       {enable = false, jobs = {"gang"}}, 
-                                                                    blacklist       =       {enable = false, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police          =       {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false},
+                                                                    blacklist       =       {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police          =       {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false},
                                                                     alert           =       {enable = true, chance = 90, notify = "A wagon robbery has been reported at"}, 
                                                                     special         =       {enable = false, jobs = {"native"}, items = {money = {20,40}}} -- special items for special jobs (eg. natives only find pelts, other players money)
                                                                     },
@@ -958,8 +958,8 @@ Config.FreeroamGunpointRobbery = {                                  -- point gun
                                                                     },
                                                                     jobs            =       {
                                                                     whitelist       =       {enable = false, jobs = {"gang"}},
-                                                                    blacklist       =       {enable = false, jobs = {"sheriff","marshal","police","deputy","banker"}},
-                                                                    police          =       {enable = false, jobs = {"sheriff","marshal","police","deputy"}, required = 2, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
+                                                                    blacklist       =       {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm","marshal", "doj"}},
+                                                                    police          =       {enable = false, jobs = {"policeVal","policeBW","policeSD","policeArm"}, required = 2, alertall = false}, -- enabled = police with these jobs needs to be online. not enabled = Config.PoliceJobs need to be online, alertall enabled = alert Config.PoliceJobs, alertall disabled = alert these jobs
                                                                     alert           =       {enable = true, chance = 90, notify = "A gunpoint robbery has been reported at"},
                                                                     special         =       {enable = false, jobs = {"native"}, items = {money = {1,5}}}, -- special items for special jobs (eg. natives)
                                                                     veryspecial     =       {enable = true, jobs = {"police"}, wep = 389133414, press = 0x760A9C6F, label = "Dawg"} -- unused atm
@@ -1070,6 +1070,10 @@ function OnDutyAPI(src, playerid, player, job)
     end
     return false
     ]]
+    if exports["syn_society"]:IsPlayerOnDuty(playerid, job) then
+        return true
+    end
+    return false
 
     -- rsg:
     --[[
@@ -1079,7 +1083,7 @@ function OnDutyAPI(src, playerid, player, job)
     return false
     ]]
 
-    return true -- if you dont want to use onduty just return true
+    -- return true -- if you dont want to use onduty just return true
 end
 
 
