@@ -35,11 +35,11 @@ Config = {
     -- Manage Activities at Water Pumps and Other Objects
     pump = {
         active  = true,       -- Enable the Use of Water Pumps and Other Objects
-        canteen = true,       -- Allow to Fill Canteen
-        bucket  = true,       -- Allow to Fill Bucket
+        canteen = false,       -- Allow to Fill Canteen
+        bucket  = false,       -- Allow to Fill Bucket
         bottle  = true,       -- Allow to Fill Bottle
         wash    = true,       -- Allow Player to Wash
-        drink   = true,       -- Allow Player to Drink
+        drink   = false,       -- Allow Player to Drink
         multi   = {
             bottles = true,   -- Allow to Fill Multiple Bottles at Once
             bottleAmount = 5, -- Maximum Amount of Bottles to Fill at Once
@@ -52,11 +52,11 @@ Config = {
     -- Manage Activities in Rivers and Lakes (Wild Waters)
     wild = {
         active  = true,       -- Enable the Use of Wild Waters
-        canteen = true,       -- Allow to Fill Canteen
-        bucket  = true,       -- Allow to Fill Bucket
+        canteen = false,       -- Allow to Fill Canteen
+        bucket  = false,       -- Allow to Fill Bucket
         bottle  = true,       -- Allow to Fill Bottle
         wash    = true,       -- Allow Player to Wash
-        drink   = true,       -- Allow Player to Drink
+        drink   = false,       -- Allow Player to Drink
         multi   = {
             bottles = true,   -- Allow to Fill Multiple Bottles at Once
             bottleAmount = 5, -- Maximum Amount of Bottles to Fill at Once
@@ -82,8 +82,8 @@ Config = {
     cleanBucket  = 'wateringcan',
     dirtyBucket  = 'wateringcan_dirtywater',
 
-    emptyBottle  = 'bcc_empty_bottle',
-    cleanBottle  = 'bcc_clean_bottle',
+    emptyBottle  = 'empty_bottle',
+    cleanBottle  = 'water',
     dirtyBottle  = 'bcc_dirty_bottle',
 
     antidoteItem = 'antidote', -- Item name that cures sickness
