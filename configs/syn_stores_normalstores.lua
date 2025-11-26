@@ -14,18 +14,15 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "craftbook", label = "Craftbook", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_handpie", label = "Meat Handpie", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "antibiotic", label = "Cold Medicine", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "meat", label = "Meat", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "water", label = "Water", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeebeans", label = "Coffee beans", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeefilter", label = "Coffee filter", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "sugar", label = "Sugar", price = "2",type = "item_standard"}, -- change label of items shown 
+            {name = "craftbook", label = "Craftbook", price = "0.5",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_handpie", label = "Meat Handpie", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "water", label = "Water", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeebeans", label = "Coffee beans", price = "0.5",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeefilter", label = "Coffee filter", price = "0.3",type = "item_standard"}, -- change label of items shown 
+            {name = "sugar", label = "Sugar", price = "1",type = "item_standard"}, -- change label of items shown 
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "water", label = "water", price = "1",type = "item_standard"},
         },
     },
     {
@@ -38,21 +35,21 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
             {name = "wateringcan", label = "Empty Bucket", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "rake", label = "rake", price = "1",type = "item_standard"}, -- change label of items shown 
             {name = "hoe", label = "hoe", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_hop", label = "Hop Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_carrot", label = "Carrot Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_apple", label = "Apple Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_wheat", label = "Wheat Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_corn", label = "Corn Seeds", price = "1",type = "item_standard"}, -- change label of items shown   
-            {name = "seed_potato", label = "Potato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_lettuce", label = "Lettuce Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_orange", label = "Orange Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_grape", label = "Grape Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_onion", label = "Onion Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_tomato", label = "Tomato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_hop", label = "Hop Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_carrot", label = "Carrot Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_apple", label = "Apple Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_wheat", label = "Wheat Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_corn", label = "Corn Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown   
+            {name = "seed_potato", label = "Potato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_lettuce", label = "Lettuce Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_orange", label = "Orange Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_grape", label = "Grape Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_onion", label = "Onion Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_tomato", label = "Tomato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
         },
@@ -64,25 +61,25 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "ironhammer", label = "Iron hammer", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "pickaxe", label = "Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "lumberaxe", label = "Wood Axe", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "ironhammer", label = "Iron hammer", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "pickaxe", label = "Pickaxe", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "lumberaxe", label = "Wood Axe", price = "10",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "iron_ore", label = "Iron Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "coal_ore", label = "Coal Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "saltpeter", label = "Saltpeter", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "limestone", label = "Limestone", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "rock", label = "Rock", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "sulfur", label = "Sulfur", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "goldnugget", label = "Gold Nugget", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "silver_ore", label = "Silver Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "zinc_ore", label = "Zinc Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "copper_ore", label = "Copper Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "Salt", label = "Rock Salt", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "wood", label = "Soft Wood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "hwood", label = "Hardwood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "fibers", label = "Fibers", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "iron_ore", label = "Iron Ore", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "coal_ore", label = "Coal Ore", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "saltpeter", label = "Saltpeter", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "limestone", label = "Limestone", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "rock", label = "Rock", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "sulfur", label = "Sulfur", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "goldnugget", label = "Gold Nugget", price = "0.19",type = "item_standard"}, -- change label of items shown
+            {name = "silver_ore", label = "Silver Ore", price = "0.25",type = "item_standard"}, -- change label of items shown
+            {name = "zinc_ore", label = "Zinc Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "copper_ore", label = "Copper Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "Salt", label = "Rock Salt", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "wood", label = "Soft Wood", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "hwood", label = "Hardwood", price = "0.14",type = "item_standard"}, -- change label of items shown
+            {name = "fibers", label = "Fibers", price = "0.07",type = "item_standard"}, -- change label of items shown
             {name = "brokenpickaxe", label = "Broken Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
         },
     },
@@ -108,18 +105,15 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "craftbook", label = "Craftbook", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_handpie", label = "Meat Handpie", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "antibiotic", label = "Cold Medicine", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "meat", label = "Meat", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "water", label = "Water", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeebeans", label = "Coffee beans", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeefilter", label = "Coffee filter", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "sugar", label = "Sugar", price = "2",type = "item_standard"}, -- change label of items shown 
+            {name = "craftbook", label = "Craftbook", price = "0.5",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_handpie", label = "Meat Handpie", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "water", label = "Water", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeebeans", label = "Coffee beans", price = "0.5",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeefilter", label = "Coffee filter", price = "0.3",type = "item_standard"}, -- change label of items shown 
+            {name = "sugar", label = "Sugar", price = "1",type = "item_standard"}, -- change label of items shown 
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "water", label = "water", price = "1",type = "item_standard"},
         },
     },
     {
@@ -132,21 +126,21 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
             {name = "wateringcan", label = "Empty Bucket", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "rake", label = "rake", price = "1",type = "item_standard"}, -- change label of items shown 
             {name = "hoe", label = "hoe", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_hop", label = "Hop Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_carrot", label = "Carrot Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_apple", label = "Apple Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_wheat", label = "Wheat Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_corn", label = "Corn Seeds", price = "1",type = "item_standard"}, -- change label of items shown   
-            {name = "seed_potato", label = "Potato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_lettuce", label = "Lettuce Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_orange", label = "Orange Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_grape", label = "Grape Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_onion", label = "Onion Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_tomato", label = "Tomato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_hop", label = "Hop Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_carrot", label = "Carrot Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_apple", label = "Apple Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_wheat", label = "Wheat Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_corn", label = "Corn Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown   
+            {name = "seed_potato", label = "Potato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_lettuce", label = "Lettuce Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_orange", label = "Orange Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_grape", label = "Grape Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_onion", label = "Onion Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_tomato", label = "Tomato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
         },
@@ -158,25 +152,25 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "ironhammer", label = "Iron hammer", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "pickaxe", label = "Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "lumberaxe", label = "Wood Axe", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "ironhammer", label = "Iron hammer", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "pickaxe", label = "Pickaxe", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "lumberaxe", label = "Wood Axe", price = "10",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "iron_ore", label = "Iron Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "coal_ore", label = "Coal Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "saltpeter", label = "Saltpeter", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "limestone", label = "Limestone", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "rock", label = "Rock", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "sulfur", label = "Sulfur", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "goldnugget", label = "Gold Nugget", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "silver_ore", label = "Silver Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "zinc_ore", label = "Zinc Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "copper_ore", label = "Copper Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "Salt", label = "Rock Salt", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "wood", label = "Soft Wood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "hwood", label = "Hardwood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "fibers", label = "Fibers", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "iron_ore", label = "Iron Ore", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "coal_ore", label = "Coal Ore", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "saltpeter", label = "Saltpeter", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "limestone", label = "Limestone", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "rock", label = "Rock", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "sulfur", label = "Sulfur", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "goldnugget", label = "Gold Nugget", price = "0.19",type = "item_standard"}, -- change label of items shown
+            {name = "silver_ore", label = "Silver Ore", price = "0.25",type = "item_standard"}, -- change label of items shown
+            {name = "zinc_ore", label = "Zinc Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "copper_ore", label = "Copper Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "Salt", label = "Rock Salt", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "wood", label = "Soft Wood", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "hwood", label = "Hardwood", price = "0.14",type = "item_standard"}, -- change label of items shown
+            {name = "fibers", label = "Fibers", price = "0.07",type = "item_standard"}, -- change label of items shown
             {name = "brokenpickaxe", label = "Broken Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
         },
     },
@@ -214,18 +208,15 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "craftbook", label = "Craftbook", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_handpie", label = "Meat Handpie", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "antibiotic", label = "Cold Medicine", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "meat", label = "Meat", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "water", label = "Water", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeebeans", label = "Coffee beans", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "coffeefilter", label = "Coffee filter", price = "2",type = "item_standard"}, -- change label of items shown 
-            {name = "sugar", label = "Sugar", price = "2",type = "item_standard"}, -- change label of items shown 
+            {name = "craftbook", label = "Craftbook", price = "0.5",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_handpie", label = "Meat Handpie", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "consumable_faygo", label = "A little Fizzy Drink", price = "2",type = "item_standard"}, -- change label of items shown
+            {name = "water", label = "Water", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeebeans", label = "Coffee beans", price = "0.5",type = "item_standard"}, -- change label of items shown 
+            {name = "coffeefilter", label = "Coffee filter", price = "0.3",type = "item_standard"}, -- change label of items shown 
+            {name = "sugar", label = "Sugar", price = "1",type = "item_standard"}, -- change label of items shown 
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "water", label = "water", price = "1",type = "item_standard"},
         },
     },
     {
@@ -238,21 +229,21 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
             {name = "wateringcan", label = "Empty Bucket", price = "1",type = "item_standard"}, -- change label of items shown
             {name = "rake", label = "rake", price = "1",type = "item_standard"}, -- change label of items shown 
             {name = "hoe", label = "hoe", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_hop", label = "Hop Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_carrot", label = "Carrot Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_apple", label = "Apple Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_wheat", label = "Wheat Seeds", price = "1",type = "item_standard"}, -- change label of items shown 
-            {name = "seed_corn", label = "Corn Seeds", price = "1",type = "item_standard"}, -- change label of items shown   
-            {name = "seed_potato", label = "Potato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_lettuce", label = "Lettuce Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_orange", label = "Orange Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_grape", label = "Grape Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_onion", label = "Onion Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_cherry", label = "Cherry Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_tomato", label = "Tomato Seeds", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_hop", label = "Hop Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_carrot", label = "Carrot Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_apple", label = "Apple Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_wheat", label = "Wheat Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown 
+            {name = "seed_corn", label = "Corn Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown   
+            {name = "seed_potato", label = "Potato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_pumpkin", label = "Pumpkin Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_lettuce", label = "Lettuce Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_orange", label = "Orange Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_grape", label = "Grape Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_onion", label = "Onion Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_cherry", label = "Cherry Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_tomato", label = "Tomato Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "seed_sugarcane", label = "Sugarcane Seeds", price = "0.1",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
         },
@@ -264,25 +255,25 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "ironhammer", label = "Iron hammer", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "pickaxe", label = "Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "lumberaxe", label = "Wood Axe", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "ironhammer", label = "Iron hammer", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "pickaxe", label = "Pickaxe", price = "10",type = "item_standard"}, -- change label of items shown
+            {name = "lumberaxe", label = "Wood Axe", price = "10",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
-            {name = "iron_ore", label = "Iron Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "coal_ore", label = "Coal Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "saltpeter", label = "Saltpeter", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "limestone", label = "Limestone", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "rock", label = "Rock", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "sulfur", label = "Sulfur", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "goldnugget", label = "Gold Nugget", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "silver_ore", label = "Silver Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "zinc_ore", label = "Zinc Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "copper_ore", label = "Copper Ore", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "Salt", label = "Rock Salt", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "wood", label = "Soft Wood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "hwood", label = "Hardwood", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "fibers", label = "Fibers", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "iron_ore", label = "Iron Ore", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "coal_ore", label = "Coal Ore", price = "0.1",type = "item_standard"}, -- change label of items shown
+            {name = "saltpeter", label = "Saltpeter", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "limestone", label = "Limestone", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "rock", label = "Rock", price = "0.05",type = "item_standard"}, -- change label of items shown
+            {name = "sulfur", label = "Sulfur", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "goldnugget", label = "Gold Nugget", price = "0.19",type = "item_standard"}, -- change label of items shown
+            {name = "silver_ore", label = "Silver Ore", price = "0.25",type = "item_standard"}, -- change label of items shown
+            {name = "zinc_ore", label = "Zinc Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "copper_ore", label = "Copper Ore", price = "0.17",type = "item_standard"}, -- change label of items shown
+            {name = "Salt", label = "Rock Salt", price = "0.15",type = "item_standard"}, -- change label of items shown
+            {name = "wood", label = "Soft Wood", price = "0.12",type = "item_standard"}, -- change label of items shown
+            {name = "hwood", label = "Hardwood", price = "0.14",type = "item_standard"}, -- change label of items shown
+            {name = "fibers", label = "Fibers", price = "0.07",type = "item_standard"}, -- change label of items shown
             {name = "brokenpickaxe", label = "Broken Pickaxe", price = "1",type = "item_standard"}, -- change label of items shown
         },
     },
@@ -320,8 +311,10 @@ Config.normalstores = {  -- delete everything inside here if you dont want norma
         joblock = {},-- leave empty if you want the shop to be available to everyone, if u wana lock it to a job set it as such {"police","doctor"} etc
         showblip = true,
         sellitems = { -- items sold by shop
-            {name = "milk", label = "Milk", price = "1",type = "item_standard"}, -- change label of items shown
-            {name = "milk_goat", label = "Goat Milk", price = "1",type = "item_standard"}, -- change label of items shown
+            {name = "milk", label = "Milk", price = "1.3",type = "item_standard"}, -- change label of items shown
+            {name = "milk_goat", label = "Goat Milk", price = "1.3",type = "item_standard"}, -- change label of items shown
+            {name = "egg", label = "Eggs", price = "1.3",type = "item_standard"}, -- change label of items shown
+            {name = "wool", label = "Wool", price = "1.3",type = "item_standard"}, -- change label of items shown
         },
         buyitems = { -- Items the shop will buy, these will only show if the player has them in his inventory 
         },
